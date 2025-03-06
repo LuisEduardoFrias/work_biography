@@ -1,0 +1,309 @@
+'use client'
+import { useState, useRef, useEffect, ReactNode, ReactElement, Children } from 'react'
+import { usePathname } from 'next/navigation'
+import Image from 'next/image'
+
+import cover from "assets/cover.jpg"
+import useTranslate from 'hk/use_translate'
+import './styles.css'
+
+export default function Book({ children }: { children: ReactNode }) {
+	const data = useRef({ count: 0, oldPathname: "/" });
+	const translate = useTranslate();
+	const pathname = usePathname();
+
+	const bookRef = useRef(null);
+
+	const pageRef2 = useRef(null);
+	const pageRef3 = useRef(null);
+	const pageRef4 = useRef(null);
+	const pageRef5 = useRef(null);
+	const pageRef6 = useRef(null);
+	const pageRef7 = useRef(null);
+	const pageRef8 = useRef(null);
+	const pageRef9 = useRef(null);
+	const pageRef10 = useRef(null);
+
+	useEffect(() => {
+		if (bookRef.current && data.current.count >= 1) {
+			bookRef.current.classList.remove('book-animate');
+			void bookRef.current.offsetWidth;
+			bookRef.current.classList.add('book-animate');
+		}
+
+		//about
+		if (pathname === "/about_me" &&
+			pageRef6.current &&
+			pageRef7.current &&
+			pageRef8.current &&
+			pageRef9.current &&
+			pageRef10.current
+		) {
+			pageRef6.current.classList.remove('origin-move-right-page-r6');
+			pageRef6.current.classList.remove('move-right-page-r6');
+			void pageRef6.current.offsetWidth;
+			pageRef6.current.classList.add('move-right-page-r6');
+
+			pageRef7.current.classList.remove('origin-move-right-page-r7');
+			pageRef7.current.classList.remove('move-right-page-r7');
+			void pageRef7.current.offsetWidth;
+			pageRef7.current.classList.add('move-right-page-r7');
+
+			pageRef8.current.classList.remove('origin-move-right-page-r8');
+			pageRef8.current.classList.remove('move-right-page-r8');
+			void pageRef8.current.offsetWidth;
+			pageRef8.current.classList.add('move-right-page-r8');
+
+			pageRef9.current.classList.remove('origin-move-right-page-r9');
+			pageRef9.current.classList.remove('move-right-page-r9');
+			void pageRef9.current.offsetWidth;
+			pageRef9.current.classList.add('move-right-page-r9');
+
+			pageRef10.current.classList.remove('origin-move-right-page-r10');
+			pageRef10.current.classList.remove('move-right-page-r10');
+			void pageRef10.current.offsetWidth;
+			pageRef10.current.classList.add('move-right-page-r10');
+		}
+
+		if (data.current.oldPathname === "/about_me" &&
+			pageRef6.current &&
+			pageRef7.current &&
+			pageRef8.current &&
+			pageRef9.current &&
+			pageRef10.current
+		) {
+			pageRef6.current.classList.remove('move-right-page-r6');
+			pageRef6.current.classList.remove('origin-move-right-page-r6');
+			void pageRef6.current.offsetWidth;
+			pageRef6.current.classList.add('origin-move-right-page-r6');
+
+			pageRef7.current.classList.remove('move-right-page-r7');
+			pageRef7.current.classList.remove('origin-move-right-page-r7');
+			void pageRef7.current.offsetWidth;
+			pageRef7.current.classList.add('origin-move-right-page-r7');
+
+			pageRef8.current.classList.remove('move-right-page-r8');
+			pageRef8.current.classList.remove('origin-move-right-page-r8');
+			void pageRef8.current.offsetWidth;
+			pageRef8.current.classList.add('origin-move-right-page-r8');
+
+			pageRef9.current.classList.remove('move-right-page-r9');
+			pageRef9.current.classList.remove('origin-move-right-page-r9');
+			void pageRef9.current.offsetWidth;
+			pageRef9.current.classList.add('origin-move-right-page-r9');
+
+			pageRef10.current.classList.remove('move-right-page-r10');
+			pageRef10.current.classList.remove('origin-move-right-page-r10');
+			void pageRef10.current.offsetWidth;
+			pageRef10.current.classList.add('origin-move-right-page-r10');
+		}
+
+		//experiences
+		if (pathname === "/experiences" &&
+			pageRef6.current &&
+			pageRef7.current
+		) {
+			pageRef6.current.classList.remove('origin-move-right-page-r6');
+			pageRef6.current.classList.remove('move-right-page-r6');
+			void pageRef6.current.offsetWidth;
+			pageRef6.current.classList.add('move-right-page-r6');
+
+			pageRef7.current.classList.remove('origin-move-right-page-r7');
+			pageRef7.current.classList.remove('move-right-page-r7');
+			void pageRef7.current.offsetWidth;
+			pageRef7.current.classList.add('move-right-page-r7');
+		}
+
+		if (data.current.oldPathname === "/experiences" &&
+			pageRef6.current &&
+			pageRef7.current
+		) {
+			pageRef6.current.classList.remove('move-right-page-r6');
+			pageRef6.current.classList.remove('origin-move-right-page-r6');
+			void pageRef6.current.offsetWidth;
+			pageRef6.current.classList.add('origin-move-right-page-r6');
+
+			pageRef7.current.classList.remove('move-right-page-r7');
+			pageRef7.current.classList.remove('origin-move-right-page-r7');
+			void pageRef7.current.offsetWidth;
+			pageRef7.current.classList.add('origin-move-right-page-r7');
+		}
+
+		//projects
+		if (pathname === "/projects" &&
+			pageRef6.current &&
+			pageRef7.current &&
+			pageRef8.current &&
+			pageRef9.current
+		) {
+			pageRef6.current.classList.remove('origin-move-right-page-r6');
+			pageRef6.current.classList.remove('move-right-page-r6');
+			void pageRef6.current.offsetWidth;
+			pageRef6.current.classList.add('move-right-page-r6');
+
+			pageRef7.current.classList.remove('origin-move-right-page-r7');
+			pageRef7.current.classList.remove('move-right-page-r7');
+			void pageRef7.current.offsetWidth;
+			pageRef7.current.classList.add('move-right-page-r7');
+
+			pageRef8.current.classList.remove('origin-move-right-page-r8');
+			pageRef8.current.classList.remove('move-right-page-r8');
+			void pageRef8.current.offsetWidth;
+			pageRef8.current.classList.add('move-right-page-r8');
+
+			pageRef9.current.classList.remove('origin-move-right-page-r9');
+			pageRef9.current.classList.remove('move-right-page-r9');
+			void pageRef9.current.offsetWidth;
+			pageRef9.current.classList.add('move-right-page-r9');
+		}
+
+		if (data.current.oldPathname === "/projects" &&
+			pageRef6.current &&
+			pageRef7.current &&
+			pageRef8.current &&
+			pageRef9.current
+		) {
+			pageRef6.current.classList.remove('move-right-page-r6');
+			pageRef6.current.classList.remove('origin-move-right-page-r6');
+			void pageRef6.current.offsetWidth;
+			pageRef6.current.classList.add('origin-move-right-page-r6');
+
+			pageRef7.current.classList.remove('move-right-page-r7');
+			pageRef7.current.classList.remove('origin-move-right-page-r7');
+			void pageRef7.current.offsetWidth;
+			pageRef7.current.classList.add('origin-move-right-page-r7');
+
+			pageRef8.current.classList.remove('move-right-page-r8');
+			pageRef8.current.classList.remove('origin-move-right-page-r8');
+			void pageRef8.current.offsetWidth;
+			pageRef8.current.classList.add('origin-move-right-page-r8');
+
+			pageRef9.current.classList.remove('move-right-page-r9');
+			pageRef9.current.classList.remove('origin-move-right-page-r9');
+			void pageRef9.current.offsetWidth;
+			pageRef9.current.classList.add('origin-move-right-page-r9');
+		}
+
+		//studies
+		if (pathname === "/studies" &&
+			pageRef3.current &&
+			pageRef4.current &&
+			pageRef5.current
+		) {
+			pageRef5.current.classList.remove('origin-move-left-page-l5');
+			pageRef5.current.classList.remove('move-left-page-l5');
+			void pageRef5.current.offsetWidth;
+			pageRef5.current.classList.add('move-left-page-l5');
+
+			pageRef4.current.classList.remove('origin-move-left-page-l4');
+			pageRef4.current.classList.remove('move-left-page-l4');
+			void pageRef4.current.offsetWidth;
+			pageRef4.current.classList.add('move-left-page-l4');
+
+			pageRef3.current.classList.remove('origin-move-left-page-l3');
+			pageRef3.current.classList.remove('move-left-page-l3');
+			void pageRef3.current.offsetWidth;
+			pageRef3.current.classList.add('move-left-page-l3');
+		}
+
+		if (data.current.oldPathname === "/studies" &&
+			pageRef3.current &&
+			pageRef4.current &&
+			pageRef5.current
+		) {
+			pageRef5.current.classList.remove('move-left-page-l5');
+			pageRef5.current.classList.remove('origin-move-left-page-l5');
+			void pageRef5.current.offsetWidth;
+			pageRef5.current.classList.add('origin-move-left-page-l5');
+
+			pageRef4.current.classList.remove('move-left-page-l4');
+			pageRef4.current.classList.remove('origin-move-left-page-l4');
+			void pageRef4.current.offsetWidth;
+			pageRef4.current.classList.add('origin-move-left-page-l4');
+
+			pageRef3.current.classList.remove('move-left-page-l3');
+			pageRef3.current.classList.remove('origin-move-left-page-l3');
+			void pageRef3.current.offsetWidth;
+			pageRef3.current.classList.add('origin-move-left-page-l3');
+		}
+
+		//skills
+		if (pathname === "/skills" &&
+			pageRef4.current &&
+			pageRef5.current
+		) {
+			pageRef5.current.classList.remove('origin-move-left-page-l5');
+			pageRef5.current.classList.remove('move-left-page-l5');
+			void pageRef5.current.offsetWidth;
+			pageRef5.current.classList.add('move-left-page-l5');
+
+			pageRef4.current.classList.remove('origin-move-left-page-l4');
+			pageRef4.current.classList.remove('move-left-page-l4');
+			void pageRef4.current.offsetWidth;
+			pageRef4.current.classList.add('move-left-page-l4');
+		}
+
+		if (data.current.oldPathname === "/skills" &&
+			pageRef4.current &&
+			pageRef5.current
+		) {
+			pageRef5.current.classList.remove('move-left-page-l5');
+			pageRef5.current.classList.remove('origin-move-left-page-l5');
+			void pageRef5.current.offsetWidth;
+			pageRef5.current.classList.add('origin-move-left-page-l5');
+
+			pageRef4.current.classList.remove('move-left-page-l4');
+			pageRef4.current.classList.remove('origin-move-left-page-l4');
+			void pageRef4.current.offsetWidth;
+			pageRef4.current.classList.add('origin-move-left-page-l4');
+		}
+
+		data.current.count = 1;
+		data.current.oldPathname = pathname;
+	}, [pathname])
+
+	return (
+		<div className="container_ relative flex-col overflow-hidden relative w-full h-full p-3 flex justify-center items-center">
+
+			<div ref={bookRef} className="relative rounded-2xl book">
+
+				<div className="pages"></div>
+
+				<div className="page left_ p_1 relative pb-5 overflow-hidden">
+					<div className="top-0 left-0 absolute bg-[--background] h-full w-full z-0 backface"></div>
+					<div className="cover top-0 left-0 absolute z-10 h-[700px] space-y-6 p-5 pt-10">
+						<h1 className="text-6xl font-extrabold" >{translate('Una pasión')}</h1>
+						<h2 className="text-3xl font-extrabold pl-5 text-pretty" >{translate('Trayectoria de un ingeniero de software')}</h2>
+						<div className="w-full h-[460px] rounded-[0_0_20px_0] overflow-auto">
+							<Image src={cover} priority={true} width={450} height={600} alt="Image of cover" />
+						</div>
+					</div>
+				</div>
+
+				<div ref={pageRef2} className="page left_ p_2"></div>
+				<div ref={pageRef3} className="page left_ p_3"></div>
+				<div ref={pageRef4} className="page left_ p_4"></div>
+				<div ref={pageRef5} className="page left_ p_5"></div>
+
+				<div ref={pageRef6} className="page right_ p_6"></div>
+				<div ref={pageRef7} className="page right_ p_7"></div>
+				<div ref={pageRef8} className="page right_ p_8"></div>
+				<div ref={pageRef9} className="page right_ p_9"></div>
+				<div ref={pageRef10} className="page right_ p_10"></div>
+
+				<div className="mark-page absolute bottom-[-80px] z-50 left-1/2 h-20 w-4 border border-primary"></div>
+				<div className="mark-page absolute bottom-[-90px] z-40 left-1/2 translate-x-3 h-[90px] w-4 border border-second"></div>
+
+				<div className="absolute h-full z-50 opacity-0 center" >{children}</div>
+			</div>
+		</div>
+	);
+}
+
+export function Page({ children }: { children: ReactNode }) {
+	return (
+		<div className="flex flex-row space-x-5 justify-center items-center w-full h-full py-5 center-animate">
+			{children}
+		</div>
+	);
+}

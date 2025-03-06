@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	/*--color:  #171717;*/
+	--theme-blue-p: #00b4ffff;
+	--theme-blue-s: #02afff9b;
+	--theme-blue-t: #30568d;
+	
+	--theme-red-p: #ff0000;
+	--theme-red-s: #ff0202bf;
+	--theme-red-t: #be2121;
+	
+	--tran-theme: 1s;
+	--dark: #000;
+	--bright: #fff;
+	--primary: var(--theme-red-p);
+	--second: var(--theme-red-s);
+	
+	/*****************/
+	
+	--background: var(--bright);
+	--color: var(--dark);
+	--border: var(--theme-red-p);
+	--meteor_n: var(--theme-red-s);
+	--meteor_r: var(--theme-red-t);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--primary: var(--theme-blue-p);
+		--second: var(--theme-blue-s);
+		
+		--background: var(--dark);
+		--color: var(--bright);
+		--border: var(--theme-blue-p);
+		--meteor_n: var(--theme-blue-s);
+		--meteor_r: var(--theme-blue-t);
+	}
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	transition: background-color var(--tran-theme) ease,
+		color Calc(var(--tran-theme) - 0.5s) ease;
+}
+
+body {
+	color: var(--color);
+	background: var(--background);
+	font-family: Arial, Helvetica, sans-serif;
+	
+	width: 100dvw;
+	height: 100dvh;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+body:has(#switch-cb-theme:checked) {
+			--primary: var(--theme-red-p);
+		--second: var(--theme-red-s);
+		
+	--background: var(--bright);
+	--color: var(--dark);
+	--border: var(--theme-red-p);
+	--meteor_n: var(--theme-red-s);
+	--meteor_r: var(--theme-red-t);
+}
