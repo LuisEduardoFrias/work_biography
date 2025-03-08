@@ -5,6 +5,7 @@ import Book from "cp/book";
 import Meteors from 'cp/meteors'
 import SelectLanguage from "cp/select_language"
 import SwitchTheme from "cp/switch_theme"
+import '@/state_warehouse'
 import "./globals.css";
 
 const geistSans = Geist({
@@ -32,13 +33,15 @@ export default function RootLayout({
 			<head>
 			</head>
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+				className={`${geistSans.variable} ${geistMono.variable} antialiased p-16 m-16`}
 			>
 				<Meteors className="layout-meteors" />
 				<div className="z-50 absolute top-0 left-0 w-full flex flex-row space-x-2 justify-end p-5">
 					<SelectLanguage />
 					<SwitchTheme />
 				</div>
+
+
 				<Book>
 					{children}
 				</Book>

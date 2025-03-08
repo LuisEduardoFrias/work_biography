@@ -246,8 +246,8 @@
 
 .mark-page {
 	border-inline-width: 8.5px;
-	box-shadow: 2px -2px 3px -1px var(--color);
 	border-bottom: 15px solid transparent;
+	box-shadow: 2px -2px 3px -1px var(--color);
 }
 
 /**********************************************************************/
@@ -302,6 +302,51 @@
 	}
 }
 
+.mark-page-move {
+	animation: mark_page_move 4s 0s forwards;
+}
+
+.mark-page-move2 {
+	animation: mark_page_move2 4s 0s forwards;
+}
+
+@keyframes mark_page_move {
+	100% {
+		transform: translateX(-28px);
+	}
+}
+
+@keyframes mark_page_move2 {
+	100% {
+		transform: translateX(-18px);
+	}
+}
+
+.book-animate2 {
+	animation: book-ligth3 4s 0s forwards;
+}
+
+@keyframes book-ligth3 {
+	10% {
+		box-shadow: 0 0 10px 0 var(--primary);
+	}
+	
+	35% {
+		box-shadow: 0 0 30px 0var(--primary);
+	}
+	
+	60% {
+		box-shadow: 0 0 50px 0 var(--primary);
+	}
+	
+	85% {
+		box-shadow: 0 0 10px 0 var(--primary);
+	}
+	
+	100% {
+		box-shadow: none;
+	}
+}
 /* ///////////////////////////////////////////////////// */
 /* /////////////////// move right page  //////////////// */
 /* ///////////////////////////////////////////////////// */

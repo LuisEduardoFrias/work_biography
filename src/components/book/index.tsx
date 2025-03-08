@@ -13,6 +13,8 @@ export default function Book({ children }: { children: ReactNode }) {
 	const pathname = usePathname();
 
 	const bookRef = useRef(null);
+	const markPageRef = useRef(null);
+	const markPageRef2 = useRef(null);
 
 	const pageRef2 = useRef(null);
 	const pageRef3 = useRef(null);
@@ -31,13 +33,23 @@ export default function Book({ children }: { children: ReactNode }) {
 			bookRef.current.classList.add('book-animate');
 		}
 
+		if (pathname === "/"  && data.current.count >= 1) {
+			bookRef.current.classList.remove('book-animate2');
+			bookRef.current.classList.remove('book-animate');
+			void bookRef.current.offsetWidth;
+			bookRef.current.classList.add('book-animate');
+		}
+
 		//about
 		if (pathname === "/about_me" &&
 			pageRef6.current &&
 			pageRef7.current &&
 			pageRef8.current &&
 			pageRef9.current &&
-			pageRef10.current
+			pageRef10.current &&
+			markPageRef.current &&
+			markPageRef2.current &&
+			bookRef.current
 		) {
 			pageRef6.current.classList.remove('origin-move-right-page-r6');
 			pageRef6.current.classList.remove('move-right-page-r6');
@@ -63,6 +75,19 @@ export default function Book({ children }: { children: ReactNode }) {
 			pageRef10.current.classList.remove('move-right-page-r10');
 			void pageRef10.current.offsetWidth;
 			pageRef10.current.classList.add('move-right-page-r10');
+
+			markPageRef.current.classList.remove('mark-page-move');
+			void markPageRef.current.offsetWidth;
+			markPageRef.current.classList.add('mark-page-move');
+
+			markPageRef2.current.classList.remove('mark-page-move2');
+			void markPageRef2.current.offsetWidth;
+			markPageRef2.current.classList.add('mark-page-move2');
+
+			bookRef.current.classList.remove('book-animate');
+			bookRef.current.classList.remove('book-animate');
+			void bookRef.current.offsetWidth;
+			bookRef.current.classList.add('book-animate2');
 		}
 
 		if (data.current.oldPathname === "/about_me" &&
@@ -291,8 +316,8 @@ export default function Book({ children }: { children: ReactNode }) {
 				<div ref={pageRef9} className="page right_ p_9"></div>
 				<div ref={pageRef10} className="page right_ p_10"></div>
 
-				<div className="mark-page absolute bottom-[-80px] z-50 left-1/2 h-20 w-4 border border-primary"></div>
-				<div className="mark-page absolute bottom-[-90px] z-40 left-1/2 translate-x-3 h-[90px] w-4 border border-second"></div>
+				<div ref={markPageRef} className="mark-page absolute bottom-[-80px] z-50 left-1/2 translate-x-0 h-20 w-4 border border-primary"></div>
+				<div ref={markPageRef2} className="mark-page absolute bottom-[-90px] z-40 left-1/2 translate-x-3 h-[90px] w-4 border border-second"></div>
 
 				<div className="absolute h-full z-50 opacity-0 center" >{children}</div>
 			</div>

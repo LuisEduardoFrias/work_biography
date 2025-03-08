@@ -1,4 +1,5 @@
 'use client'
+import '@/state_warehouse'
 import { useEffect, useState } from 'react'
 import { useSubscriberState } from 'subscriber_state'
 

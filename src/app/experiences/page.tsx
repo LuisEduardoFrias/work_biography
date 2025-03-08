@@ -10,7 +10,7 @@ export default function page() {
 	return (
 		<Page>
 			<div className="w-6/12 h-full ">
-				<p>{translate('Experiences')} </p>
+				<p>{translate('Experiences')}</p>
 				<Image src="/file.svg" className="dark:invert"
 					alt="Next.js logo"
 					width={180}

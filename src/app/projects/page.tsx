@@ -9,7 +9,7 @@ export default function page() {
 	const translate = useTranslate();
 	return (
 		<Page>
-			<div className="w-6/12 h-full ">
+			<div className="w-6/12 h-full">
 				<p>{translate('Projects')} </p>
 				<Link href="/">{translate('back')}</Link>
 				<Image

@@ -1,8 +1,9 @@
 'use client'
 import Link from 'next/link'
-import useTranslate from 'hk/use_translate'
+//import '@/state_warehouse'
 import { Page } from 'cp/book'
-import '@/state_warehouse'
+import useTranslate from 'hk/use_translate'
+import Loading from './loading'
 
 export default function Home() {
 	const translate = useTranslate();
@@ -21,6 +22,7 @@ export default function Home() {
 			</div>
 			<div className="w-6/12 h-full">
 				<p>Page 5 other</p>
+
 			</div>
 		</Page>
 	);

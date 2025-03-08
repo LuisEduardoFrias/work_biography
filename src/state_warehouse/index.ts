@@ -1,4 +1,4 @@
-'use client'
+
 
 import { createWarehouse, update } from "subscriber_state";
 import { setCookie, getCookie } from 'hp/cookies'
