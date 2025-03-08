@@ -1,9 +1,15 @@
 'use client'
 import Link from 'next/link'
-//import '@/state_warehouse'
 import { Page } from 'cp/book'
+import Profile from 'cp/profile'
+import Menu from 'cp/menu'
+import Presentation from 'cp/presentation'
 import useTranslate from 'hk/use_translate'
-import Loading from './loading'
+import localFont from "next/font/local";
+
+const days_one = localFont({
+	src: "../../public/fonts/Days_One/DaysOne-Regular.ttf"
+});
 
 export default function Home() {
 	const translate = useTranslate();
@@ -11,18 +17,11 @@ export default function Home() {
 	return (
 		<Page>
 			<div className="w-6/12 h-full">
-				<p>{translate('Page 5')}</p>
-				<div className="flex space-x-5 p-5">
-					<Link href="/experiences">{translate('Experiences')}</Link>
-					<Link href="/studies">{translate('Studies')}</Link>
-					<Link href="/skills">{translate('Skills')}</Link>
-					<Link href="/projects">{translate('Projects')}</Link>
-					<Link href="/about_me">{translate('about me')}</Link>
-				</div>
+				<Presentation days_one={days_one} />
+				<Menu days_one={days_one} />
 			</div>
 			<div className="w-6/12 h-full">
-				<p>Page 5 other</p>
-
+				<Profile />
 			</div>
 		</Page>
 	);
