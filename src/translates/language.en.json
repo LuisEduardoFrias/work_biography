@@ -1,4 +1,5 @@
 {
+	"IEV": "The CV file is not available at this time.",
 	"Hello! Im": "Hello! I'm ",
 	"developer": "developer",
 	"I have over 4 years of experience in the job market, specializing as a backend developer with the language of": "I have over 4 years of experience in the job market, specializing as a backend developer with the language of",
@@ -10,9 +11,9 @@
 	"Una pasión": "A passion",
 	"Trayectoria de un ingeniero de software": "Career path of a software engineer",
 	"back": "back",
-	"Studies": "Studies",
-	"Skills": "Skills",
-	"Projects": "Projects",
-	"Experiences": "Experiences",
-	"about me": "about me"
+	"studies": "Studies",
+	"skills": "Skills",
+	"projects": "Projects",
+	"experiences": "Experiences",
+	"about me": "About me"
 }

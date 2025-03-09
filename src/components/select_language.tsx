@@ -18,7 +18,7 @@ export default function SelectLanguage() {
 	return (
 		<select
 			id="language-select"
-			className="select-none font-bold text-color bg-background rounded-md w-28 border-2 border-border p-1"
+			className="select-none font-bold text-font-color bg-transparent rounded-md w-28 border-2 border-border-color-ctt p-1"
 			value={language}
 			onChange={handleLanguageChange}
 		>

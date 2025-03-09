@@ -9,7 +9,7 @@ export default function page() {
 	return (
 		<Page>
 			<div className="w-6/12 h-full ">
-				<p>{translate('Skills')}  </p>
+				<p>{translate('Skills')}</p>
 				<Link href="/">{translate('back')}</Link>
 			</div>
 			<div className="w-6/12 h-full">

@@ -16,7 +16,7 @@ export default function Home() {
 
 	return (
 		<Page>
-			<div className="w-6/12 h-full">
+			<div className="w-6/12 h-full flex flex-col justify-between ">
 				<Presentation days_one={days_one} />
 				<Menu days_one={days_one} />
 			</div>

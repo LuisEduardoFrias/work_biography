@@ -33,7 +33,7 @@ export default function Book({ children }: { children: ReactNode }) {
 			bookRef.current.classList.add('book-animate');
 		}
 
-		if (pathname === "/"  && data.current.count >= 1) {
+		if (pathname === "/" && data.current.count >= 1) {
 			bookRef.current.classList.remove('book-animate2');
 			bookRef.current.classList.remove('book-animate');
 			void bookRef.current.offsetWidth;
@@ -295,7 +295,7 @@ export default function Book({ children }: { children: ReactNode }) {
 				<div className="pages"></div>
 
 				<div className="page left_ p_1 relative pb-5 overflow-hidden">
-					<div className="top-0 left-0 absolute bg-[--background] h-full w-full z-0 backface"></div>
+					<div className="top-0 left-0 absolute bg-[--base] h-full w-full z-0 backface"></div>
 					<div className="cover top-0 left-0 absolute z-10 h-[700px] space-y-6 p-5 pt-10">
 						<h1 className="text-6xl font-extrabold" >{translate('Una pasión')}</h1>
 						<h2 className="text-3xl font-extrabold pl-5 text-pretty" >{translate('Trayectoria de un ingeniero de software')}</h2>
@@ -316,8 +316,8 @@ export default function Book({ children }: { children: ReactNode }) {
 				<div ref={pageRef9} className="page right_ p_9"></div>
 				<div ref={pageRef10} className="page right_ p_10"></div>
 
-				<div ref={markPageRef} className="mark-page absolute bottom-[-80px] z-50 left-1/2 translate-x-0 h-20 w-4 border border-primary"></div>
-				<div ref={markPageRef2} className="mark-page absolute bottom-[-90px] z-40 left-1/2 translate-x-3 h-[90px] w-4 border border-second"></div>
+				<div ref={markPageRef} className="mark-page absolute bottom-[-80px] z-50 left-1/2 translate-x-0 h-20 w-4 border border-theme-1"></div>
+				<div ref={markPageRef2} className="mark-page absolute bottom-[-90px] z-40 left-1/2 translate-x-3 h-[90px] w-4 border border-theme-2"></div>
 
 				<div className="absolute h-full z-50 opacity-0 center" >{children}</div>
 			</div>

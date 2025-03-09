@@ -33,7 +33,7 @@ export default function Meteors({ number }: TMeteorProps) {
 					before:-translate-y-[25%] before:w-[50px] 
 					before:h-[1px] before:bg-gradient-to-r 
 					before:from-[--meteor_r] before:to-transparent`}
-					style={{ position: "fixed" }}
+					style={{ position: 'fixed' }}
 				></span>
 			))}
 		</>

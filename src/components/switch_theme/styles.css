@@ -10,7 +10,7 @@
 	position: relative;
 	width: var(--width-of-switch-theme);
 	height: var(--height-of-switch-theme);
-	border: 2px solid var(--border);
+	border: 2px solid var(--border-color-ctt);
 	border-radius: 20px;
 	user-select: none;
 }
@@ -30,7 +30,7 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: var(--background);
+	background: transparent;
 	transition: .4s;
 	border-radius: 30px;
 }
@@ -45,12 +45,12 @@
 	border-radius: 20px;
 	
 	left: calc(100% - (var(--size-of-icon, 1.4em) + var(--slider-offset, 0.3em)));
-	background: var(--background);
+	background: var(--base);
 	box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
 }
 
 input:checked+.slider-theme {
-	background-color: var(--background);
+	background-color: transparent;
 }
 
 input:checked+.slider-theme:before {

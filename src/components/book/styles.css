@@ -36,23 +36,23 @@
 
 @keyframes book-ligth {
 	10% {
-		box-shadow: 0 0 10px 0 var(--primary);
+		box-shadow: 0 0 10px 0 var(--theme-1);
 	}
 	
 	35% {
-		box-shadow: 0 0 30px 0var(--primary);
+		box-shadow: 0 0 30px 0var(--theme-1);
 	}
 	
 	60% {
-		box-shadow: 0 0 50px 0 var(--primary);
+		box-shadow: 0 0 50px 0 var(--theme-1);
 	}
 	
 	85% {
-		box-shadow: 0 0 10px 0 var(--primary);
+		box-shadow: 0 0 10px 0 var(--theme-1);
 	}
 	
 	100% {
-		box-shadow: 0px 0px 6px 0px var(--primary);
+		box-shadow: 0px 0px 6px 0px var(--theme-1);
 	}
 }
 
@@ -70,11 +70,11 @@
 	position: absolute;
 	width: 50%;
 	height: 100%;
-	border: 1px solid var(--color);
+	border: 1px solid var(--border-color);
 	left: 50%;
 	top: 0;
 	z-index: 0;
-	background: var(--background);
+	background: var(--base);
 	border-radius: 0 20px 20px 0;
 }
 
@@ -83,11 +83,11 @@
 	position: absolute;
 	width: 52%;
 	height: 100%;
-	border: 1px solid var(--color);
+	border: 1px solid var(--border-color);
 	left: 52%;
 	top: 1%;
 	border-radius: 0 20px 20px 0;
-	background: var(--background);
+	background: var(--base);
 	z-index: -1;
 	animation: pages-hidden 0s 5s ease-in-out forwards;
 }
@@ -100,12 +100,12 @@
 
 .pages::after {
 	content: "Texto o imagen";
-	background-color: var(--color);
+	background-color: var(--border-color);
 	position: absolute;
 	width: 97%;
 	border-radius: 0 20px 20px 0;
 	height: 99.5%;
-	border: 1px solid var(--color);
+	border: 1px solid var(--border-color);
 	left: 0%;
 	top: 0px;
 	z-index: -2;
@@ -247,7 +247,7 @@
 .mark-page {
 	border-inline-width: 8.5px;
 	border-bottom: 15px solid transparent;
-	box-shadow: 2px -2px 3px -1px var(--color);
+	box-shadow: 2px -2px 3px -1px var(--contrast);
 }
 
 /**********************************************************************/
@@ -260,7 +260,7 @@
 	width: Calc(100% - 40px);
 	opacity: 0;
 	visibility: hidden;
-	animation: center-opacity 4s 4s forwards;
+	animation: center-opacity 4s 2s forwards;
 }
 
 @keyframes center-opacity {
@@ -282,23 +282,23 @@
 
 @keyframes book-ligth2 {
 	10% {
-		box-shadow: 0 0 10px 0 var(--primary);
+		box-shadow: 0 0 10px 0 var(--theme-1);
 	}
 	
 	35% {
-		box-shadow: 0 0 30px 0var(--primary);
+		box-shadow: 0 0 30px 0var(--theme-1);
 	}
 	
 	60% {
-		box-shadow: 0 0 50px 0 var(--primary);
+		box-shadow: 0 0 50px 0 var(--theme-1);
 	}
 	
 	85% {
-		box-shadow: 0 0 10px 0 var(--primary);
+		box-shadow: 0 0 10px 0 var(--theme-1);
 	}
 	
 	100% {
-		box-shadow: 0px 0px 6px 0px var(--primary);
+		box-shadow: 0px 0px 6px 0px var(--theme-1);
 	}
 }
 
@@ -328,25 +328,26 @@
 
 @keyframes book-ligth3 {
 	10% {
-		box-shadow: 0 0 10px 0 var(--primary);
+		box-shadow: 0 0 10px 0 var(--theme-1);
 	}
 	
 	35% {
-		box-shadow: 0 0 30px 0var(--primary);
+		box-shadow: 0 0 30px 0var(--theme-1);
 	}
 	
 	60% {
-		box-shadow: 0 0 50px 0 var(--primary);
+		box-shadow: 0 0 50px 0 var(--theme-1);
 	}
 	
 	85% {
-		box-shadow: 0 0 10px 0 var(--primary);
+		box-shadow: 0 0 10px 0 var(--theme-1);
 	}
 	
 	100% {
 		box-shadow: none;
 	}
 }
+
 /* ///////////////////////////////////////////////////// */
 /* /////////////////// move right page  //////////////// */
 /* ///////////////////////////////////////////////////// */

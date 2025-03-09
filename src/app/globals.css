@@ -3,40 +3,92 @@
 @tailwind utilities;
 
 :root {
-	/*--color:  #171717;*/
-	--theme-blue-p: #00b4ffff;
-	--theme-blue-s: #02afff9b;
-	--theme-blue-t: #30568d;
+	--blue-0: #83ecff;
+	--blue-1: #48dfff;
+	--blue-2: #1ec4ff;
+	--blue-3: #06a9ff;
+	--blue-4: #0093fa;
+	--blue-5: #0872c5;
+	--blue-6: #0d609b;
+	--blue-7: #0e3a5d;
+	--blue-8: #031524;
 	
-	--theme-red-p: #ff0000;
-	--theme-red-s: #ff0202bf;
-	--theme-red-t: #be2121;
+	--green-0: #72ff53;
+	--green-1: #41fb20;
+	--green-2: #21fa00;
+	--green-3: #12b500;
+	--green-4: #0f8902;
+	--green-5: #116c08;
+	--green-6: #125b0c;
+	--green-7: #023300;
+	--green-8: #011900;
+	
+	--red-0: #ff5353;
+	--red-1: #fb2020;
+	--red-2: #fa0000;
+	--red-3: #b50000;
+	--red-4: #890202;
+	--red-5: #6c0808;
+	--red-6: #5b0c0c;
+	--red-7: #330000;
+	--red-8: #190000;
 	
 	--tran-theme: 1s;
 	--dark: #000;
 	--bright: #fff;
-	--primary: var(--theme-red-p);
-	--second: var(--theme-red-s);
 	
 	/*****************/
 	
-	--background: var(--bright);
-	--color: var(--dark);
-	--border: var(--theme-red-p);
-	--meteor_n: var(--theme-red-s);
-	--meteor_r: var(--theme-red-t);
+	--base: var(--bright);
+	--contrast: var(--dark);
+	
+	--theme-0: var(--red-0);
+	--theme-1: var(--red-1);
+	--theme-2: var(--red-2);
+	--theme-3: var(--red-3);
+	--theme-4: var(--red-4);
+	--theme-5: var(--red-5);
+	--theme-6: var(--red-6);
+	--theme-7: var(--red-7);
+	--theme-8: var(--red-8);
+	
+	--font-color: var(--contrast);
+	--font-color-ctt: var(--theme-1);
+	--font-color-alt: #fa6a00;
+	
+	--border-color: var(--contrast);
+	--border-color-ctt: var(--theme-1);
+	--border-color-alt: #fa6a00;
+	
+	--border-width: 2px;
+	
+	--meteor_n: var(--theme-2);
+	--meteor_r: var(--theme-3);
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--primary: var(--theme-blue-p);
-		--second: var(--theme-blue-s);
+		--base: var(--dark);
+		--contrast: var(--bright);
 		
-		--background: var(--dark);
-		--color: var(--bright);
-		--border: var(--theme-blue-p);
-		--meteor_n: var(--theme-blue-s);
-		--meteor_r: var(--theme-blue-t);
+		--theme-0: var(--blue-0);
+		--theme-1: var(--blue-1);
+		--theme-2: var(--blue-2);
+		--theme-3: var(--blue-3);
+		--theme-4: var(--blue-4);
+		--theme-5: var(--blue-5);
+		--theme-6: var(--blue-6);
+		--theme-7: var(--blue-7);
+		--theme-8: var(--blue-8);
+		
+		--font-color: var(--contrast);
+		--font-color-ctt: var(--theme-1);
+		
+		--border-color: var(--contrast);
+		--border-color-ctt: var(--theme-1);
+		
+		--meteor_n: var(--theme-2);
+		--meteor_r: var(--theme-3);
 	}
 }
 
@@ -49,8 +101,8 @@
 }
 
 body {
-	color: var(--color);
-	background: var(--background);
+	color: var(--font-color);
+	background: var(--base);
 	font-family: Arial, Helvetica, sans-serif;
 	
 	width: 100dvw;
@@ -62,12 +114,26 @@ body {
 }
 
 body:has(#switch-cb-theme:checked) {
-			--primary: var(--theme-red-p);
-		--second: var(--theme-red-s);
+	
+	--base: var(--bright);
+	--contrast: var(--dark);
+	
+	--theme-0: var(--red-0);
+	--theme-1: var(--red-1);
+	--theme-2: var(--red-2);
+	--theme-3: var(--red-3);
+	--theme-4: var(--red-4);
+	--theme-5: var(--red-5);
+	--theme-6: var(--red-6);
+	--theme-7: var(--red-7);
+	--theme-8: var(--red-8);
+	
+			--font-color: var(--contrast);
+		--font-color-ctt: var(--theme-1);
 		
-	--background: var(--bright);
-	--color: var(--dark);
-	--border: var(--theme-red-p);
-	--meteor_n: var(--theme-red-s);
-	--meteor_r: var(--theme-red-t);
+		--border-color: var(--contrast);
+		--border-color-ctt: var(--theme-1);
+		
+		--meteor_n: var(--theme-2);
+		--meteor_r: var(--theme-3);
 }

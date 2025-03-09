@@ -40,6 +40,9 @@
 			],
 			"tls/*": [
 				"./src/translates/*"
+			],
+			"svg/*": [
+				"./src/svg/*"
 			]
 		}
 	},

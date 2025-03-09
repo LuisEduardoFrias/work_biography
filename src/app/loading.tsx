@@ -30,14 +30,14 @@ export default function Loading() {
 						<div className="absolute top-[-24px] left-[-10px] h-2 w-[6px] border-[3.2px] border-transparent border-t-[8px] border-t-amber-400"></div>
 						<div className="absolute top-[-24px] left-[-3px] h-2 w-[6px] border-[3.2px] border-transparent border-t-[8px] border-t-amber-500"></div>
 						<div className="absolute top-[-24px] left-[4px] h-2 w-[6px] border-[3.2px] border-transparent border-t-[8px] border-t-amber-400"></div>
-						<div className="absolute top-[-8px] left-[-3px] h-2 w-[6px] border-[3.2px] border-transparent border-t-[8px] border-t-color"></div>
+						<div className="absolute top-[-8px] left-[-3px] h-2 w-[6px] border-[3.2px] border-transparent border-t-[8px] border-t-border-color-ctt"></div>
 					</div>
 				</div>
 			</div>
 			<div className="flex flex-row pl-5 space-x-[22px] w-full absolute bottom-5">
-				<div className="animate-points1 opacity-0 w-1 h-1 rounded bg-color transition-transform left-0 mt-14"></div>
-				<div className="animate-points2 opacity-0 w-1 h-1 rounded bg-color transition-transform left-[40px] mt-14"></div>
-				<div className="animate-points3 opacity-0 w-1 h-1 rounded bg-color transition-transform left-[80px] mt-14"></div>
+				<div className="animate-points1 opacity-0 w-1 h-1 rounded bg-theme-1 transition-transform left-0 mt-14"></div>
+				<div className="animate-points2 opacity-0 w-1 h-1 rounded bg-theme-1 transition-transform left-[40px] mt-14"></div>
+				<div className="animate-points3 opacity-0 w-1 h-1 rounded bg-theme-1 transition-transform left-[80px] mt-14"></div>
 			</div>
 		</div>
 	)

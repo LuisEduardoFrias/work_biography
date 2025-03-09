@@ -9,14 +9,29 @@ export default {
 	theme: {
 		extend: {
 			dropShadow: {
-				homero: '0 0 0.75rem var(--primary)'
+				homero: '0 0 0.75rem var(--theme-1)'
 			},
 			colors: {
-				background: "var(--background)",
-				primary: "var(--primary)",
-				second: "var(--second)",
-				border: "var(--border)",
-				color: "var(--color)",
+				"base": "var(--base)",
+				"contrast": "var(--contrast)",
+
+				"font-color": "var(--font-color)",
+				"font-color-ctt": "var(--font-color-ctt)",
+				"font-color-alt": "var(--font-color-alt)",
+
+				"border-color": "var(--border-color)",
+				"border-color-ctt": "var(--border-color-ctt)",
+				"border-color-alt": "var(--border-color-alt)",
+
+				"theme-0": "var(--theme-0)",
+				"theme-1": "var(--theme-1)",
+				"theme-2": "var(--theme-2)",
+				"theme-3": "var(--theme-3)",
+				"theme-4": "var(--theme-4)",
+				"theme-5": "var(--theme-5)",
+				"theme-6": "var(--theme-6)",
+				"theme-7": "var(--theme-7)",
+				"theme-8": "var(--theme-8)",
 			},
 			height: {
 				"book-h": "695px",

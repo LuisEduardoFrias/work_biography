@@ -1,8 +1,9 @@
 {
+	"IEV": "El archivo del CV no está disponible en este momento.",
 	"Hello! Im": "Hola! soy ",
-	"developer": "programador",
-	"I have over 4 years of experience in the job market, specializing as a backend developer with the language of": "Tengo mas de 4 años de experiencia EN el mercado laboral, me destaco como backend con el lenguaje de <strong>C#</strong>",
-	"I also develop websites using": "Tambien desarrollo webs con <strong>React</strong>, soy apacionado y dedicado.",
+	"developer": "ingeniero de software",
+	"I have over 4 years of experience in the job market, specializing as a backend developer with the language of": "Tengo experiencia en el mercado laboral, me adactor facil y rapido.",
+	"I also develop websites using": "Tengo buena abilidades blando, me gusta ayudar, apacionado por el mundo de la tegnologia.",
 	"Write your own story.": "Escribe tu propia historia.",
 	"Go to the home": "Ir al inicio!",
 	"Something went wrong!": "¡Algo salió mal!",
@@ -10,9 +11,9 @@
 	"Una pasión": "Una pasión",
 	"Trayectoria de un ingeniero de software": "Trayectoria de un ingeniero de software",
 	"back": "Atras",
-	"Studies": "Estudios",
-	"Skills": "Abilidades",
-	"Projects": "proyectos",
-	"Experiences": "Experiencias",
+	"studies": "Estudios",
+	"skills": "Abilidades",
+	"projects": "Proyectos",
+	"experiences": "Experiencias",
 	"about me": "Acerca de mi"
 }
