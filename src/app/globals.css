@@ -97,7 +97,7 @@
 	margin: 0;
 	box-sizing: border-box;
 	transition: background-color var(--tran-theme) ease,
-		color Calc(var(--tran-theme) - 0.5s) ease;
+		color Calc(var(--tran-theme) - 0.8s) ease;
 }
 
 body {
@@ -128,12 +128,22 @@ body:has(#switch-cb-theme:checked) {
 	--theme-7: var(--red-7);
 	--theme-8: var(--red-8);
 	
-			--font-color: var(--contrast);
-		--font-color-ctt: var(--theme-1);
-		
-		--border-color: var(--contrast);
-		--border-color-ctt: var(--theme-1);
-		
-		--meteor_n: var(--theme-2);
-		--meteor_r: var(--theme-3);
+	--font-color: var(--contrast);
+	--font-color-ctt: var(--theme-1);
+	
+	--border-color: var(--contrast);
+	--border-color-ctt: var(--theme-1);
+	
+	--meteor_n: var(--theme-2);
+	--meteor_r: var(--theme-3);
+}
+
+.clip-path-right {
+	clip-path: polygon(0 0, 100% 100%, 0% 100%, 0 50%);
+	border-radius: 0 0 0 10px;
+}
+
+.clip-path-left {
+	clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 100%);
+	border-radius: 0 0 10px 0;
 }

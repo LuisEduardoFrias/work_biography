@@ -1,4 +1,4 @@
-
+'use client'
 
 import { createWarehouse, update } from "subscriber_state";
 import { setCookie, getCookie } from 'hp/cookies'
@@ -14,12 +14,12 @@ type Actions = {
 }
 
 function changeLanguage(language: string) {
-	setCookie('language', language)
 	update((state) => ({ ...state, language }))
+	setCookie('language', language)
 }
 function changeTheme(isDark: boolean) {
-	setCookie('isDark', isDark)
 	update((state) => ({ ...state, isDark }))
+	setCookie('isDark', isDark)
 }
 
 

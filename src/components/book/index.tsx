@@ -327,7 +327,7 @@ export default function Book({ children }: { children: ReactNode }) {
 
 export function Page({ children }: { children: ReactNode }) {
 	return (
-		<div className="flex flex-row space-x-5 justify-center items-center w-full h-full py-5 center-animate">
+		<div className="flex flex-row absolute space-x-5 justify-center items-center w-full h-full py-5 center-animate">
 			{children}
 		</div>
 	);

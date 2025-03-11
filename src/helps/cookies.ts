@@ -2,7 +2,7 @@
 export function setCookie(key: string, value: any, maxAge = 3600) {
 	let count = 0;
 	function setK() {
-		count ++;
+		count++;
 		if (typeof document !== 'undefined') {
 			try {
 				document.cookie = `${key}=${JSON.stringify(value)}; path=/; max-age=${maxAge}`;
@@ -24,7 +24,7 @@ export function getCookie(key: string) {
 	let count = 0;
 
 	function getK() {
-		count ++;
+		count++;
 		if (typeof document !== 'undefined') {
 			const valueCookie = document.cookie;
 
@@ -33,7 +33,6 @@ export function getCookie(key: string) {
 			if (findValue) {
 				const valueString = findValue.split(",")[0].split("=")[1];
 				try {
-					console.log('get: ', key, ' : ', JSON.parse(valueString), ' -- ', valueString ?? 'true')
 					return JSON.parse(valueString);
 				} catch {
 					return null;
@@ -42,7 +41,7 @@ export function getCookie(key: string) {
 		}
 		else {
 			if (count < 20)
-			return getK();
+				return getK();
 		}
 	}
 

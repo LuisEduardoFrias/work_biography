@@ -260,7 +260,7 @@
 	width: Calc(100% - 40px);
 	opacity: 0;
 	visibility: hidden;
-	animation: center-opacity 4s 2s forwards;
+	animation: center-opacity 4s 4s forwards;
 }
 
 @keyframes center-opacity {
