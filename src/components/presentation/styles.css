@@ -1,0 +1,68 @@
+.header-container {
+	grid-area: header;
+	width: 100%;
+	height: auto;
+	padding-inline: 10px;
+	padding-block: 15px 0px;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 10px;
+	
+	>h1 {
+		grid-area: title;
+		font-size: 27px;
+		width: 100%;
+	}
+	
+	>h2 {
+		grid-area: subtitle;
+		font-size: 2.0rem;
+		font-weight: 300;
+		background: linear-gradient(to right, var(--theme-1) 20%,
+				var(--theme-3) 40%,
+				var(--theme-3) 60%,
+				var(--theme-5) 80%);
+		background-size: 200%;
+		color: var(--theme-6);
+		background-clip: text;
+		animation: shine 6s linear infinite;
+	}
+	
+	>div {
+		grid-area: paragraf;
+		height: 100%;
+		overflow: hidden;
+		
+		>p {
+			font-size: .84rem;
+			text-wrap: pretty;
+			padding-inline-end: 10px;
+			margin-block-end: 15px;
+			
+			img {
+				width: 25px;
+				height: 25px;
+			}
+			
+			strong {
+				font-weight: bold;
+				color: var(--theme-2);
+			}
+		}
+	}
+}
+
+@keyframes shine {
+	to {
+		background-position: 200% center;
+	}
+}
+
+@media (width <=800px) {
+	.header-container {
+		/*     grid-template-rows: 70px 110px 1fr; */
+		padding-block: 60px 0px;
+	}
+}

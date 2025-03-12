@@ -1,0 +1,260 @@
+{
+    "backend": {
+        "advancedExperience": [
+            {
+                "href": "https://icon.icepanel.io/Technology/svg/C%23-%28CSharp%29.svg",
+                "alt": "Icon CSharp",
+                "name": "C Shart"
+            },
+            {
+                "href": "https://icon.icepanel.io/Technology/svg/.NET-core.svg",
+                "alt": "Icon .Net Core",
+                "name": ".Net core"
+            },
+            {
+                "href": "https://icon.icepanel.io/Technology/svg/NuGet.svg",
+                "alt": "Icon NuGet",
+                "name": "NuGet"
+            },
+            {
+                "href": "https://icon.icepanel.io/Technology/svg/Swagger.svg",
+                "alt": "Icon Swagger",
+                "name": "Swagger"
+            }
+        ],
+        "middleExperience": [
+            {
+                "href": "https://icon.icepanel.io/Technology/png-shadow-512/Express.png",
+                "alt": "Icon Express",
+                "name": "Express"
+            },
+            {
+                "href": "https://icon.icepanel.io/Technology/svg/Node.js.svg",
+                "alt": "Icon NodeJS",
+                "name": "Nodejs"
+            },
+            {
+                "href": "",
+                "alt": "Icon",
+                "name": ""
+            },
+            {
+                "href": "",
+                "alt": "Icon",
+                "name": ""
+            }
+        ]
+    },
+    "frontend": {
+        "advancedExperience": [
+            {
+                "href": "https://icon.icepanel.io/Technology/svg/HTML5.svg",
+                "alt": "Icon HTML5",
+                "name": "Html 5"
+            },
+            {
+                "href": "https://icon.icepanel.io/Technology/svg/CSS3.svg",
+                "alt": "Icon CSS3",
+                "name": "Css CSS3"
+            },
+            {
+                "href": "https://icon.icepanel.io/Technology/svg/JavaScript.svg",
+                "alt": "Icon JavaScript",
+                "name": "JavaScript"
+            },
+            {
+                "href": "https://icon.icepanel.io/Technology/svg/TypeScript.svg",
+                "alt": "Icon TypeScript",
+                "name": "TypeScript"
+            },
+            {
+                "href": "https://icon.icepanel.io/Technology/svg/React.svg",
+                "alt": "Icon React",
+                "name": "React"
+            },
+            {
+                "href": "https://icon.icepanel.io/Technology/svg/Vite.js.svg",
+                "alt": "Icon ViteJS",
+                "name": "ViteJs"
+            },
+            {
+                "href": "https://icon.icepanel.io/Technology/svg/ESLint.svg",
+                "alt": "Icon EsLint",
+                "name": "EsLint"
+            },
+            {
+                "href": "https://icon.icepanel.io/Technology/svg/NPM.svg",
+                "alt": "Icon NPM",
+                "name": "Npm"
+            }
+        ],
+        "middleExperience": [
+            {
+                "href": "https://icon.icepanel.io/Technology/png-shadow-512/Next.js.png",
+                "alt": "Icon NextJS",
+                "name": "NextJs"
+            },
+            {
+                "href": "https://icon.icepanel.io/Technology/svg/Angular.svg",
+                "alt": "Icon Angular",
+                "name": "Angular"
+            },
+            {
+                "href": "https://icon.icepanel.io/Technology/svg/Redux.svg",
+                "alt": "Icon Redux",
+                "name": "Redux"
+            },
+            {
+                "href": "https://raw.githubusercontent.com/pmndrs/zustand/main/bear.jpg",
+                "alt": "Icon Zustand",
+                "name": "Zustand"
+            },
+            {
+                "href": "https://icon.icepanel.io/Technology/svg/jQuery.svg",
+                "alt": "Icon jQuery",
+                "name": "JQuery"
+            },
+            {
+                "href": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
+                "alt": "Icon TailwindCSS",
+                "name": "Tailwind Css"
+            },
+            {
+                "href": "https://icon.icepanel.io/Technology/svg/Bootstrap.svg",
+                "alt": "Icon Bootstrap",
+                "name": "BootStrap"
+            },
+            {
+                "href": "https://icon.icepanel.io/Technology/svg/MongoDB.svg",
+                "alt": "Icon MongoDB",
+                "name": "MongoDB"
+            },
+            {
+                "href": "https://icon.icepanel.io/Technology/svg/Yarn.svg",
+                "alt": "Icon Yarn",
+                "name": "Yarn"
+            },
+            {
+                "href": "",
+                "alt": "Icon",
+                "name": ""
+            },
+            {
+                "href": "",
+                "alt": "Icon",
+                "name": ""
+            },
+            {
+                "href": "",
+                "alt": "Icon",
+                "name": ""
+            }
+        ]
+    },
+    "another": {
+        "advancedExperience": [
+            {
+                "href": "https://icon.icepanel.io/Technology/svg/Postman.svg",
+                "alt": "Icon Postman",
+                "name": "Postman"
+            },
+            {
+                "href": "https://icon.icepanel.io/Technology/png-shadow-512/JSON.png",
+                "alt": "Icon JSON",
+                "name": "Json"
+            },
+            {
+                "href": "https://icon.icepanel.io/Technology/png-shadow-512/Microsoft-SQL-Server.png",
+                "alt": "Icon Microsoft SQL Server",
+                "name": "Ms Sql Server"
+            },
+            {
+                "href": "https://icon.icepanel.io/Technology/svg/Visual-Studio.svg",
+                "alt": "Icon VisualStudio",
+                "name": "Visual Studio"
+            },
+            {
+                "href": "https://icon.icepanel.io/Technology/svg/Visual-Studio-Code-%28VS-Code%29.svg",
+                "alt": "Icon VSCode",
+                "name": "Vs code"
+            },
+            {
+                "href": "https://icon.icepanel.io/Technology/svg/Oracle.svg",
+                "alt": "Icon Oracle",
+                "name": "Oracle Pl/Sql"
+            },
+            {
+                "href": "https://icon.icepanel.io/Technology/png-shadow-512/Linux.png",
+                "alt": "Icon Linux",
+                "name": "Linux"
+            },
+            {
+                "href": "https://icon.icepanel.io/Technology/svg/Git.svg",
+                "alt": "Icon Git",
+                "name": "Git"
+            },
+            {
+                "href": "https://icon.icepanel.io/Technology/png-shadow-512/GitHub.png",
+                "alt": "Icon GitHub",
+                "name": "GitHub"
+            },
+            {
+                "href": "https://icon.icepanel.io/Technology/png-shadow-512/SQLite.png",
+                "alt": "Icon SQLite",
+                "name": "Sql lite"
+            }
+        ],
+        "middleExperience": [
+            {
+                "href": "https://icon.icepanel.io/Technology/svg/React.svg",
+                "alt": "Icon React",
+                "name": "React Native"
+            },
+            {
+                "href": "https://icon.icepanel.io/Technology/svg/Xamarin.svg",
+                "alt": "Icon Xamarin",
+                "name": "Xamarin"
+            },
+            {
+                "href": "https://icon.icepanel.io/Technology/svg/Nest.js.svg",
+                "alt": "Icon Xamarin",
+                "name": "Nest Js"
+            },
+            {
+                "href": "https://icon.icepanel.io/Technology/svg/Flutter.svg",
+                "alt": "Icon Flutter",
+                "name": "Flutter"
+            },
+            {
+                "href": "https://icon.icepanel.io/Technology/svg/Dart.svg",
+                "alt": "Icon Dart",
+                "name": "Dart"
+            },
+            {
+                "href": "https://icon.icepanel.io/Technology/svg/Go.svg",
+                "alt": "Icon Go",
+                "name": "Go"
+            },
+            {
+                "href": "https://icon.icepanel.io/Technology/svg/Firebase.svg",
+                "alt": "Icon Firebase",
+                "name": "FireBase"
+            },
+            {
+                "href": "https://icon.icepanel.io/Technology/svg/Azure-SQL-Database.svg",
+                "alt": "Icon AzureSQLDatabase",
+                "name": "Azure Db"
+            },
+            {
+                "href": "https://icon.icepanel.io/Technology/svg/Slack.svg",
+                "alt": "Icon Slack",
+                "name": "Slack"
+            },
+            {
+                "href": "",
+                "alt": "Icon",
+                "name": ""
+            }
+        ]
+    }
+}

@@ -1,0 +1,52 @@
+[
+	{
+		"title": "Tecnoligía Asesoría, Servicios, TAS SRL",
+		"cargo": "Software engineer",
+		"tegnologies": [
+			"C#",
+			"Asp .Net framework",
+			"soap",
+			"Asp. Net core RestFull",
+			"Oracle Pl/Sql",
+			"Sql server T-sql"
+		],
+		"responsabilities": [
+			"Consultant for the National Savings and Loan Association.",
+			"Consultant for the National Savings and Loan Association.",
+			"Consultant for the National Savings and Loan Association.",
+			"Consultant for the National Savings and Loan Association."
+		]
+	},
+	{
+		"title": "Aloe Software SRL",
+		"cargo": "Software developer",
+		"tegnologies": [
+			"C# Asp .Net core",
+			"React",
+			"TypeScript"
+		],
+		"responsabilities": [
+			"Migration of an operating system, package management and administration, EPS courier.",
+			"Migration of an operating system, package management and administration, EPS courier.",
+			"Migration of an operating system, package management and administration, EPS courier.",
+			"Migration of an operating system, package management and administration, EPS courier.",
+			"Migration of an operating system, package management and administration, EPS courier."
+		]
+	},
+	{
+		"title": "Tecnologia y sistemancomputarizado SRL",
+		"cargo": "developer",
+		"tegnologies": [
+			"C#",
+			"windows forms"
+		],
+		"responsabilities": [
+			"Migration of an ERP system form COBOL languages to C# Windows Forms",
+			"Migration of an ERP system form COBOL languages to C# Windows Forms",
+			"Migration of an ERP system form COBOL languages to C# Windows Forms",
+			"Migration of an ERP system form COBOL languages to C# Windows Forms",
+			"Migration of an ERP system form COBOL languages to C# Windows Forms",
+			"Migration of an ERP system form COBOL languages to C# Windows Forms"
+		]
+	}
+]

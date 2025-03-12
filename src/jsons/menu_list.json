@@ -1,0 +1,27 @@
+[
+	{
+		"src": "skill_svg",
+		"name": "skills",
+		"href": "skills"
+	},
+	{
+		"src": "project_svg",
+		"name": "projects",
+		"href": "projects"
+	},
+	{
+		"src": "experience_svg",
+		"name": "experiencias",
+		"href": "experiences"
+	},
+	{
+		"src": "studie_svg",
+		"name": "estudios",
+		"href": "studies"
+	},
+	{
+		"src": "about_svg",
+		"name":"sobre mi",
+		"href": "about_me"
+	}
+]
