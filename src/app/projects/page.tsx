@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import { Page } from 'cp/book'
 import BackHome from 'cp/back_home'
+import ProjectCard, { TypeProjectCard } from 'cp/project_card'
 import Loading from '../loading'
 import useTranslate from 'hk/use_translate'
 import Image from 'next/image'
@@ -10,12 +11,11 @@ import '@/state_warehouse'
 
 export default function page() {
 	const translate = useTranslate();
-	const [state, setState] = useState(null)
+	const [state, setState] = useState<TypeProjectCard[]>(null)
 
 	useEffect(() => {
 		(async () => {
-			const data = await getRepoInfoWithProfile();
-			setState(data)
+			setState(await getRepoInfoWithProfile())
 		})()
 	}, [])
 
@@ -24,9 +24,14 @@ export default function page() {
 		<Page>
 			<div className="w-6/12 h-full relative">
 				<BackHome position="left" />
-				<h1 className="absolute font-extrabold left-1/2 top-[-15px] translate-x-[-50%]" >{translate('Project')}</h1>
-				<div className="w-full h-full border border-amber-500 p-3 overflow-y-scroll">
-					<span>{JSON.stringify(state, null, 2)}</span>
+				<h1 className="absolute text-2xl bg-transluxed backdrop-blur px-7 py-2 rounded-2xl font-extrabold left-1/2 top-[-15px] translate-x-[-50%] " >{translate('Project')}</h1>
+				<div className="w-full h-full box-border pt-10 flex flex-row flex-wrap space-y-4 p-3 overflow-y-scroll">
+
+					{state ?
+						state?.map((obj: TypeProjectCard) => <ProjectCard key={obj.name} {...obj} />) :
+						<span>no data fount</span>
+					}
+
 					{!state && <Loading />}
 				</div>
 			</div>

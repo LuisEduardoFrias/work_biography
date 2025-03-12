@@ -14,7 +14,7 @@ export default {
 			colors: {
 				"base": "var(--base)",
 				"contrast": "var(--contrast)",
-				"transluxed": "#cacaca70",
+				"transluxed": "var(--transluxed)",
 
 				"font-color": "var(--font-color)",
 				"font-color-ctt": "var(--font-color-ctt)",

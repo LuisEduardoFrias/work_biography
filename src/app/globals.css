@@ -36,11 +36,14 @@
 	--tran-theme: 1s;
 	--dark: #000;
 	--bright: #fff;
+	--dark-transluxed: #00000090;
+	--bright-transluxed: #ffffff90;
 	
 	/*****************/
 	
 	--base: var(--bright);
 	--contrast: var(--dark);
+	--transluxed: var(--bright-transluxed);
 	
 	--theme-0: var(--red-0);
 	--theme-1: var(--red-1);
@@ -70,6 +73,7 @@
 	:root {
 		--base: var(--dark);
 		--contrast: var(--bright);
+		--transluxed: var(--dark-transluxed);
 		
 		--theme-0: var(--blue-0);
 		--theme-1: var(--blue-1);
@@ -117,6 +121,7 @@ body:has(#switch-cb-theme:checked) {
 	
 	--base: var(--bright);
 	--contrast: var(--dark);
+	--transluxed: var(--bright-transluxed);
 	
 	--theme-0: var(--red-0);
 	--theme-1: var(--red-1);
