@@ -1,38 +1,37 @@
 'use client'
-import Option from './menu/option';
 import { useState, useEffect, ChangeEvent } from 'react'
 import { useSubscriberState } from 'subscriber_state'
+import useTranslate from 'hk/use_translate'
 import languages from 'tls/languages.json'
 
-interface Language {
+type TypeLanguage = {
 	key: string;
 	value: string;
 }
 
 export default function SelectLanguage() {
-	const [{ language }, { changeLanguage }] = useSubscriberState('language', true);
-	const [isLanguage, setIsLanguage] = useState(language);
-
-	useEffect(() => { setIsLanguage(language) }, [language])
+	const [{ language: lang }, { changeLanguage }] = useSubscriberState('language', true);
+	const [language, setLanguage] = useState(lang);
+	const translate = useTranslate();
 
 	const handleLanguageChange = (event: ChangeEvent<HTMLSelectElement>) => {
-		changeLanguage(event.target.value);
-		setIsLanguage(event.target.value);
+	changeLanguage(event.target.value)
+		setLanguage(event.target.value)
 	};
 
 	return (
 		<select
-			id="language-select"
+		name="translate"
 			className="select-none font-bold text-font-color bg-transparent rounded-md w-28 border-2 border-border-color-ctt p-1"
 			onChange={handleLanguageChange}
-			value={`${isLanguage}`}
+			value={language}
 		>
 			{
-				languages.reverse().map((lang: Language) => (
+				languages && languages.map((lang: TypeLanguage) =>
 					<option key={lang.key} value={lang.key}>
-						{lang.value}
+						{translate(lang.value)}
 					</option>
-				))
+				)
 			}
 		</select>
 	);

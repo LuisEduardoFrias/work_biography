@@ -38,6 +38,7 @@
 	--bright: #fff;
 	--dark-transluxed: #00000090;
 	--bright-transluxed: #ffffff90;
+	--border-page-radius: 20px;
 	
 	/*****************/
 	
@@ -102,7 +103,13 @@
 	box-sizing: border-box;
 	transition: background-color var(--tran-theme) ease,
 		color Calc(var(--tran-theme) - 0.8s) ease;
+	scrollbar-width: none;
+	
+	&::--webkit-scrollbar-thumb {
+		border: 3px solid transparent;
+	}
 }
+
 
 body {
 	color: var(--font-color);
@@ -117,7 +124,7 @@ body {
 	align-items: center;
 }
 
-body:has(#switch-cb-theme:checked) {
+body:has(#switch-theme:not(:checked)) {
 	
 	--base: var(--bright);
 	--contrast: var(--dark);

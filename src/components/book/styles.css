@@ -57,7 +57,7 @@
 }
 
 .cover {
-	animation: cover-hidden 0s 6s ease forwards;
+	animation: cover-hidden 0s 4.8s ease forwards;
 }
 
 @keyframes cover-hidden {
@@ -75,7 +75,7 @@
 	top: 0;
 	z-index: 0;
 	background: var(--base);
-	border-radius: 0 20px 20px 0;
+	border-radius: 0 var(--border-page-radius) var(--border-page-radius)0;
 }
 
 /* /////////cover pages ////////// */
@@ -86,7 +86,7 @@
 	border: 1px solid var(--border-color);
 	left: 52%;
 	top: 1%;
-	border-radius: 0 20px 20px 0;
+	border-radius: 0 var(--border-page-radius) var(--border-page-radius) 0;
 	background: var(--base);
 	z-index: -1;
 	animation: pages-hidden 0s 5s ease-in-out forwards;
@@ -103,7 +103,7 @@
 	background-color: var(--border-color);
 	position: absolute;
 	width: 97%;
-	border-radius: 0 20px 20px 0;
+	border-radius: 0 var(--border-page-radius) var(--border-page-radius) 0;
 	height: 99.5%;
 	border: 1px solid var(--border-color);
 	left: 0%;
@@ -112,8 +112,8 @@
 }
 
 
-.backface {
-	border-radius: 0 20px 20px 0;
+.backface2 {
+	border-radius: 0 var(--border-page-radius) var(--border-page-radius) 0;
 	animation: hiddenBackFace 1s 4.7s forwards;
 }
 
@@ -127,11 +127,46 @@
 	}
 }
 
-.center {
-	transform: translateX(20px);
-	border-radius: 20px;
-	width: Calc(100% - 40px);
+.center-about {
+	position: absolute;
+	transform: translateX(0px);
+	width: Calc(100% - 0px);
+	height: 100%;
+	border-radius: var(--border-page-radius);
 	opacity: 0;
+	z-index: 99;
+	animation: center-opacity 1s 4s forwards;
+}
+
+.center-project {
+	position: absolute;
+	transform: translateX(5px);
+	width: Calc(100% - 10px);
+	height: 100%;
+	border-radius: var(--border-page-radius);
+	opacity: 0;
+	z-index: 99;
+	animation: center-opacity 1s 4s forwards;
+}
+
+.center-finish {
+	position: absolute;
+	transform: translateX(20px);
+	width: Calc(100% - 40px);
+	height: 100%;
+	border-radius: 20px;
+	opacity: 1;
+	z-index: 99;
+}
+
+.center {
+	position: absolute;
+	transform: translateX(20px);
+	width: Calc(100% - 40px);
+	height: 100%;
+	border-radius: 20px;
+	opacity: 0;
+	z-index: 99;
 	animation: center-opacity 1s 10s forwards;
 }
 
@@ -256,8 +291,6 @@
 /**********************************************************************/
 
 .center-animate {
-	transform: translateX(20px);
-	width: Calc(100% - 40px);
 	opacity: 0;
 	visibility: hidden;
 	animation: center-opacity 4s 4s forwards;
@@ -351,6 +384,10 @@
 /* ///////////////////////////////////////////////////// */
 /* /////////////////// move right page  //////////////// */
 /* ///////////////////////////////////////////////////// */
+
+.borde-for-btn {
+	-moz-border-radius-topleft: 0;
+}
 
 .move-right-page-r6 {
 	transform: rotateY(0deg);

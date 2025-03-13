@@ -20,14 +20,7 @@
 		grid-area: subtitle;
 		font-size: 2.0rem;
 		font-weight: 300;
-		background: linear-gradient(to right, var(--theme-1) 20%,
-				var(--theme-3) 40%,
-				var(--theme-3) 60%,
-				var(--theme-5) 80%);
 		background-size: 200%;
-		color: var(--theme-6);
-		background-clip: text;
-		animation: shine 6s linear infinite;
 	}
 	
 	>div {
@@ -52,6 +45,20 @@
 			}
 		}
 	}
+}
+
+.text-color-shine{
+			background: linear-gradient(to right,
+				var(--theme-1) 20%,
+				var(--theme-3) 40%,
+				var(--theme-3) 60%,
+				var(--theme-5) 80%);
+		
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+		display: inline-block;
+		animation: shine 6s linear infinite;
 }
 
 @keyframes shine {

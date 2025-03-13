@@ -3,7 +3,6 @@ import { useState, useRef, useEffect, ReactNode, ReactElement, Children } from '
 import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 
-import cover from "assets/cover.jpg"
 import useTranslate from 'hk/use_translate'
 import './styles.css'
 
@@ -13,6 +12,7 @@ export default function Book({ children }: { children: ReactNode }) {
 	const pathname = usePathname();
 
 	const bookRef = useRef(null);
+	const centerRef = useRef(null);
 	const markPageRef = useRef(null);
 	const markPageRef2 = useRef(null);
 
@@ -27,17 +27,31 @@ export default function Book({ children }: { children: ReactNode }) {
 	const pageRef10 = useRef(null);
 
 	useEffect(() => {
+
 		if (bookRef.current && data.current.count >= 1) {
+			centerRef.current.classList.remove('center-about');
+			void centerRef.current.offsetWidth;
+
 			bookRef.current.classList.remove('book-animate');
 			void bookRef.current.offsetWidth;
 			bookRef.current.classList.add('book-animate');
 		}
 
-		if (pathname === "/" && data.current.count >= 1) {
+		if (pathname === "/" && bookRef.current && data.current.count >= 1) {
 			bookRef.current.classList.remove('book-animate2');
 			bookRef.current.classList.remove('book-animate');
 			void bookRef.current.offsetWidth;
 			bookRef.current.classList.add('book-animate');
+		}
+
+		console.log('fuera: ', data.current.count)
+		if (pathname === "/" && centerRef.current && data.current.count >= 2) {
+			console.log('dentro')
+			centerRef.current.classList.remove('center-about');
+			centerRef.current.classList.remove('center-finis');
+			centerRef.current.classList.remove('center');
+			void centerRef.current.offsetWidth;
+			centerRef.current.classList.add('center-finish');
 		}
 
 		//about
@@ -49,7 +63,8 @@ export default function Book({ children }: { children: ReactNode }) {
 			pageRef10.current &&
 			markPageRef.current &&
 			markPageRef2.current &&
-			bookRef.current
+			bookRef.current &&
+			centerRef.current
 		) {
 			pageRef6.current.classList.remove('origin-move-right-page-r6');
 			pageRef6.current.classList.remove('move-right-page-r6');
@@ -88,6 +103,15 @@ export default function Book({ children }: { children: ReactNode }) {
 			bookRef.current.classList.remove('book-animate');
 			void bookRef.current.offsetWidth;
 			bookRef.current.classList.add('book-animate2');
+
+			centerRef.current.classList.remove('center-about');
+			centerRef.current.classList.remove('center-finis');
+			centerRef.current.classList.remove('center');
+			void centerRef.current.offsetWidth;
+			centerRef.current.classList.add('center-about');
+
+			data.current.count = 2;
+			console.log('suma count: ', data.current.count)
 		}
 
 		if (data.current.oldPathname === "/about_me" &&
@@ -159,7 +183,8 @@ export default function Book({ children }: { children: ReactNode }) {
 			pageRef6.current &&
 			pageRef7.current &&
 			pageRef8.current &&
-			pageRef9.current
+			pageRef9.current &&
+			centerRef.current
 		) {
 			pageRef6.current.classList.remove('origin-move-right-page-r6');
 			pageRef6.current.classList.remove('move-right-page-r6');
@@ -180,6 +205,14 @@ export default function Book({ children }: { children: ReactNode }) {
 			pageRef9.current.classList.remove('move-right-page-r9');
 			void pageRef9.current.offsetWidth;
 			pageRef9.current.classList.add('move-right-page-r9');
+			
+			centerRef.current.classList.remove('center-project');
+			centerRef.current.classList.remove('center-finis');
+			centerRef.current.classList.remove('center');
+			void centerRef.current.offsetWidth;
+			centerRef.current.classList.add('center-project');
+
+			data.current.count = 2;
 		}
 
 		if (data.current.oldPathname === "/projects" &&
@@ -283,24 +316,27 @@ export default function Book({ children }: { children: ReactNode }) {
 			pageRef4.current.classList.add('origin-move-left-page-l4');
 		}
 
+if(data.current.count === 0){
 		data.current.count = 1;
+}
 		data.current.oldPathname = pathname;
 	}, [pathname])
 
 	return (
 		<div className="container_ relative flex-col overflow-hidden relative w-full h-full p-3 flex justify-center items-center">
 
-			<div ref={bookRef} className="relative rounded-2xl book">
+			<div ref={bookRef} className="relative rounded-border-page-radius book">
 
 				<div className="pages"></div>
 
-				<div className="page left_ p_1 relative pb-5 overflow-hidden">
-					<div className="top-0 left-0 absolute bg-[--base] h-full w-full z-0 backface"></div>
+   				<div className="page left_ p_1 relative pb-5 overflow-hidden">
+{//					<div className="top-0 left-0 absolute bg-[--base] h-full w-full z-0 backface"></div>
+}
 					<div className="cover top-0 left-0 absolute z-10 h-[700px] space-y-6 p-5 pt-10">
 						<h1 className="text-6xl font-extrabold" >{translate('Una pasión')}</h1>
 						<h2 className="text-3xl font-extrabold pl-5 text-pretty" >{translate('Trayectoria de un ingeniero de software')}</h2>
-						<div className="w-full h-[460px] rounded-[0_0_20px_0] overflow-auto">
-							<Image src={cover} priority={true} width={450} height={600} alt="Image of cover" />
+						<div className="w-full h-[460px] rounded-[0_0_var(--border-page-radius)_0] overflow-auto">
+							<Image src="/imgs/cover.webp" priority={true} width={450} height={600} alt="Image of cover" />
 						</div>
 					</div>
 				</div>
@@ -319,7 +355,7 @@ export default function Book({ children }: { children: ReactNode }) {
 				<div ref={markPageRef} className="mark-page absolute bottom-[-80px] z-50 left-1/2 translate-x-0 h-20 w-4 border border-theme-1"></div>
 				<div ref={markPageRef2} className="mark-page absolute bottom-[-90px] z-40 left-1/2 translate-x-3 h-[90px] w-4 border border-theme-2"></div>
 
-				<div className="absolute h-full z-50 opacity-0 center" >{children}</div>
+				<div ref={centerRef} className="center">{children}</div>
 			</div>
 		</div>
 	);
@@ -327,7 +363,7 @@ export default function Book({ children }: { children: ReactNode }) {
 
 export function Page({ children }: { children: ReactNode }) {
 	return (
-		<div className="flex flex-row absolute space-x-5 justify-center items-center w-full h-full py-5 center-animate">
+		<div className="rounded-border-page-radius absolute w-full h-full flex flex-row center-animate">
 			{children}
 		</div>
 	);

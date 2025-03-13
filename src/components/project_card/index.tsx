@@ -27,8 +27,8 @@ export default function ProjectCard(state: TypeProjectCard) {
 	} = state;
 
 	return (
-		<div className="text-contrast bg-base rounded-lg h-96 overflow-y-scroll border border-ctt shadow-[2px_2px_6px_2px_var(--theme-6)] p-4 mb-4">
-			<h2 className="text-2xl font-semibold mb-2">
+		<div className="text-contrast bg-base rounded-lg h-96 w-full overflow-y-scroll border border-ctt shadow-[2px_2px_6px_2px_var(--theme-6)] p-4 mb-4">
+			<h2 className="text-2xl font-semibold mb-2 cursor-pointer">
 				<a href={html_url} target="_blank" rel="noopener noreferrer">
 					{name}
 				</a>

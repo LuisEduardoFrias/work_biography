@@ -1,4 +1,6 @@
 {
+	"Spanich": "Español",
+	"English": "Ingles",
 	"about_subtitle": "Programador FrontEnd y BackEnd",
 	"about_phone": "Teléfono",
 	"about_address": "República Dominican",
@@ -7,7 +9,8 @@
 	"about_text2": "Experiencia en el mundo de las bases de datos con Microsoft SQL Server usando T-SQL y Oracle DB usando PL/SQL.",
 	"back": "Atras",
 	"IEV": "El archivo del CV no está disponible en este momento.",
-	"Hello! Im": "Hola! soy ",
+	"Hello": "Hola! soy ",
+	"fixes_printer":"el que arregla la impresora,",
 	"developer": "ingeniero de software",
 	"I have over 4 years of experience in the job market, specializing as a backend developer with the language of": "Tengo experiencia en el mercado laboral, me adactor facil y rapido.",
 	"I also develop websites using": "Tengo buena abilidades blando, me gusta ayudar, apacionado por el mundo de la tegnologia.",

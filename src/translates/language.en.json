@@ -1,4 +1,6 @@
 {
+	"Spanich": "Spanich",
+	"English": "English",
 	"about_subtitle": "Developer FrontEnd y BackEnd",
 	"about_phone": "Phone number",
 	"about_address": "Dominican Republic",
@@ -7,8 +9,9 @@
 	"about_text2": "I have Experience in the world of databases with Microsoft SQL Server using T-SQL and Oracle DB using PL/SQL.",
 	"back": "Back",
 	"IEV": "The CV file is not available at this time.",
-	"Hello! Im": "Hello! I'm ",
-	"developer": "developer",
+	"Hello": "Hello! I'm ",
+	"fixes_printer": "the one who fixes the printer,",
+	"developer": "software engineer",
 	"I have over 4 years of experience in the job market, specializing as a backend developer with the language of": "I have over 4 years of experience in the job market, specializing as a backend developer with the language of",
 	"I also develop websites using": "I also develop websites using <strong>React</strong>, i am passionate and dedicated.",
 	"Write your own story.": "Write your own story.",

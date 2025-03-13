@@ -11,6 +11,15 @@ export default {
 			dropShadow: {
 				homero: '0 0 0.75rem var(--theme-1)'
 			},
+			borderRadius: {
+				"border-page-radius": "var(--border-page-radius)",
+			},
+			backgroundImage: {
+				'repeating-linear': 'repeating-linear-gradient(to bottom, #afafaf35, #afafaf35 1px, transparent 1px, transparent 25px)',
+			},
+			backgroundSize: {
+				'repeating-linear-size': '100% 25px',
+			},
 			colors: {
 				"base": "var(--base)",
 				"contrast": "var(--contrast)",
