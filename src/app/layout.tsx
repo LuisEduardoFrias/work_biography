@@ -31,6 +31,12 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<head>
+				<meta charset="UTF-8" />
+				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+				<title>Mi Camino en la Programación: De la Decepción a la Autodidaxia</title>
+				<meta name="description" content="Descubre mi viaje personal en el mundo de la programación, desde mis inicios en soporte informático hasta convertirme en un 'ingeniero de software' autodidacta." />
+				<meta name="keywords" content="programación, autodidacta, desarrollo de software, HTML, CSS, JavaScript, educación, experiencia, carrera profesional, ITLA, ITSC, UASD" />
+				<meta name="author" content="Luis Eduardo Frias" />
 			</head>
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased p-16 m-16`}
