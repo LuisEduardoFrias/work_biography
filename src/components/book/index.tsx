@@ -1,10 +1,15 @@
 'use client'
 import { useState, useRef, useEffect, ReactNode, ReactElement, Children } from 'react'
 import { usePathname } from 'next/navigation'
+import localFont from "next/font/local";
 import Image from 'next/image'
 
 import useTranslate from 'hk/use_translate'
 import './styles.css'
+
+const orbitron = localFont({
+	src: "../../../public/fonts/Orbitron/Orbitron-VariableFont_wght.ttf"
+});
 
 export default function Book({ children }: { children: ReactNode }) {
 	const data = useRef({ count: 0, oldPathname: "/" });
@@ -205,7 +210,7 @@ export default function Book({ children }: { children: ReactNode }) {
 			pageRef9.current.classList.remove('move-right-page-r9');
 			void pageRef9.current.offsetWidth;
 			pageRef9.current.classList.add('move-right-page-r9');
-			
+
 			centerRef.current.classList.remove('center-project');
 			centerRef.current.classList.remove('center-finis');
 			centerRef.current.classList.remove('center');
@@ -316,9 +321,9 @@ export default function Book({ children }: { children: ReactNode }) {
 			pageRef4.current.classList.add('origin-move-left-page-l4');
 		}
 
-if(data.current.count === 0){
-		data.current.count = 1;
-}
+		if (data.current.count === 0) {
+			data.current.count = 1;
+		}
 		data.current.oldPathname = pathname;
 	}, [pathname])
 
@@ -329,10 +334,10 @@ if(data.current.count === 0){
 
 				<div className="pages"></div>
 
-   				<div className="page left_ p_1 relative pb-5 overflow-hidden">
-{//					<div className="top-0 left-0 absolute bg-[--base] h-full w-full z-0 backface"></div>
-}
-					<div className="cover top-0 left-0 absolute z-10 h-[700px] space-y-6 p-5 pt-10">
+				<div className="page left_ p_1 relative pb-5 overflow-hidden">
+					{//					<div className="top-0 left-0 absolute bg-[--base] h-full w-full z-0 backface"></div>
+					}
+					<div className={`${orbitron.className} cover top-0 left-0 absolute z-10 h-[700px] space-y-6 p-5 pt-10`}>
 						<h1 className="text-6xl font-extrabold" >{translate('Una pasión')}</h1>
 						<h2 className="text-3xl font-extrabold pl-5 text-pretty" >{translate('Trayectoria de un ingeniero de software')}</h2>
 						<div className="w-full h-[460px] rounded-[0_0_var(--border-page-radius)_0] overflow-auto">
