@@ -1,11 +1,11 @@
 /**/
 .footer-container {
-	grid-area: footer;
 	height: 180px;
 	
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	gap: 20px;
 	padding-bottom: 15px;
 	
 	>nav {

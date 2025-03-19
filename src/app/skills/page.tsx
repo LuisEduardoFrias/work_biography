@@ -13,6 +13,7 @@ export default function Skill() {
 	const translate = useTranslate();
 	return (
 		<Page>
+				<BackHome position="right" />
 			<div className="w-6/12 h-full relative">
 				<h1 className="absolute font-extrabold left-1/2 top-[-15px] translate-x-[-50%]" >{translate('Skills')}</h1>
 			</div>
@@ -22,7 +23,6 @@ export default function Skill() {
 				<Other />
 			</Slider>
 			<div className="w-6/12 h-full relative">
-				<BackHome position="right" />
 			</div>
 		</Page>
 	);

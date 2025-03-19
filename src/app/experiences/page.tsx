@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { Page } from 'cp/book'
-import KeyBoard  from 'cp/keyboard'
+import KeyBoard from 'cp/keyboard'
 import BackHome from 'cp/back_home'
 import experiences from '../../jsons/experiences.json'
 import useTranslate from 'hk/use_translate'
@@ -13,8 +13,8 @@ export default function page() {
 
 	return (
 		<Page>
-			<div className="w-6/12 h-full relative ">
 				<BackHome position="left" />
+			<div className="w-6/12 h-full relative ">
 				<h1 className="absolute text-2xl bg-transluxed backdrop-blur px-7 py-2 rounded-2xl font-extrabold left-1/2 top-[-15px] translate-x-[-50%] " >{translate('Experiences')}</h1>
 				<div className="w-full h-full box-border pt-10 flex flex-row flex-wrap space-y-4 p-3 overflow-y-scroll">
 					{experiences.map((experience, index) => (
@@ -23,7 +23,7 @@ export default function page() {
 				</div>
 			</div>
 			<div className="w-6/12 h-full relative">
-			<KeyBoard />
+				<KeyBoard />
 			</div>
 		</Page>
 	);

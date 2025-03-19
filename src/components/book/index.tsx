@@ -368,7 +368,7 @@ export default function Book({ children }: { children: ReactNode }) {
 
 export function Page({ children }: { children: ReactNode }) {
 	return (
-		<div className="rounded-border-page-radius absolute w-full h-full flex flex-row center-animate">
+		<div className="border border-amber-700 rounded-border-page-radius absolute w-full h-full grid grid-cols-1 grid-rows-2 sm:grid-cols-2 sm:grid-rows-1  sm:overflow-y-hidden overflow-y-scroll overflow-scroll center-animate">
 			{children}
 		</div>
 	);

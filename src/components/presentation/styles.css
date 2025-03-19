@@ -1,5 +1,4 @@
 .header-container {
-	grid-area: header;
 	width: 100%;
 	height: auto;
 	padding-inline: 10px;
@@ -11,20 +10,17 @@
 	gap: 10px;
 	
 	>h1 {
-		grid-area: title;
 		font-size: 27px;
 		width: 100%;
 	}
 	
 	>h2 {
-		grid-area: subtitle;
 		font-size: 2.0rem;
 		font-weight: 300;
 		background-size: 200%;
 	}
 	
 	>div {
-		grid-area: paragraf;
 		height: 100%;
 		overflow: hidden;
 		
@@ -47,18 +43,18 @@
 	}
 }
 
-.text-color-shine{
-			background: linear-gradient(to right,
-				var(--theme-1) 20%,
-				var(--theme-3) 40%,
-				var(--theme-3) 60%,
-				var(--theme-5) 80%);
-		
-		-webkit-background-clip: text;
-		background-clip: text;
-		color: transparent;
-		display: inline-block;
-		animation: shine 6s linear infinite;
+.text-color-shine {
+	background: linear-gradient(to right,
+			var(--theme-1) 20%,
+			var(--theme-3) 40%,
+			var(--theme-3) 60%,
+			var(--theme-5) 80%);
+	
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	display: inline-block;
+	animation: shine 6s linear infinite;
 }
 
 @keyframes shine {

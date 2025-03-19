@@ -1,49 +1,16 @@
 'use client';
 import BackHome from 'cp/back_home';
 import { Page } from 'cp/book';
+import sections from '../../jsons/about.json'
 import Image from 'next/image';
 import useTranslate from 'hk/use_translate';
 
 export default function PageAbout() {
 	const translate = useTranslate();
-
-	const data = [
-		{
-			id: "introduccion",
-			section: "Mis Inicios en la Informática",
-			p1: "Mi introducción al mundo de la informática comenzó a los 15 años, durante un curso de '<b>Soporte Informático</b>' mientras cursaba la secundaria. Este curso me brindó una visión general de la computación, redes y sistemas, despertando mi interés por este mundo tecnológico, anhelando así conseguir el título de <b>Ingeniero en Informática</b> en un futuro.",
-			p2: "En el <i>Instituto Politécnico Prof. Juan Bosch</i>, durante mi tercer año de secundaria, comencé a profundizar en la programación con materias como programación con <i>Delphi</i>, desarrollo web con <i>Dreamweaver</i> y lógica de compuertas. Aunque me gustaba la programación, sentía que <i>Delphi y Dreamweaver</i> eran tecnologías ambiguas, prefería la web tradicional con HTML, CSS y JavaScript, y explorar alternativas como Visual Basic."
-		},
-		{
-			id: "desafios",
-			section: "Desafíos y Decisiones",
-			p1: "Al terminar la secundaria, una maestra me habló de una oportunidad para una beca en el ITLA (Instituto Tecnológico de las Américas) en la carrera de '<i>Desarrollo de Software</i>', dicha oportunidad se esfumó debido a circunstancias personales, Luego, la muerte de mi padre y la caída económica en mi familia me llevaron enfocarme a la UASD (Universidad Autónoma de Santo Domingo) con el fin de cumplir mi anhelo de convertirme en <b>Ingeniero en Informática</b>, anhelo que decallo al descubrir que la carrera había cambiado su titulo pasando de ser una '<b>Ingeniería</b>' a ser una '<b>Licenciatura</b>', la decepción fue grande, pero decidí continuar.",
-			p2: "Al final, la experiencia que me esperaba en la UASD era difícil, con la dificultad que implica estudiar allí, la decepción que ya tenía sobre la carrera, la introducción de un ciclo básico extenso de 2 años y la necesidad de trabajar, me llevaron a nunca asistir, abandoné todo anhelo.<br /> Finalmente, una luz apareció, gracias a Dios, un día me encontré con una amiga de la secundaria, ella estudiaba en el ITSC (Instituto Técnico Superior Comunitario), un instituto igual de bueno que el ITLA, ella me guio y explicó cómo era todo allí, me devolvió las esperanzas. Fue entonces donde encontré mi camino como '<b>Técnico Superior en Desarrollo de Software</b>'."
-		},
-		{
-			id: "autodidacta",
-			section: "El Camino del Autodidacta",
-			p1: "Para amediado del años 2019 ya tenía mi primer empleo como programador y finalice la carrera técnica en el ITSC en el 2020. Comencé a aprender de forma autodidacta, adsorvia informacion y a adquiria experiencia muy rapido, y ennpoco tiempo ya abia consegido mi 2do trabajo y duplicado mis ingresos, un empleo estable donde podia creser aun mas. Por la recomendscion de un amigo fue como fui contactado para lo que fue mi 3er empleo y asi duplicado otra vez mis ingreso, buen ambiente laboral, capacidades de cresimiento y desarrollo aun mayores, nuevamente mi deceos de arquirir un titulo universitario (<b>Ingeniero</b>) se esfumaron. Valoraba más el conocimiento y la capacidad que había adquirido luego de la carrera técnica y seguir como autodidacta. Me considero a mí mismo como '<b>Ingeniero en Informática</b>' en constante aprendizaje.",
-			p2: "Actial mente en pleno 2025, el deseo de obtener el título universitario ha resurgido. Además, el inglés se ha convertido en mi segunda gran meta o quien sabe quisas que intercambien los puestos."
-		},
-		{
-			id: "caida",
-			section: "Un tropiezo, caída profunda",
-			p1: "Para 2022, mi carrera como programador había experimentado un crecimiento significativo, tras asumir nuevos roles y desafíos, me encontraba en un momento de gran \"satisfacción\" personal y profesional (siempre me mantengo en constrante aprendisaje). Disfrutaba de un excelente ambiente laboral, una vida familiar plena y la perspectiva de seguir avanzando. Estaba a punto de concretar una oportunidad de trabajo remoto con una empresa mexicana, esta y otras cartas, tenia soble la meza, lo que me impulsó a fijar nuevas metas y a enfocarme en el dominio del inglés para alcanzar el siguiente nivel. Todo parecía marchar a la perfección, hasta que una acusación injusta me llevó a enfrentar un período de privación de libertad.",
-			p2: "De repente, todo se derrumbó. ¿Cómo recuperarme? El apoyo incondicional de mi familia fue fundamental para mantenerme en pie. Durante ese tiempo, me dediqué a buscar una forma de estudiar para no quedarme estancado, fue dificil lograrlo pero tras un año, logré lo que parecía imposible para mi en ese entonces, comencé a explorar nuevas tecnologías, adquirir nuevas abilidades y desarrollar proyectos personales, comense a tonar pruebas tegnica, mi principal motivación era el reto..."
-		},
-		{
-			id: "reflexiones",
-			section: "Reflexiones Finales",
-			p1: "Mi viaje en la programación ha sido un camino de descubrimientos, desafíos y aprendizaje constante. He aprendido que la pasión, la dedicación y la capacidad de aprender por uno mismo son fundamentales en este campo.",
-			p2: "Siempre en busca de nuevos retos."
-		}
-	]
-
 	return (
 		<Page>
-			<div className="w-full md:w-6/12 h-full relative">
 				<BackHome position="left" />
+			<div className="w-full md:w-6/12 h-full relative">
 				<div className="w-full h-full flex flex-col p-5 overflow-y-hidden">
 					<header className="flex flex-col justify-center items-center mb-8">
 						<Image
@@ -58,17 +25,17 @@ export default function PageAbout() {
 						<h3 className="text-[1em] mb-[10px]" >{translate("about_address")}</h3>
 					</header>
 					<main className="text-[15px] space-y-6 overflow-y-scroll">
-						{data.map(da =>
-							<section id={da.id}>
-								<h2 className="text-[20px] font-semibold mb-2 text-theme-5">{da.section}</h2>
-								<p dangerouslySetInnerHTML={{ __html: da.p1 }} />
+						{sections.map(section =>
+							<section key={section.id}>
+								<h2 className="text-[20px] font-semibold mb-2 text-theme-5">{translate(section.section)}</h2>
+								<p dangerouslySetInnerHTML={{ __html: translate(section.p1) }} />
 								<br />
-								<p dangerouslySetInnerHTML={{ __html: da.p2 }} />
+								<p dangerouslySetInnerHTML={{ __html: translate(section.p2) }} />
 							</section>
 						)}
 					</main>
 					<footer className="mt-8 text-center">
-						<p>&copy; 2024 Luis Eduardo Frias</p>
+						<p>&copy; {translate("footer_about")} </p>
 					</footer>
 				</div>
 			</div>

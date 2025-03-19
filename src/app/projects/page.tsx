@@ -21,8 +21,8 @@ export default function page() {
 
 	return (
 		<Page>
+			<BackHome position="left" />
 			<div className="w-6/12 h-full relative">
-				<BackHome position="left" />
 				<h1 className="absolute text-2xl bg-transluxed backdrop-blur px-7 py-2 rounded-2xl font-extrabold left-1/2 top-[5px] translate-x-[-50%] " >{translate('Project')}</h1>
 				<div className="rounded-[var(--border-page-radius)_0_0_var(--border-page-radius)] w-full h-full box-border pt-14 flex flex-row flex-wrap gap-4 p-3 overflow-y-scroll" >
 

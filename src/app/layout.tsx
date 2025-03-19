@@ -19,16 +19,15 @@ export const metadata: Metadata = {
 	keywords: "programación, autodidacta, desarrollo de software, HTML, CSS, JavaScript, educación, experiencia, carrera profesional, ITLA, ITSC, UASD"
 };
 
-export default function RootLayout({
-	children,
-}: Readonly<{
-	children: ReactNode;
-}>) {
+export default function RootLayout({ children, }: Readonly<{ children: ReactNode; }>) {
 	return (
 		<html lang="es">
-			<body className={`${days_one.className} antialiased p-16 m-16`}>
+			<head>
+				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			</head>
+			<body className={`${days_one.className} antialiased`}>
 				<Meteors className="layout-meteors" />
-				<div className="z-50 absolute top-0 left-0 w-full flex flex-row space-x-2 justify-end p-5">
+				<div className="z-50 absolute top-0 left-0 w-full flex flex-row space-x-5 justify-end p-2">
 					<SelectLanguage />
 					<SwitchTheme />
 				</div>

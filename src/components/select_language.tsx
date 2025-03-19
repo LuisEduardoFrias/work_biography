@@ -15,14 +15,14 @@ export default function SelectLanguage() {
 	const translate = useTranslate();
 
 	const handleLanguageChange = (event: ChangeEvent<HTMLSelectElement>) => {
-	changeLanguage(event.target.value)
+		changeLanguage(event.target.value)
 		setLanguage(event.target.value)
 	};
 
 	return (
 		<select
-		name="translate"
-			className="select-none font-bold text-font-color bg-transparent rounded-md w-28 border-2 border-border-color-ctt p-1"
+			name="translate"
+			className="select-none font-bold text-font-color bg-transparent rounded-[20px] w-28 border-2 border-border-color-ctt p-1"
 			onChange={handleLanguageChange}
 			value={language}
 		>
