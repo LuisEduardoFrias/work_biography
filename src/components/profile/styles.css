@@ -25,7 +25,7 @@
 	transform: translateX(-50%);
 	animation: show 1s both 0.5s;
 	
-	@media(width <=650px) {
+	@media(width <=768px) {
 		visibility: hidden;
 	}
 }
@@ -46,7 +46,7 @@
 	animation: imagePresentation 1s 11s both;
 	mask-image: linear-gradient(black 80%, transparent);
 	
-	@media (width <=650px) {
+	@media (width <=768px) {
 		max-width: 80%;
 	}
 }

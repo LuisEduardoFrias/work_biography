@@ -28,10 +28,10 @@
 	
 	animation: book-ligth 8s 5s ease-in-out forwards;
 	
-	@media(width >=1300px) {
+/* 	@media(width >=1300px) {
 		width: 1000px;
 		height: 700px;
-	}
+	} */
 }
 
 @keyframes book-ligth {
@@ -183,7 +183,7 @@
 .right_ {
 	transform-origin: left center;
 	
-	@media (width <=700px) {
+	@media (width <=768px) {
 		border-left-width: 0;
 	}
 }
@@ -217,7 +217,7 @@
 .left_ {
 	transform-origin: left center;
 	
-	@media (width <=700px) {
+	@media (width <=768px) {
 		border-left-width: 0;
 	}
 }
