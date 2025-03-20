@@ -28,7 +28,7 @@
 	
 	animation: book-ligth 8s 5s ease-in-out forwards;
 	
-/* 	@media(width >=1300px) {
+	/* 	@media(width >=1300px) {
 		width: 1000px;
 		height: 700px;
 	} */
@@ -111,6 +111,11 @@
 	z-index: -2;
 }
 
+.left-page-home {
+	@media (max-width: 768px) {
+		mask-image: linear-gradient(to bottom, #ffffff14 10px, #000000 15%, #000000 80%, #ffffff14 95%);
+	}
+}
 
 .backface2 {
 	border-radius: 0 var(--border-page-radius) var(--border-page-radius) 0;
@@ -127,47 +132,19 @@
 	}
 }
 
-.center-about {
+/***********************************/
+/***********  Center ***************/
+/***********************************/
+
+.center-default {
 	position: absolute;
-	transform: translateX(0px);
-	width: Calc(100% - 0px);
 	height: 100%;
+	box-sizing: border-box;
+	padding: 1px;
 	border-radius: var(--border-page-radius);
 	opacity: 0;
 	z-index: 99;
 	animation: center-opacity 1s 4s forwards;
-}
-
-.center-project {
-	position: absolute;
-	transform: translateX(5px);
-	width: Calc(100% - 10px);
-	height: 100%;
-	border-radius: var(--border-page-radius);
-	opacity: 0;
-	z-index: 99;
-	animation: center-opacity 1s 4s forwards;
-}
-
-.center-finish {
-	position: absolute;
-	transform: translateX(20px);
-	width: Calc(100% - 40px);
-	height: 100%;
-	border-radius: 20px;
-	opacity: 1;
-	z-index: 99;
-}
-
-.center {
-	position: absolute;
-	transform: translateX(20px);
-	width: Calc(100% - 40px);
-	height: 100%;
-	border-radius: 20px;
-	opacity: 0;
-	z-index: 99;
-	animation: center-opacity 1s 10s forwards;
 }
 
 @keyframes center-opacity {
@@ -179,6 +156,48 @@
 		opacity: 1;
 	}
 }
+
+.center-finish {
+	transform: translateX(20px);
+	width: Calc(100% - 42px);
+	opacity: 1;
+	animation: none;
+}
+
+.center {
+	transform: translateX(20px);
+	width: Calc(100% - 42px);
+}
+
+.center-skills {
+	transform: translateX(10px);
+	width: Calc(100% - 25px);
+}
+
+.center-studies {
+	transform: translateX(5px);
+	width: Calc(100% - 15px);
+}
+
+.center-project {
+	transform: translateX(5px);
+	width: Calc(100% - 5px);
+}
+
+.center-experiences {
+	transform: translateX(15px);
+	border: 1px solid red;
+	width: Calc(100% - 25px);
+}
+
+.center-about {
+	transform: translateX(0px);
+	width: Calc(100% - 0px);
+}
+
+/***********************************/
+/***********  *****  ***************/
+/***********************************/
 
 .right_ {
 	transform-origin: left center;

@@ -10,7 +10,8 @@ export default function Presentation() {
 	const translate = useTranslate();
 
 	return (
-		<div className="header-container">
+		<div className="presentation-container w-full h-auto px-2 flex flex-col align-middle gap-3">
+
 			<h1 className={`${orbitron.className} flex flex-col`}>
 				<span>{translate('Hello')} <strong className="text-color-shine" >Luis Eduardo </strong></span>
 				<span className="line-through font-mono text-[15px]">{translate('fixes_printer')}</span>

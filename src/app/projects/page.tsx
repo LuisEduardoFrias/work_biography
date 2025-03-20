@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { Page } from 'cp/book'
-import BackHome from 'cp/back_home'
+
 import ProjectCard, { TypeProjectCard } from 'cp/project_card'
 import Loading from '../loading'
 import useTranslate from 'hk/use_translate'
@@ -21,8 +21,7 @@ export default function page() {
 
 	return (
 		<Page>
-			<BackHome position="left" />
-			<div className="w-6/12 h-full relative">
+			<div className="md:col-start-2 md:col-end-3 col-start-1 col-end-2 row-start-1 row-end-3 h-full">
 				<h1 className="absolute text-2xl bg-transluxed backdrop-blur px-7 py-2 rounded-2xl font-extrabold left-1/2 top-[5px] translate-x-[-50%] " >{translate('Project')}</h1>
 				<div className="rounded-[var(--border-page-radius)_0_0_var(--border-page-radius)] w-full h-full box-border pt-14 flex flex-row flex-wrap gap-4 p-3 overflow-y-scroll" >
 
@@ -34,7 +33,7 @@ export default function page() {
 					{!state && <Loading />}
 				</div>
 			</div>
-			<div className="w-6/12 h-full">
+			<div className="hidden md:visible col-start-1 col-end-2 md:row-start-1 md:row-end-2 row-start-2 row-end-3 h-full  relative">
 			</div>
 		</Page>
 	);

@@ -1,5 +1,4 @@
 'use client';
-import BackHome from 'cp/back_home';
 import { Page } from 'cp/book';
 import sections from '../../jsons/about.json'
 import Image from 'next/image';
@@ -9,7 +8,6 @@ export default function PageAbout() {
 	const translate = useTranslate();
 	return (
 		<Page>
-				<BackHome position="left" />
 			<div className="w-full md:w-6/12 h-full relative">
 				<div className="w-full h-full flex flex-col p-5 overflow-y-hidden">
 					<header className="flex flex-col justify-center items-center mb-8">

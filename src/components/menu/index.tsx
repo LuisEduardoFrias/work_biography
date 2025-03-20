@@ -42,7 +42,7 @@ export default function Footer() {
 						(
 							downloading ?
 								<div className="refresh_icon"></div> :
-								<a href={`./profile/${cvPath}`} download >
+								<a label="download cv" aria-label="download cv" href={`./profile/${cvPath}`} download >
 									<PdfSvg />
 								</a>
 						)
@@ -54,13 +54,13 @@ export default function Footer() {
 					}
 					{'CV'}
 				</div>
-				
+
 				<div className="social-footer" >
 					{Socials.map((social: TypeSocial) => {
 						const DynamicComponent = require(`../../svg/${social.src}.tsx`).default;
 
 						return (
-							<a key={social.href} href={social.href} target="_blank">
+							<a key={social.href} aria-label={social.href} label={social.href} href={social.href} target="_blank">
 								<DynamicComponent />
 							</a>
 						);

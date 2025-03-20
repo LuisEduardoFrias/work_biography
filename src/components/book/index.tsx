@@ -1,6 +1,7 @@
 'use client'
 import { useState, useRef, useEffect, ReactNode, ReactElement, Children } from 'react'
 import { usePathname } from 'next/navigation'
+import BackHome from 'cp/back_home'
 import localFont from "next/font/local";
 import Image from 'next/image'
 
@@ -10,6 +11,27 @@ import './styles.css'
 const orbitron = localFont({
 	src: "../../../public/fonts/Orbitron/Orbitron-VariableFont_wght.ttf"
 });
+
+export function Page({ children, className }: { children: ReactNode, className:string }) {
+	const pathname = usePathname();
+
+	function getPosition() {
+		const leftPaths = new Set(["/about_me", "/experiences", "/projects"]);
+		const rightPaths = new Set(["/studies", "/skills"]);
+
+		if (leftPaths.has(pathname)) return "left";
+		if (rightPaths.has(pathname)) return "right";
+
+		return "right";
+	}
+
+	return (
+		<div className={`rounded-border-page-radius absolute w-full h-full grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1  md:overflow-y-hidden overflow-hidden center-animate ${className}`}>
+			{pathname !== "/" && <BackHome position={getPosition()} />}
+			{children}
+		</div>
+	);
+}
 
 export default function Book({ children }: { children: ReactNode }) {
 	const data = useRef({ count: 0, oldPathname: "/" });
@@ -31,6 +53,16 @@ export default function Book({ children }: { children: ReactNode }) {
 	const pageRef9 = useRef(null);
 	const pageRef10 = useRef(null);
 
+	function removeClassCenter() {
+		centerRef.current.classList.remove('center-finis');
+		centerRef.current.classList.remove('center-skills');
+		centerRef.current.classList.remove('center-studies');
+		centerRef.current.classList.remove('center-projects');
+		centerRef.current.classList.remove('center-experiences');
+		centerRef.current.classList.remove('center-about');
+		centerRef.current.classList.remove('center');
+	}
+
 	useEffect(() => {
 
 		if (bookRef.current && data.current.count >= 1) {
@@ -49,12 +81,8 @@ export default function Book({ children }: { children: ReactNode }) {
 			bookRef.current.classList.add('book-animate');
 		}
 
-		console.log('fuera: ', data.current.count)
 		if (pathname === "/" && centerRef.current && data.current.count >= 2) {
-			console.log('dentro')
-			centerRef.current.classList.remove('center-about');
-			centerRef.current.classList.remove('center-finis');
-			centerRef.current.classList.remove('center');
+			removeClassCenter();
 			void centerRef.current.offsetWidth;
 			centerRef.current.classList.add('center-finish');
 		}
@@ -109,14 +137,9 @@ export default function Book({ children }: { children: ReactNode }) {
 			void bookRef.current.offsetWidth;
 			bookRef.current.classList.add('book-animate2');
 
-			centerRef.current.classList.remove('center-about');
-			centerRef.current.classList.remove('center-finis');
-			centerRef.current.classList.remove('center');
+			removeClassCenter();
 			void centerRef.current.offsetWidth;
 			centerRef.current.classList.add('center-about');
-
-			data.current.count = 2;
-			console.log('suma count: ', data.current.count)
 		}
 
 		if (data.current.oldPathname === "/about_me" &&
@@ -155,7 +178,8 @@ export default function Book({ children }: { children: ReactNode }) {
 		//experiences
 		if (pathname === "/experiences" &&
 			pageRef6.current &&
-			pageRef7.current
+			pageRef7.current &&
+			centerRef.current
 		) {
 			pageRef6.current.classList.remove('origin-move-right-page-r6');
 			pageRef6.current.classList.remove('move-right-page-r6');
@@ -166,6 +190,10 @@ export default function Book({ children }: { children: ReactNode }) {
 			pageRef7.current.classList.remove('move-right-page-r7');
 			void pageRef7.current.offsetWidth;
 			pageRef7.current.classList.add('move-right-page-r7');
+
+			removeClassCenter();
+			void centerRef.current.offsetWidth;
+			centerRef.current.classList.add('center-experiences');
 		}
 
 		if (data.current.oldPathname === "/experiences" &&
@@ -217,7 +245,9 @@ export default function Book({ children }: { children: ReactNode }) {
 			void centerRef.current.offsetWidth;
 			centerRef.current.classList.add('center-project');
 
-			data.current.count = 2;
+			removeClassCenter();
+			void centerRef.current.offsetWidth;
+			centerRef.current.classList.add('center-projects');
 		}
 
 		if (data.current.oldPathname === "/projects" &&
@@ -251,7 +281,8 @@ export default function Book({ children }: { children: ReactNode }) {
 		if (pathname === "/studies" &&
 			pageRef3.current &&
 			pageRef4.current &&
-			pageRef5.current
+			pageRef5.current &&
+			centerRef.current
 		) {
 			pageRef5.current.classList.remove('origin-move-left-page-l5');
 			pageRef5.current.classList.remove('move-left-page-l5');
@@ -267,6 +298,10 @@ export default function Book({ children }: { children: ReactNode }) {
 			pageRef3.current.classList.remove('move-left-page-l3');
 			void pageRef3.current.offsetWidth;
 			pageRef3.current.classList.add('move-left-page-l3');
+
+			removeClassCenter();
+			void centerRef.current.offsetWidth;
+			centerRef.current.classList.add('center-studies');
 		}
 
 		if (data.current.oldPathname === "/studies" &&
@@ -293,7 +328,8 @@ export default function Book({ children }: { children: ReactNode }) {
 		//skills
 		if (pathname === "/skills" &&
 			pageRef4.current &&
-			pageRef5.current
+			pageRef5.current &&
+			centerRef.current
 		) {
 			pageRef5.current.classList.remove('origin-move-left-page-l5');
 			pageRef5.current.classList.remove('move-left-page-l5');
@@ -304,6 +340,10 @@ export default function Book({ children }: { children: ReactNode }) {
 			pageRef4.current.classList.remove('move-left-page-l4');
 			void pageRef4.current.offsetWidth;
 			pageRef4.current.classList.add('move-left-page-l4');
+
+			removeClassCenter();
+			void centerRef.current.offsetWidth;
+			centerRef.current.classList.add('center-skills');
 		}
 
 		if (data.current.oldPathname === "/skills" &&
@@ -323,6 +363,9 @@ export default function Book({ children }: { children: ReactNode }) {
 
 		if (data.current.count === 0) {
 			data.current.count = 1;
+		}
+		if (pathname !== "/") {
+			data.current.count = 2;
 		}
 		data.current.oldPathname = pathname;
 	}, [pathname])
@@ -360,16 +403,8 @@ export default function Book({ children }: { children: ReactNode }) {
 				<div ref={markPageRef} className="mark-page absolute bottom-[-80px] z-50 left-1/2 translate-x-0 h-20 w-4 border border-theme-1"></div>
 				<div ref={markPageRef2} className="mark-page absolute bottom-[-90px] z-40 left-1/2 translate-x-3 h-[90px] w-4 border border-theme-2"></div>
 
-				<div ref={centerRef} className="center">{children}</div>
+				<div ref={centerRef} className="center-default center">{children}</div>
 			</div>
-		</div>
-	);
-}
-
-export function Page({ children }: { children: ReactNode }) {
-	return (
-		<div className="border border-amber-700 rounded-border-page-radius absolute w-full h-full grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1  md:overflow-y-hidden overflow-y-scroll overflow-scroll center-animate">
-			{children}
 		</div>
 	);
 }

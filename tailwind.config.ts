@@ -8,6 +8,9 @@ export default {
 	],
 	theme: {
 		extend: {
+			screens: {
+				'-md': { 'max': '768px' },
+			},
 			dropShadow: {
 				homero: '0 0 0.75rem var(--theme-1)'
 			},
@@ -15,7 +18,7 @@ export default {
 				"border-page-radius": "var(--border-page-radius)",
 			},
 			backgroundImage: {
-				'repeating-linear': 'repeating-linear-gradient(to bottom, #afafaf35, #afafaf35 1px, transparent 1px, transparent 25px)',
+				'custom-gradient': 'linear-gradient(0deg, #35353588 0%, #ffffff00 20%, #ffffff00 95%,  #35353588 100%)',
 			},
 			backgroundSize: {
 				'repeating-linear-size': '100% 25px',
