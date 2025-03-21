@@ -11,11 +11,11 @@ type TypeLanguage = {
 }
 
 export default function SelectLanguage() {
-	const [{ language: lang }, { changeLanguage }] = useSubscriberState<Partial<State>, Actions>('language', true);
-	const [language, setLanguage] = useState(lang);
+	const [{ language: lang }, { changeLanguage }] = useSubscriberState<State, Actions>(['language'], true);
+	const [language, setLanguage] = useState<string>(lang);
 	//	const translate = useTranslate();
 
-	useEffect(() => { changeLanguage(language && "es") }, [language, changeLanguage])
+	useEffect(() => { changeLanguage(language) }, [language, changeLanguage])
 
 	const handleLanguageChange = (event: ChangeEvent<HTMLSelectElement>) => {
 		setLanguage(event.target.value)
