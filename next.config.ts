@@ -2,10 +2,6 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
 	reactStrictMode: true,
-	// env: {
-// 		PATH_CV: "/LuisEF_CV_En.pdf",
-// 		GITHUB_KEY: "aaaaaa-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"
-// 	},
 	images: {
 		remotePatterns: [
 			{
@@ -18,13 +14,13 @@ const nextConfig: NextConfig = {
 				protocol: 'https',
 				hostname: 'raw.githubusercontent.com',
 				port: '',
-				pathname: '/pmndrs/zustand/main/**',
+				pathname: '/pmndrs/zustand/**',
 			},
 			{
 				protocol: 'https',
 				hostname: 'raw.githubusercontent.com',
 				port: '',
-				pathname: '/LuisEduardoFrias/gats_and_boxes/main/gifs/**',
+				pathname: '/LuisEduardoFrias/cats_and_boxes/main/gifs/**',
 			},
 		],
 		formats: ['image/webp'],
@@ -32,4 +28,4 @@ const nextConfig: NextConfig = {
 	},
 };
 
-export default nextConfig;
+module.exports = nextConfig;

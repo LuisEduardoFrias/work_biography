@@ -17,6 +17,7 @@ function changeLanguage(language: string) {
 	update((state) => ({ ...state, language }))
 	setCookie('language', language)
 }
+
 function changeTheme(isDark: boolean) {
 	update((state) => ({ ...state, isDark }))
 	setCookie('isDark', isDark)

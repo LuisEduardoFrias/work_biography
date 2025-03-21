@@ -9,9 +9,11 @@ export default function useTranslate() {
 	const [stateTranslated, setState] = useState(null);
 
 	useEffect(() => {
+		if(language){
 		(async () => {
 			setState(await import(`../translates/language.${language}.json`))
 		})()
+		}
 	}, [language])
 
 	function translate(text: string) {
