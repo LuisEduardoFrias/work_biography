@@ -1,7 +1,7 @@
 "use client"
-import { useState } from 'react'
+//import { useState } from 'react'
 import Skills from "../../jsons/skills.json";
-import Skill from "cp/skills/skill";
+// import Skill from "cp/skills/skill";
 import { Draw } from "./back_end";
 import "./back_end.css";
 
@@ -14,11 +14,11 @@ type Sk = {
 }
 
 export default function FrontEnd() {
-	const [selectInd, setSelect] = useState(-1)
+	//const [selectInd, setSelect] = useState(-1)
 
 	const skills = [...Skills.frontend.advancedExperience, ...Skills.frontend.middleExperience];
-	let count = skills.length;
-	count = count / 2 === 0 ? count : count + 1;
+	// let count = skills.length;
+	// 	count = count / 2 === 0 ? count : count + 1;
 
 	const StyleGrid = {
 		gridTemplateColumns: `repeat(${12}, Calc(60px - 10px))`,
@@ -41,7 +41,7 @@ export default function FrontEnd() {
 
 			<div style={StyleGrid}>
 				{
-					skills.map((e: Sk, index) => <Draw key={index} selectInd={selectInd} onclick={() => setSelect(index)} skill={e} index={index} />)
+					skills.map((e: Sk, index) => <Draw key={index} onclick={() => { }} skill={e} index={index} />)
 				}
 			</div>
 		</div>

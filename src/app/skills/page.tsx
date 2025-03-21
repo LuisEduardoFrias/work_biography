@@ -1,5 +1,4 @@
 'use client'
-import Link from 'next/link'
 import { Page } from 'cp/book'
 import FrontEnd from 'cp/skills/front_end'
 import BackEnd from 'cp/skills/back_end'

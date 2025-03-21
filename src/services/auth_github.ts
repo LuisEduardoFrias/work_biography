@@ -1,4 +1,4 @@
-import { Octokit, App } from "octokit";
+import { Octokit } from "octokit";
 
 const octokit = new Octokit({ auth: process.env.NEXT_PUBLIC_GITHUB_TOKEN });
 
@@ -7,7 +7,7 @@ export async function getUserName() {
 		const { data } = await octokit.rest.users.getAuthenticated();
 		return data;
 	} catch (error) {
-		console.log("errr:, %s", Loading);
+		console.log("errr:, %s", error);
 	}
 }
 
@@ -27,6 +27,11 @@ async function getRepos(username: string) {
 export async function getRepoInfoWithProfile() {
 	const username = process.env.NEXT_PUBLIC_GITHUB_USER_NAME;
 	const file = process.env.NEXT_PUBLIC_GITHUB_REPO_FILE;
+
+	if (!username) {
+		const error = new Error("Se requiere la variable en entorno user_name");
+		throw error;
+	}
 
 	const repos = await getRepos(username);
 	const reposWithProfile = [];
@@ -50,6 +55,8 @@ export async function getRepoInfoWithProfile() {
 				gifUrls,
 			});
 		} catch (error) {
+			if (!error)
+				console.log(error)
 			//console.log(`El repositorio '${repo.name}'' no tiene ${file} o hubo un error.`);
 		}
 	}
@@ -57,14 +64,14 @@ export async function getRepoInfoWithProfile() {
 	return reposWithProfile;
 }
 
-async function getFilesInFolder(username: string, repoName: string, folderPath: string) {
+async function getFilesInFolder(username: string, repoName: string, folderPath: string): Promise<TypeFile[] >{
 	try {
 		const response = await octokit.request(
 			`GET /repos/${username}/${repoName}/contents/${folderPath}`
 		);
 
 		// Filtra solo los archivos (no carpetas)
-		const files = response.data.filter((item: any) => item.type === "file");
+		const files: TypeFile[] = response.data.filter((item: { type: string }) => item.type === "file");
 
 		return files;
 	} catch (error) {
@@ -73,8 +80,10 @@ async function getFilesInFolder(username: string, repoName: string, folderPath: 
 	}
 }
 
-function getGifUrls(files: any[]) {
+export type TypeFile ={ name: string, download_url: string }
+
+function getGifUrls(files: TypeFile[]) {
 	return files
-		.filter((file) => file.name.toLowerCase().endsWith(".gif"))
+		.filter((file: TypeFile) => file.name.toLowerCase().endsWith(".gif"))
 		.map((file) => file.download_url);
 }

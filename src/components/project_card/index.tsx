@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import useTranslate from 'hk/use_translate'
 
 export type TypeProjectCard = {
@@ -61,12 +62,14 @@ export default function ProjectCard(state: TypeProjectCard) {
 					<h3 className="text-lg font-semibold mb-2">GIFs:</h3>
 					<div className="flex flex-wrap">
 						{gifUrls.map((url, index) => (
-							<img
+							<Image
 								key={index}
 								src={url}
+								priority={true}
+								width={2094}
+								height={2176}
 								alt={`GIF ${index}`}
-								className="w-32 h-32 object-cover mr-2 mb-2 rounded-lg"
-							/>
+								className="w-32 h-32 object-cover mr-2 mb-2 rounded-lg" />
 						))}
 					</div>
 				</div>

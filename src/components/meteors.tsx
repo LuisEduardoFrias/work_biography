@@ -7,10 +7,10 @@ type TMeteorProps = {
 
 export default function Meteors({ number }: TMeteorProps) {
 	const meteors = new Array(number || 50).fill(true);
-	const meteorRefs = useRef([]);
+	const meteorRefs = useRef<HTMLSpanElement[]>([]);
 
 	useEffect(() => {
-		meteorRefs.current.forEach((meteor) => {
+		meteorRefs.current.forEach((meteor: HTMLSpanElement) => {
 			if (meteor) {
 				meteor.style.top = Math.floor(Math.random() * 100) + "%";
 				meteor.style.left = Math.floor(Math.random() * (100 - -100) + -100) + "%";
@@ -25,7 +25,7 @@ export default function Meteors({ number }: TMeteorProps) {
 			{meteors.map((_, idx) => (
 				<span
 					key={"meteor" + idx}
-					ref={(el) => (meteorRefs.current[idx] = el)}
+					ref={(el) => {if (el) {meteorRefs.current[idx] = el;}}}
 					className={`animate-meteor-effect absolute top-1/2
 					left-1/2 h-1 w-1 rounded-[9999px] bg-slate-500 
 					rotate-[215deg] before:content-[''] before:absolute 

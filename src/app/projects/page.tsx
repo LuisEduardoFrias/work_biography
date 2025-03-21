@@ -1,15 +1,12 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { Page } from 'cp/book'
-
 import ProjectCard, { TypeProjectCard } from 'cp/project_card'
 import Loading from '../loading'
 import useTranslate from 'hk/use_translate'
-import Image from 'next/image'
 import { getRepoInfoWithProfile } from 'sv/auth_github'
-import '@/state_warehouse'
 
-export default function page() {
+export default function Projects() {
 	const translate = useTranslate();
 	const [state, setState] = useState<TypeProjectCard[] | null>(null)
 

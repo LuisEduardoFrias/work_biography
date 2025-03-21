@@ -1,20 +1,20 @@
 
 import "./styles.css"
 
-const keyframes = {
-	'@keyframes typeAndDelete': {
-		'0%, 10%': {
-			width: 0,
-		},
-		'45%, 55%': {
-			width: "8em",
-		},
-		'90%, 100%': {
-			width: 0,
-		}
-	}
-};
-
+// const keyframes = {
+// 	'@keyframes typeAndDelete': {
+// 		'0%, 10%': {
+// 			width: 0,
+// 		},
+// 		'45%, 55%': {
+// 			width: "8em",
+// 		},
+// 		'90%, 100%': {
+// 			width: 0,
+// 		}
+// 	}
+// };
+// 
 type KeyProps = {
 	text: string | undefined,
 	subText: string | undefined,
@@ -22,13 +22,13 @@ type KeyProps = {
 }
 
 export default function KeyBoard() {
-	const text = "programando"
+//	const text = "programando"
 
-	const animationStyles = {
-		animation: "typeAndDelete 8s infinite, blinkCursor .5s step-end infinite alternate",
-		animationTimingFunction: `steps(${text.length + 2})`,
-		animationName: 'typeAndDelete'
-	};
+	// const animationStyles = {
+// 		animation: "typeAndDelete 8s infinite, blinkCursor .5s step-end infinite alternate",
+// 		animationTimingFunction: `steps(${text.length + 2})`,
+// 		animationName: 'typeAndDelete'
+// 	};
 
 	return (
 		<div className="container-keyboard">

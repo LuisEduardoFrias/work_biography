@@ -1,10 +1,11 @@
 'use client'
 import '@/state_warehouse'
 import { useEffect, useState } from 'react'
+import { State, Actions } from '@/state_warehouse'
 import { useSubscriberState } from 'subscriber_state'
 
 export default function useTranslate() {
-	const [{ language }, _] = useSubscriberState('language');
+	const [{ language }] = useSubscriberState<Partial<State>, Actions>('language');
 	const [stateTranslated, setState] = useState(null);
 
 	useEffect(() => {

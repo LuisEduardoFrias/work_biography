@@ -2,9 +2,8 @@
 import Image from 'next/image'
 import { Page } from 'cp/book'
 import useTranslate from 'hk/use_translate'
-import '@/state_warehouse'
 
-export default function page() {
+export default function Studies() {
 	const translate = useTranslate();
 	return (
 		<Page >

@@ -3,12 +3,12 @@
 import { createWarehouse, update } from "subscriber_state";
 import { setCookie, getCookie } from 'hp/cookies'
 
-type State = {
+export type State = {
 	language: string,
 	isDark: boolean
 }
 
-type Actions = {
+export type Actions = {
 	changeLanguage: (language: string) => void
 	changeTheme: (isDark: boolean) => void
 }

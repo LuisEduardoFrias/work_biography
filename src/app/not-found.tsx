@@ -14,11 +14,11 @@ export default function NotFoundPage() {
 		<Page>
 			<div className="w-6/12 h-full relative" >
 				<div className="flex flex-col space-y-6 text-color">
-					<h2 className="text-5xl font-extrabold text-center" >{translate('Something went wrong!')}</h2>
-					<span className="text-center" >{translate('IEV')}</span>
-					<Link href={"/"} className="text-2xl text-primary underline font-extrabold text-center" >
-						{translate('Go to the home')}
-					</Link>
+				        	<h2 className="text-5xl font-extrabold text-center" >{translate('Something went wrong!')}</h2>
+				{error&&	<span className="text-center" >{translate(error)}</span>}
+				        	<Link href={"/"} className="text-2xl text-primary underline font-extrabold text-center" >
+				        		{translate('Go to the home')}
+				        	</Link>
 				</div>
 				<Image
 					priority={true}

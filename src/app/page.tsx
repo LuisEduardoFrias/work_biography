@@ -3,10 +3,8 @@ import { Page } from 'cp/book'
 import Profile from 'cp/profile'
 import Menu from 'cp/menu'
 import Presentation from 'cp/presentation'
-import useTranslate from 'hk/use_translate'
 
 export default function Home() {
-	const translate = useTranslate();
 	return (
 		<Page>
 			<div className="left-page-home pt-3 overflow-y-scroll md:overflow-y-hidden col-start-1 col-end-2 md:row-start-1 md:row-end-2 row-start-2 row-end-3 h-full flex flex-col justify-between gap-[20px] -md:bg-custom-gradient">

@@ -1,5 +1,5 @@
 'use client'
-import { useState, useRef, useEffect, ReactNode, ReactElement, Children } from 'react'
+import { useRef, useEffect, ReactNode } from 'react'
 import { usePathname } from 'next/navigation'
 import BackHome from 'cp/back_home'
 import localFont from "next/font/local";

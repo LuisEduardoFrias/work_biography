@@ -1,5 +1,6 @@
 "use client"
-import { useState, useRef, MouseEvent } from 'react'
+import { useState, Suspense, lazy } from 'react'
+import Loading from '@/app/loading'
 import localFont from 'next/font/local'
 import Link from 'next/link';
 import PdfSvg from 'svg/pdf_svg';
@@ -14,19 +15,19 @@ const orbitron = localFont({
 
 type TypeSocial = {
 	href: string,
-	src:string
+	src: string
 }
 
 export default function Footer() {
-	const [downloading, setDownloading] = useState(false);
-	const fileDownloadRef = useRef(null);
+	const [downloading] = useState(false);
+	// const fileDownloadRef = useRef(null);
 	const cvPath = process.env.PATH_CV;
 
-	async function handleDownload(event: MouseEvent<HTMLAnchorElement, MouseEvent>) {
-		event.preventDefault();
-		setDownloading(true);
-
-	}
+	// async function handleDownload(event: MouseEvent<HTMLAnchorElement, MouseEvent>) {
+	// 		event.preventDefault();
+	// 		setDownloading(true);
+	// 
+	// 	}
 
 	return (
 		<div className="footer-container" >
@@ -57,11 +58,14 @@ export default function Footer() {
 
 				<div className="social-footer" >
 					{Socials.map((social: TypeSocial) => {
-						const DynamicComponent = require(`../../svg/${social.src}.tsx`).default;
+						//	const DynamicComponent = requited(`../../svg/${social.src}.tsx`).default;
+						const DynamicComponent = lazy(() => import(`../../svg/${social.src}.tsx`));
 
 						return (
 							<a key={social.href} aria-label={social.href} href={social.href} target="_blank">
-								<DynamicComponent />
+								<Suspense fallback={<Loading />}>
+									<DynamicComponent />
+								</Suspense>
 							</a>
 						);
 					})}

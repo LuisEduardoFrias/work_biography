@@ -1,11 +1,11 @@
 "use client"
 import { useState, ChangeEvent } from 'react'
+import { State, Actions } from '@/state_warehouse'
 import { useSubscriberState } from 'subscriber_state'
 import './styles.css'
 
 export default function SwitchTheme() {
-	const [{ isDark }, { changeTheme }] = useSubscriberState('isDark', true);
-	const [show, setShow] = useState(false);
+	const [{ isDark }, { changeTheme }] = useSubscriberState<Partial<State>, Actions>('isDark', true);
 	const [checkIsDark, setCheckIsDark] = useState(isDark);
 
 	function handleChange(event: ChangeEvent<HTMLInputElement>) {

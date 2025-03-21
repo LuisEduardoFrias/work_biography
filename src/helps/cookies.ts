@@ -1,12 +1,12 @@
 
-export function setCookie(key: string, value: any, maxAge = 3600) {
+export function setCookie(key: string, value: object|string|number|boolean|symbol, maxAge = 3600) {
 	let count = 0;
 	function setK() {
 		count++;
 		if (typeof document !== 'undefined') {
 			try {
 				document.cookie = `${key}=${JSON.stringify(value)}; path=/; max-age=${maxAge}`;
-				setValue(value);
+				// setValue(value);
 			} catch {
 				// Manejo de error
 			}

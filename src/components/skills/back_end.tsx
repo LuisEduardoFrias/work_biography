@@ -1,5 +1,5 @@
 "use client"
-import { useState } from 'react'
+//import { useState } from 'react'
 import Image from 'next/image'
 import Skills from '../../jsons/skills.json'
 import './back_end.css'
@@ -13,13 +13,14 @@ type Sk = {
 }
 
 type TDrawProps = {
+	key: number,
 	skill: Sk,
 	index: number,
-	selectInd: number,
+	//selectInd: number,
 	onclick: () => void
 }
 
-export function Draw({ skill, index, selectInd, onclick }: TDrawProps) {
+export function Draw({ skill, index, onclick }: TDrawProps) {
 
 	const Styles = {
 		gridArea: `s${index + 1}`,
@@ -37,11 +38,11 @@ export function Draw({ skill, index, selectInd, onclick }: TDrawProps) {
 }
 
 export default function BackEnd() {
-	const [selectInd, setSelect] = useState(-1)
+	//	const [selectInd, setSelect] = useState(-1)
 
 	const skills: Sk[] = [...Skills.backend.advancedExperience, ...Skills.backend.middleExperience];
-	let count = skills.length;
-	count = count / 2 === 0 ? count : count + 1;
+	// 	let count = skills.length;
+	// 	count = count / 2 === 0 ? count : count + 1;
 
 	const StyleGrid = {
 		//	gridTemplateColumns: `repeat(6, 50px`,
@@ -57,7 +58,7 @@ export default function BackEnd() {
 
 			<div style={StyleGrid}>
 				{
-					skills.map((e: Sk, index) => <Draw key={index} selectInd={selectInd} onclick={() => setSelect(index)} skill={e} index={index} />)
+					skills.map((e: Sk, index: number) => <Draw key={index} onclick={() => { }} skill={e} index={index} />)
 				}
 			</div>
 		</div>

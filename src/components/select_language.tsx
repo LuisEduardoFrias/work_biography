@@ -1,6 +1,7 @@
 'use client'
-import { useState, useEffect, ChangeEvent } from 'react'
+import { useState, ChangeEvent } from 'react'
 import { useSubscriberState } from 'subscriber_state'
+import { State, Actions } from '@/state_warehouse'
 import useTranslate from 'hk/use_translate'
 import languages from 'tls/languages.json'
 
@@ -10,7 +11,7 @@ type TypeLanguage = {
 }
 
 export default function SelectLanguage() {
-	const [{ language: lang }, { changeLanguage }] = useSubscriberState('language', true);
+	const [{ language: lang }, { changeLanguage }] = useSubscriberState<Partial<State>, Actions>('language', true);
 	const [language, setLanguage] = useState(lang);
 	const translate = useTranslate();
 
