@@ -11,7 +11,7 @@ import '@/state_warehouse'
 
 export default function page() {
 	const translate = useTranslate();
-	const [state, setState] = useState<TypeProjectCard[]>(null)
+	const [state, setState] = useState<TypeProjectCard[] | null>(null)
 
 	useEffect(() => {
 		(async () => {

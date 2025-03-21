@@ -13,7 +13,7 @@ export default function Option({ name, href, src }: TypeOption) {
 
 	return (
 		<li>
-			<Link href={href} label={href} aria-label={href}>
+			<Link href={href} aria-label={href}>
 				<DynamicComponent />
 				<p className='footer_tooltip'>{translate(name)}</p>
 			</Link>

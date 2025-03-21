@@ -16,7 +16,7 @@ export default function page() {
 				<h1 className="absolute text-2xl bg-transluxed backdrop-blur px-7 py-2 rounded-2xl font-extrabold left-1/2 top-[5px] translate-x-[-50%] " >{translate('Experiences')}</h1>
 				<div className="w-full h-full box-border pt-14 flex flex-row flex-wrap space-y-4 p-3 overflow-y-scroll">
 					{experiences.map((experience, index) => (
-						<ExperienceCard key={index} {...experience} />
+						<ExperienceCard key={`${index}`} {...experience} />
 					))}
 					<div className="my-2">
 						<KeyBoard />

@@ -14,7 +14,7 @@ const orbitron = localFont({
 
 type TypeSocial = {
 	href: string,
-	classIconName: string,
+	src:string
 }
 
 export default function Footer() {
@@ -42,13 +42,13 @@ export default function Footer() {
 						(
 							downloading ?
 								<div className="refresh_icon"></div> :
-								<a label="download cv" aria-label="download cv" href={`./profile/${cvPath}`} download >
+								<a aria-label="download cv" href={`./profile/${cvPath}`} download >
 									<PdfSvg />
 								</a>
 						)
 
 						:
-						<Link href="/CV?error=IEV">
+						<Link href="/CV?error=IEV" aria-label={"/CV?error=IEV"}>
 							{downloading ? <div className="refresh_icon"></div> : <PdfSvg />}
 						</Link>
 					}
@@ -60,7 +60,7 @@ export default function Footer() {
 						const DynamicComponent = require(`../../svg/${social.src}.tsx`).default;
 
 						return (
-							<a key={social.href} aria-label={social.href} label={social.href} href={social.href} target="_blank">
+							<a key={social.href} aria-label={social.href} href={social.href} target="_blank">
 								<DynamicComponent />
 							</a>
 						);

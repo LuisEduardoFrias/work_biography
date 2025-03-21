@@ -12,7 +12,9 @@ const orbitron = localFont({
 	src: "../../../public/fonts/Orbitron/Orbitron-VariableFont_wght.ttf"
 });
 
-export function Page({ children, className }: { children: ReactNode, className:string }) {
+type TyoePage = { children: ReactNode, className?: string };
+
+export function Page({ children, className }: TyoePage) {
 	const pathname = usePathname();
 
 	function getPosition() {
@@ -26,7 +28,7 @@ export function Page({ children, className }: { children: ReactNode, className:s
 	}
 
 	return (
-		<div className={`rounded-border-page-radius absolute w-full h-full grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1  md:overflow-y-hidden overflow-hidden center-animate ${className}`}>
+		<div className={`rounded-border-page-radius absolute w-full h-full grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1  md:overflow-y-hidden overflow-hidden center-animate ${className ?? ""}`}>
 			{pathname !== "/" && <BackHome position={getPosition()} />}
 			{children}
 		</div>
@@ -38,34 +40,36 @@ export default function Book({ children }: { children: ReactNode }) {
 	const translate = useTranslate();
 	const pathname = usePathname();
 
-	const bookRef = useRef(null);
-	const centerRef = useRef(null);
-	const markPageRef = useRef(null);
-	const markPageRef2 = useRef(null);
+	const bookRef = useRef<HTMLDivElement>(null);
+	const centerRef = useRef<HTMLDivElement>(null);
+	const markPageRef = useRef<HTMLDivElement>(null);
+	const markPageRef2 = useRef<HTMLDivElement>(null);
 
-	const pageRef2 = useRef(null);
-	const pageRef3 = useRef(null);
-	const pageRef4 = useRef(null);
-	const pageRef5 = useRef(null);
-	const pageRef6 = useRef(null);
-	const pageRef7 = useRef(null);
-	const pageRef8 = useRef(null);
-	const pageRef9 = useRef(null);
-	const pageRef10 = useRef(null);
+	const pageRef2 = useRef<HTMLDivElement>(null);
+	const pageRef3 = useRef<HTMLDivElement>(null);
+	const pageRef4 = useRef<HTMLDivElement>(null);
+	const pageRef5 = useRef<HTMLDivElement>(null);
+	const pageRef6 = useRef<HTMLDivElement>(null);
+	const pageRef7 = useRef<HTMLDivElement>(null);
+	const pageRef8 = useRef<HTMLDivElement>(null);
+	const pageRef9 = useRef<HTMLDivElement>(null);
+	const pageRef10 = useRef<HTMLDivElement>(null);
 
 	function removeClassCenter() {
-		centerRef.current.classList.remove('center-finish');
-		centerRef.current.classList.remove('center-skills');
-		centerRef.current.classList.remove('center-studies');
-		centerRef.current.classList.remove('center-projects');
-		centerRef.current.classList.remove('center-experiences');
-		centerRef.current.classList.remove('center-about');
-		centerRef.current.classList.remove('center');
+		if (centerRef.current) {
+			centerRef.current.classList.remove('center-finish');
+			centerRef.current.classList.remove('center-skills');
+			centerRef.current.classList.remove('center-studies');
+			centerRef.current.classList.remove('center-projects');
+			centerRef.current.classList.remove('center-experiences');
+			centerRef.current.classList.remove('center-about');
+			centerRef.current.classList.remove('center');
+		}
 	}
 
 	useEffect(() => {
 
-		if (bookRef.current && data.current.count >= 1) {
+		if (bookRef.current && data.current.count >= 1 && centerRef.current) {
 			centerRef.current.classList.remove('center-about');
 			void centerRef.current.offsetWidth;
 
@@ -238,7 +242,7 @@ export default function Book({ children }: { children: ReactNode }) {
 			pageRef9.current.classList.remove('move-right-page-r9');
 			void pageRef9.current.offsetWidth;
 			pageRef9.current.classList.add('move-right-page-r9');
-			
+
 			removeClassCenter();
 			void centerRef.current.offsetWidth;
 			centerRef.current.classList.add('center-projects');
