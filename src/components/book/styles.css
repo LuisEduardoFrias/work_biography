@@ -179,14 +179,13 @@
 	width: Calc(100% - 15px);
 }
 
-.center-project {
+.center-projects {
 	transform: translateX(5px);
 	width: Calc(100% - 5px);
 }
 
 .center-experiences {
 	transform: translateX(15px);
-	border: 1px solid red;
 	width: Calc(100% - 25px);
 }
 

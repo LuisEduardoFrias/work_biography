@@ -54,7 +54,7 @@ export default function Book({ children }: { children: ReactNode }) {
 	const pageRef10 = useRef(null);
 
 	function removeClassCenter() {
-		centerRef.current.classList.remove('center-finis');
+		centerRef.current.classList.remove('center-finish');
 		centerRef.current.classList.remove('center-skills');
 		centerRef.current.classList.remove('center-studies');
 		centerRef.current.classList.remove('center-projects');
@@ -238,13 +238,7 @@ export default function Book({ children }: { children: ReactNode }) {
 			pageRef9.current.classList.remove('move-right-page-r9');
 			void pageRef9.current.offsetWidth;
 			pageRef9.current.classList.add('move-right-page-r9');
-
-			centerRef.current.classList.remove('center-project');
-			centerRef.current.classList.remove('center-finis');
-			centerRef.current.classList.remove('center');
-			void centerRef.current.offsetWidth;
-			centerRef.current.classList.add('center-project');
-
+			
 			removeClassCenter();
 			void centerRef.current.offsetWidth;
 			centerRef.current.classList.add('center-projects');

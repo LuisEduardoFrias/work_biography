@@ -5,9 +5,9 @@ export default function Loading() {
 	const translate = useTranslate();
 
 	return (
-		<div className="w-full h-full absolute z-50">
-			<span className="text-contrast absolute bottom-5 pr-2" >Loading </span>
-			<div className="w-full h-full absolute z-50 left-12">
+		<div className="w-full h-full absolute top-0 left-0 z-50 m-1 ">
+			<span className="text-contrast absolute bottom-4 pr-2" >{translate('Loading')} </span>
+			<div className="w-full h-full absolute z-50 left-16">
 				<div className="w-5 h-40 animate-move-loading absolute bottom-[60px]" >
 					<div className="w-5 h-36 animate-bounce">
 
