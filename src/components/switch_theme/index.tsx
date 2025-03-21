@@ -1,4 +1,3 @@
-import Input from '../../../../subscribe_state/node_modules2/.pnpm/node_modules/postcss/lib/input';
 "use client"
 import { useState, ChangeEvent } from 'react'
 import { State, Actions } from '@/state_warehouse'

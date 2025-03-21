@@ -15,7 +15,7 @@ export default function SelectLanguage() {
 	const [language, setLanguage] = useState(lang);
 	//	const translate = useTranslate();
 
-	useEffect(() => { changeLanguage(event.target.value) }, [language])
+	useEffect(() => { changeLanguage(event.target.value) }, [language,changeLanguage])
 
 	const handleLanguageChange = (event: ChangeEvent<HTMLSelectElement>) => {
 		setLanguage(event.target.value)
