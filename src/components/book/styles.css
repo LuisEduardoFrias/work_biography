@@ -144,66 +144,76 @@
 	border-radius: var(--border-page-radius);
 	opacity: 0;
 	z-index: 99;
-	animation: center-opacity 1s 4s forwards;
-}
-
-@keyframes center-opacity {
-	0% {
-		opacity: 0;
-	}
-	
-	100% {
-		opacity: 1;
-	}
 }
 
 .center-finish {
 	transform: translateX(20px);
 	width: Calc(100% - 42px);
-	opacity: 1;
-	animation: none;
+	opacity: 0;
+	animation: center-opacity 1s 5s forwards;
 }
 
 .center {
 	transform: translateX(20px);
 	width: Calc(100% - 42px);
+	opacity: 0;
+	animation: center-opacity 1s 9s forwards;
 }
 
 .center-skills {
 	transform: translateX(10px);
 	width: Calc(100% - 25px);
+	opacity: 0;
+	animation: center-opacity 1s 4s forwards;
 }
 
 .center-studies {
 	transform: translateX(5px);
 	width: Calc(100% - 15px);
+	opacity: 0;
+	animation: center-opacity 1s 4s forwards;
 }
 
 .center-projects {
 	transform: translateX(5px);
 	width: Calc(100% - 5px);
+	opacity: 0;
+	animation: center-opacity 1s 4s forwards;
 }
 
 .center-experiences {
 	transform: translateX(15px);
 	width: Calc(100% - 25px);
+	opacity: 0;
+	animation: center-opacity 1s 4s forwards;
 }
 
 .center-about {
 	transform: translateX(0px);
 	width: Calc(100% - 0px);
+	opacity: 0;
+	animation: center-opacity 1s 7s forwards;
+}
+
+@keyframes center-opacity {
+	100% {
+		opacity: 1;
+	}
 }
 
 /***********************************/
 /***********  *****  ***************/
 /***********************************/
 
-.right_ {
-	transform-origin: left center;
-	
+.remove-left-border {
 	@media (width <=768px) {
 		border-left-width: 0;
 	}
+}
+
+.right_ {
+	transform-origin: left center;
+	
 }
 
 .p_6 {
@@ -235,9 +245,9 @@
 .left_ {
 	transform-origin: left center;
 	
-	@media (width <=768px) {
+	/* 	@media (width <=768px) {
 		border-left-width: 0;
-	}
+	} */
 }
 
 .p_1 {
@@ -315,11 +325,11 @@
 /**********************************************************************/
 /**********************************************************************/
 /**********************************************************************/
-
+/* 
 .center-animate {
 	opacity: 0;
 	visibility: hidden;
-	animation: center-opacity 4s 4s forwards;
+	animation: center-opacity 4s 10s forwards;
 }
 
 @keyframes center-opacity {
@@ -332,7 +342,7 @@
 		visibility: visible;
 		opacity: 1;
 	}
-}
+} */
 
 
 .book-animate {

@@ -1,4 +1,5 @@
 {
+	"Coming soon": "Coming soon",
 	"Spanich": "Spanich",
 	"English": "English",
 	"about_subtitle": "Developer FrontEnd y BackEnd",
@@ -19,8 +20,8 @@
 	"Go to the home": "Go to the home",
 	"Something went wrong!": "Something went wrong!",
 	"Page 5": "Page 5",
-	"Una pasión": "A passion",
-	"Trayectoria de un ingeniero de software": "Career path of a software engineer",
+	"cover_title": "A passion",
+	"cover_subtitle": "Career path of a software engineer",
 	"studies": "Studies",
 	"skills": "Skills",
 	"projects": "Projects",

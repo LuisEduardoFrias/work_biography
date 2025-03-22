@@ -1,10 +1,13 @@
 import Image from 'next/image'
+import { useChangeClassName } from 'hk/use_change_classname';
 import './styles.css'
 
 export default function Profile() {
+	const [classRef] = useChangeClassName<HTMLImageElement>('img-show-first', 'img-show-second');
+
 	return (
 		<div className="main-container w-full h-full relative">
-			<Image id="profile" src="/imgs/profile.webp" priority={true} width={3264} height={2177} alt="Image of profile" />
+			<Image ref={classRef} id="profile" className="img-show-first" src="/imgs/profile.webp" priority={true} width={3264} height={2177} alt="Image of profile" />
 			<Image id="logo" src="/imgs/tridente_sc.webp" priority={true} width={2094} height={2176} alt="logo ico" />
 
 			<pre>

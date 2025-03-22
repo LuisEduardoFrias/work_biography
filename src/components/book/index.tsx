@@ -4,7 +4,6 @@ import { usePathname } from 'next/navigation'
 import BackHome from 'cp/back_home'
 import localFont from "next/font/local";
 import Image from 'next/image'
-
 import useTranslate from 'hk/use_translate'
 import './styles.css'
 
@@ -28,7 +27,7 @@ export function Page({ children, className }: TyoePage) {
 	}
 
 	return (
-		<div className={`rounded-border-page-radius absolute w-full h-full grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1  md:overflow-y-hidden overflow-hidden center-animate ${className ?? ""}`}>
+		<div className={`rounded-border-page-radius absolute w-full h-full grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1  md:overflow-y-hidden overflow-hidden center-animate2 ${className ?? ""}`}>
 			{pathname !== "/" && <BackHome position={getPosition()} />}
 			{children}
 		</div>
@@ -45,6 +44,7 @@ export default function Book({ children }: { children: ReactNode }) {
 	const markPageRef = useRef<HTMLDivElement>(null);
 	const markPageRef2 = useRef<HTMLDivElement>(null);
 
+	const pageRef1 = useRef<HTMLDivElement>(null);
 	const pageRef2 = useRef<HTMLDivElement>(null);
 	const pageRef3 = useRef<HTMLDivElement>(null);
 	const pageRef4 = useRef<HTMLDivElement>(null);
@@ -89,6 +89,30 @@ export default function Book({ children }: { children: ReactNode }) {
 			removeClassCenter();
 			void centerRef.current.offsetWidth;
 			centerRef.current.classList.add('center-finish');
+		}
+
+		if (pathname !== "/about_me" &&
+			pageRef1.current &&
+			pageRef2.current &&
+			pageRef3.current &&
+			pageRef4.current &&
+			pageRef5.current &&
+			pageRef6.current &&
+			pageRef7.current &&
+			pageRef8.current &&
+			pageRef9.current &&
+			pageRef10.current
+		) {
+			pageRef1.current.classList.add('remove-left-border');
+			pageRef2.current.classList.add('remove-left-border');
+			pageRef3.current.classList.add('remove-left-border');
+			pageRef4.current.classList.add('remove-left-border');
+			pageRef5.current.classList.add('remove-left-border');
+			pageRef6.current.classList.add('remove-left-border');
+			pageRef7.current.classList.add('remove-left-border');
+			pageRef8.current.classList.add('remove-left-border');
+			pageRef9.current.classList.add('remove-left-border');
+			pageRef10.current.classList.add('remove-left-border');
 		}
 
 		//about
@@ -188,12 +212,12 @@ export default function Book({ children }: { children: ReactNode }) {
 			pageRef6.current.classList.remove('origin-move-right-page-r6');
 			pageRef6.current.classList.remove('move-right-page-r6');
 			void pageRef6.current.offsetWidth;
-			pageRef6.current.classList.add('move-right-page-r6');
+			pageRef6.current.classList.add('move-right-page-r6', '-md:border-l-[1px]');
 
 			pageRef7.current.classList.remove('origin-move-right-page-r7');
 			pageRef7.current.classList.remove('move-right-page-r7');
 			void pageRef7.current.offsetWidth;
-			pageRef7.current.classList.add('move-right-page-r7');
+			pageRef7.current.classList.add('move-right-page-r7', '-md:border-l-[1px]');
 
 			removeClassCenter();
 			void centerRef.current.offsetWidth;
@@ -226,22 +250,22 @@ export default function Book({ children }: { children: ReactNode }) {
 			pageRef6.current.classList.remove('origin-move-right-page-r6');
 			pageRef6.current.classList.remove('move-right-page-r6');
 			void pageRef6.current.offsetWidth;
-			pageRef6.current.classList.add('move-right-page-r6');
+			pageRef6.current.classList.add('move-right-page-r6', '-md:border-l-[1px]');
 
 			pageRef7.current.classList.remove('origin-move-right-page-r7');
 			pageRef7.current.classList.remove('move-right-page-r7');
 			void pageRef7.current.offsetWidth;
-			pageRef7.current.classList.add('move-right-page-r7');
+			pageRef7.current.classList.add('move-right-page-r7', '-md:border-l-[1px]');
 
 			pageRef8.current.classList.remove('origin-move-right-page-r8');
 			pageRef8.current.classList.remove('move-right-page-r8');
 			void pageRef8.current.offsetWidth;
-			pageRef8.current.classList.add('move-right-page-r8');
+			pageRef8.current.classList.add('move-right-page-r8', '-md:border-l-[1px]');
 
 			pageRef9.current.classList.remove('origin-move-right-page-r9');
 			pageRef9.current.classList.remove('move-right-page-r9');
 			void pageRef9.current.offsetWidth;
-			pageRef9.current.classList.add('move-right-page-r9');
+			pageRef9.current.classList.add('move-right-page-r9', '-md:border-l-[1px]');
 
 			removeClassCenter();
 			void centerRef.current.offsetWidth;
@@ -285,17 +309,17 @@ export default function Book({ children }: { children: ReactNode }) {
 			pageRef5.current.classList.remove('origin-move-left-page-l5');
 			pageRef5.current.classList.remove('move-left-page-l5');
 			void pageRef5.current.offsetWidth;
-			pageRef5.current.classList.add('move-left-page-l5');
+			pageRef5.current.classList.add('move-left-page-l5', '-md:border-l-[1px]');
 
 			pageRef4.current.classList.remove('origin-move-left-page-l4');
 			pageRef4.current.classList.remove('move-left-page-l4');
 			void pageRef4.current.offsetWidth;
-			pageRef4.current.classList.add('move-left-page-l4');
+			pageRef4.current.classList.add('move-left-page-l4', '-md:border-l-[1px]');
 
 			pageRef3.current.classList.remove('origin-move-left-page-l3');
 			pageRef3.current.classList.remove('move-left-page-l3');
 			void pageRef3.current.offsetWidth;
-			pageRef3.current.classList.add('move-left-page-l3');
+			pageRef3.current.classList.add('move-left-page-l3', '-md:border-l-[1px]');
 
 			removeClassCenter();
 			void centerRef.current.offsetWidth;
@@ -332,12 +356,12 @@ export default function Book({ children }: { children: ReactNode }) {
 			pageRef5.current.classList.remove('origin-move-left-page-l5');
 			pageRef5.current.classList.remove('move-left-page-l5');
 			void pageRef5.current.offsetWidth;
-			pageRef5.current.classList.add('move-left-page-l5');
+			pageRef5.current.classList.add('move-left-page-l5', '-md:border-l-[1px]');
 
 			pageRef4.current.classList.remove('origin-move-left-page-l4');
 			pageRef4.current.classList.remove('move-left-page-l4');
 			void pageRef4.current.offsetWidth;
-			pageRef4.current.classList.add('move-left-page-l4');
+			pageRef4.current.classList.add('move-left-page-l4', '-md:border-l-[1px]');
 
 			removeClassCenter();
 			void centerRef.current.offsetWidth;
@@ -351,12 +375,12 @@ export default function Book({ children }: { children: ReactNode }) {
 			pageRef5.current.classList.remove('move-left-page-l5');
 			pageRef5.current.classList.remove('origin-move-left-page-l5');
 			void pageRef5.current.offsetWidth;
-			pageRef5.current.classList.add('origin-move-left-page-l5');
+			pageRef5.current.classList.add('origin-move-left-page-l5', '-md:border-l-[1px]');
 
 			pageRef4.current.classList.remove('move-left-page-l4');
 			pageRef4.current.classList.remove('origin-move-left-page-l4');
 			void pageRef4.current.offsetWidth;
-			pageRef4.current.classList.add('origin-move-left-page-l4');
+			pageRef4.current.classList.add('origin-move-left-page-l4', '-md:border-l-[1px]');
 		}
 
 		if (data.current.count === 0) {
@@ -375,12 +399,12 @@ export default function Book({ children }: { children: ReactNode }) {
 
 				<div className="pages"></div>
 
-				<div className="page left_ p_1 relative pb-5 overflow-hidden">
+				<div ref={pageRef1} className="page left_ p_1 relative pb-5 overflow-hidden">
 					{//					<div className="top-0 left-0 absolute bg-[--base] h-full w-full z-0 backface"></div>
 					}
 					<div className={`${orbitron.className} cover top-0 left-0 absolute z-10 h-[700px] space-y-6 p-5 pt-10`}>
-						<h1 className="text-6xl font-extrabold" >{translate('Una pasión')}</h1>
-						<h2 className="text-3xl font-extrabold pl-5 text-pretty" >{translate('Trayectoria de un ingeniero de software')}</h2>
+						<h1 className="text-6xl font-extrabold" >{translate("cover_title")}</h1>
+						<h2 className="text-3xl font-extrabold pl-5 text-pretty" >{translate("cover_subtitle")}</h2>
 						<div className="w-full h-[460px] rounded-[0_0_var(--border-page-radius)_0] overflow-auto">
 							<Image src="/imgs/cover.webp" priority={true} width={450} height={600} alt="Image of cover" />
 						</div>

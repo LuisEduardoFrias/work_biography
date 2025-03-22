@@ -1,12 +1,12 @@
 "use client"
 import { useState, ChangeEvent } from 'react'
-import { State, Actions } from '@/state_warehouse'
 import { useSubscriberState } from 'subscriber_state'
+import { State, Actions } from '@/state_warehouse'
 import './styles.css'
 
 export default function SwitchTheme() {
-	const [{ isDark }, { changeTheme }] = useSubscriberState<Partial<State>, Actions>('isDark', true);
-	const [checkIsDark, setCheckIsDark] = useState(isDark);
+	const [{ isDark }, { changeTheme }] = useSubscriberState<State, Actions>('isDark', true);
+	const [checkIsDark, setCheckIsDark] = useState<boolean>(isDark);
 
 	function handleChange(event: ChangeEvent<HTMLInputElement>) {
 		changeTheme(event.target.checked)
@@ -20,3 +20,5 @@ export default function SwitchTheme() {
 		</label>
 	)
 }
+
+

@@ -14,8 +14,8 @@ export type Actions = {
 }
 
 function changeLanguage(language: string) {
-	update((state) => ({ ...state, language }))
-	setCookie('language', language)
+	update((state) => ({ ...state, language }));
+	setCookie('language', language);
 }
 
 function changeTheme(isDark: boolean) {

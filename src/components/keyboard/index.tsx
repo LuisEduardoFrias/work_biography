@@ -1,6 +1,6 @@
 
 import "./styles.css"
-
+import Clock from './clock'
 // const keyframes = {
 // 	'@keyframes typeAndDelete': {
 // 		'0%, 10%': {
@@ -15,6 +15,7 @@ import "./styles.css"
 // 	}
 // };
 // 
+
 type KeyProps = {
 	text: string | undefined,
 	subText: string | undefined,
@@ -22,13 +23,13 @@ type KeyProps = {
 }
 
 export default function KeyBoard() {
-//	const text = "programando"
+	//	const text = "programando"
 
 	// const animationStyles = {
-// 		animation: "typeAndDelete 8s infinite, blinkCursor .5s step-end infinite alternate",
-// 		animationTimingFunction: `steps(${text.length + 2})`,
-// 		animationName: 'typeAndDelete'
-// 	};
+	//		animation: "typeAndDelete 8s infinite, blinkCursor .5s step-end infinite alternate",
+	//		animationTimingFunction: `steps(${text.length + 2})`,
+	//		animationName: 'typeAndDelete'
+	//	};
 
 	return (
 		<div className="container-keyboard">
@@ -86,8 +87,8 @@ export default function KeyBoard() {
 					<div>
 						<div>
 							<div>
-								<div>
-									<span>9:00</span>
+								<div className="screen-data" >
+									<Clock />
 									<span>Thru, Apr 4</span>
 								</div>
 							</div>

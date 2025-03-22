@@ -23,7 +23,7 @@
 	height: auto;
 	opacity: 0;
 	transform: translateX(-50%);
-	animation: show 1s both 0.5s;
+	animation: profile-opacity 1s 10s both;
 	
 	@media(width <=768px) {
 		visibility: hidden;
@@ -43,24 +43,27 @@
 	z-index: 9;
 	filter: blur(10000px);
 	transform-style: filter 1s ease;
-	animation: imagePresentation 1s 11s both;
 	mask-image: linear-gradient(black 80%, transparent);
+	filter: drop-shadow(10px 7px 15px black);
 	
 	@media (width <=768px) {
 		max-width: 80%;
 	}
 }
 
-
-@keyframes show {
-	to {
-		opacity: 1;
-	}
+.img-show-first {
+	opacity: 0;
+	animation: profile-opacity 1s 10s both;
 }
 
-@keyframes imagePresentation {
-	to {
-		filter: drop-shadow(10px 7px 15px black);
+.img-show-second {
+	opacity: 0;
+	animation: profile-opacity 1s 4s both;
+}
+
+@keyframes profile-opacity {
+	100% {
+		opacity: 1;
 	}
 }
 

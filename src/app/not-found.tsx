@@ -12,13 +12,13 @@ export default function NotFoundPage() {
 
 	return (
 		<Page>
-			<div className="w-6/12 h-full relative" >
-				<div className="flex flex-col space-y-6 text-color">
-				        	<h2 className="text-5xl font-extrabold text-center" >{translate('Something went wrong!')}</h2>
-				{error&&	<span className="text-center" >{translate(error)}</span>}
-				        	<Link href={"/"} className="text-2xl text-primary underline font-extrabold text-center" >
-				        		{translate('Go to the home')}
-				        	</Link>
+			<div className="col-start-1 col-end-2 md:row-start-1 md:row-end-2 -md:row-start-1 -md:row-end-3 h-full relative" >
+				<div className="flex flex-col space-y-6 text-color pt-3">
+					<h2 className="text-5xl font-extrabold text-center" >{translate('Something went wrong!')}</h2>
+					{error && <span className="text-center" >{translate(error)}</span>}
+					<Link href={"/"} className="text-2xl text-primary underline font-extrabold text-center" >
+						{translate('Go to the home')}
+					</Link>
 				</div>
 				<Image
 					priority={true}
@@ -29,7 +29,7 @@ export default function NotFoundPage() {
 					alt={"image error 404"}
 				/>
 			</div>
-			<div className="w-6/12 h-full">
+			<div className="-md:hidden md:visible md:col-start-2 col-end-3 md:row-start-1 md:row-end-2 h-full">
 			</div>
 		</Page>
 	);

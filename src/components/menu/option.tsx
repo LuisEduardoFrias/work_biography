@@ -11,7 +11,6 @@ export type TypeOption = {
 
 export default function Option({ name, href, src }: TypeOption) {
 	const translate = useTranslate();
-	//const DynamicComponent = requited(`../../svg/${src}.tsx`).default;
 	const DynamicComponent = lazy(() => import(`../../svg/${src}.tsx`));
 
 	return (

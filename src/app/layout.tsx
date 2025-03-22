@@ -15,7 +15,7 @@ const days_one = localFont({
 export const metadata: Metadata = {
 	title: "Mi Camino en la Programación: De la Decepción a la Autodidaxia",
 	description: "Descubre mi viaje personal en el mundo de la programación, desde mis inicios en soporte informático hasta convertirme en un 'ingeniero de software' autodidacta.",
-	authors: [{name:"Luis Eduardo Frias"}],
+	authors: [{ name: "Luis Eduardo Frias" }],
 	keywords: "programación, autodidacta, desarrollo de software, HTML, CSS, JavaScript, educación, experiencia, carrera profesional, ITLA, ITSC, UASD"
 };
 
@@ -25,9 +25,9 @@ export default function RootLayout({ children, }: Readonly<{ children: ReactNode
 			<head>
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 			</head>
-			<body className={`${days_one.className} antialiased`}>
+			<body className={`${days_one.className} antialiased flex flex-col`}>
 				<Meteors />
-				<div className="z-50 absolute top-0 left-0 w-full flex flex-row space-x-5 justify-end p-2">
+				<div className="w-full flex flex-row space-x-5 justify-end p-2">
 					<SelectLanguage />
 					<SwitchTheme />
 				</div>

@@ -1,4 +1,5 @@
 {
+	"Coming soon": "Proximamente",
 	"Spanich": "Español",
 	"English": "Ingles",
 	"about_subtitle": "Ingeniero de software",
@@ -19,8 +20,8 @@
 	"Go to the home": "Ir al inicio!",
 	"Something went wrong!": "¡Algo salió mal!",
 	"Page 5": "pagina 5",
-	"Una pasión": "Una pasión",
-	"Trayectoria de un ingeniero de software": "Trayectoria de un ingeniero de software",
+	"cover_title": "Una pasión",
+	"cover_subtitle": "Trayectoria de un ingeniero de software",
 	"studies": "Estudios",
 	"skills": "Abilidades",
 	"projects": "Proyectos",

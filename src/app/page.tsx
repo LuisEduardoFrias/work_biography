@@ -3,6 +3,7 @@ import { Page } from 'cp/book'
 import Profile from 'cp/profile'
 import Menu from 'cp/menu'
 import Presentation from 'cp/presentation'
+import '@/state_warehouse'
 
 export default function Home() {
 	return (
