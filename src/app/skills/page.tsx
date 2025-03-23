@@ -5,7 +5,6 @@ import BackEnd from 'cp/skills/back_end'
 import Other from 'cp/skills/other'
 import Slider from 'cp/skills/slider'
 import useTranslate from 'hk/use_translate'
-import '@/state_warehouse'
 
 export default function Skill() {
 	const translate = useTranslate();

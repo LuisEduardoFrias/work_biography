@@ -4,7 +4,7 @@ import sections from '../../jsons/about.json'
 import Image from 'next/image';
 import useTranslate from 'hk/use_translate';
 
-export default function PageAbout() {
+export default function About() {
 	const translate = useTranslate();
 	return (
 		<Page>
