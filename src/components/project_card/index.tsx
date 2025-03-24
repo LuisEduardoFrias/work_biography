@@ -1,5 +1,7 @@
 import Image from 'next/image'
+import Loading from '../loading'
 import useTranslate from 'hk/use_translate'
+import { useState } from 'react';
 
 export type TypeProjectCard = {
 	name: string;
@@ -60,20 +62,41 @@ export default function ProjectCard(state: TypeProjectCard) {
 			{gifUrls && gifUrls.length > 0 && (
 				<div className="mb-4">
 					<h3 className="text-lg font-semibold mb-2">GIFs:</h3>
-					<div className="flex flex-wrap">
-						{gifUrls.map((url, index) => (
-							<Image
-								key={index}
-								src={url}
-								priority={true}
-								width={2094}
-								height={2176}
-								alt={`GIF ${index}`}
-								className="w-32 h-32 object-cover mr-2 mb-2 rounded-lg" />
-						))}
+					<div className="flex flex-wrap gap-2">
+						{gifUrls.map((url, index) => <ImageLoading index={index} key={`${index}`} url={url} />)}
 					</div>
 				</div>
 			)}
 		</div>
 	);
 };
+
+function ImageLoading({ url, index }: { url: string, index: number, key: string }) {
+	const [loading, setLoading] = useState(true);
+	const [error, setError] = useState();
+
+	return (
+		<div className="relative border border-contrast rounded w-32 h-44">
+			{loading &&
+				<div className="w-full h-full flex justify-center items-center">
+					<div className="refresh_icon"></div>
+				</div>}
+			{error &&
+				<div className="absolute bg-[#ffffff38] backdrop-blur-[1px] w-full h-full flex justify-center items-center px-2">
+					<span className="text-contrast text-[12px]">Image loading error.</span>
+				</div>
+			}
+			<Image
+				//loading="lazy"
+				//placeholder="blur"
+				src={url}
+				width={2094}
+				height={2176}
+				onLoad={() => setLoading(false)}
+				onError={() => { setLoading(false); setError(true); }}
+				alt={`GIF - ${index}`}
+				className="w-32 h-44 object-cover mr-2 mb-2 rounded-lg" />
+
+		</div>
+	);
+}
