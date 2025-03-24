@@ -28,9 +28,9 @@
 	
 	animation: book-ligth 8s 5s ease-in-out forwards;
 	
-	/* 	@media(width >=1300px) {
-		width: 1000px;
-		height: 700px;
+	/*	@media(width >=1300px) {
+	  	width: 1000px;
+	  	height: 700px;
 	} */
 }
 
@@ -57,7 +57,7 @@
 }
 
 .cover {
-	animation: cover-hidden 0s 4.8s ease forwards;
+	animation: cover-hidden 0s 3.7s ease forwards;
 }
 
 @keyframes cover-hidden {
@@ -150,7 +150,7 @@
 	transform: translateX(20px);
 	width: Calc(100% - 42px);
 	opacity: 0;
-	animation: center-opacity 1s 5s forwards;
+	animation: center-opacity 1s 6s forwards;
 }
 
 .center {
@@ -203,13 +203,17 @@
 
 /***********************************/
 /***********  *****  ***************/
-/***********************************/
+/***************************2********/
+
 
 .remove-left-border {
 	@media (width <=768px) {
-		border-left-width: 0;
+		border-left-width: 0px;
+		transition: border ease 4s;
 	}
 }
+
+
 
 .right_ {
 	transform-origin: left center;
@@ -245,14 +249,23 @@
 .left_ {
 	transform-origin: left center;
 	
-	/* 	@media (width <=768px) {
-		border-left-width: 0;
+	/*	@media (width <=768px) {
+	  	border-left-width: 0;
 	} */
 }
 
 .p_1 {
+	width: 50%;
+	left: 50%;
 	z-index: 10;
 	animation: open-book1 3s 4s ease forwards;
+	
+	@media (max-width: 768px) {
+		z-index: 10;
+		width: 100%;
+		left: 0%;
+		animation: open-book-mini1 3s 4s ease forwards;
+	}
 }
 
 .p_2 {
@@ -284,6 +297,27 @@
 	100% {
 		transform: rotateY(-180deg);
 		z-index: 1;
+	}
+}
+
+@keyframes open-book-mini1 {
+	
+	50% {
+		width: 50%;
+		left: 50%;
+	}
+	
+	80% {
+		transform: rotateY(-180deg);
+		width: 50%;
+		left: 50%;
+	}
+	
+	100% {
+		transform: rotateY(-180deg);
+		z-index: 1;
+		width: 50%;
+		left: 50%;
 	}
 }
 
@@ -433,26 +467,33 @@
 
 .move-right-page-r7 {
 	transform: rotateY(0deg);
-	z-index: 4;
+	z-index: 6;
 	animation: move_right_page_r7 3.4s 0.4s ease forwards;
 }
 
 .move-right-page-r8 {
 	transform: rotateY(0deg);
-	z-index: 3;
+	z-index: 7;
 	animation: move_right_page_r8 3.8s 0.8s ease forwards;
 }
 
 .move-right-page-r9 {
 	transform: rotateY(0deg);
-	z-index: 2;
+	z-index: 8;
 	animation: move_right_page_r9 4.2s 1.2s ease forwards;
 }
 
 .move-right-page-r10 {
 	transform: rotateY(0deg);
-	z-index: 1;
+	z-index: 10;
 	animation: move_right_page_r10 4.6s 1.6s ease forwards;
+}
+
+.about-extends-page {
+	@media (max-width: 768px) {
+		animation: move_right_page_r10_about 4.6s 1.6s ease forwards;
+		z-index: 10;
+	}
 }
 
 @keyframes move_right_page_r6 {
@@ -487,6 +528,19 @@
 	100% {
 		transform: rotateY(-180deg);
 		z-index: 10;
+	}
+}
+
+@keyframes move_right_page_r10_about {
+	0% {
+		transform: rotateY(-180deg);
+	}
+	
+	100% {
+		position: absolute;
+		transform: rotateY(-180deg);
+		width: 100%;
+		left: 100%;
 	}
 }
 

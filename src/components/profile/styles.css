@@ -58,7 +58,7 @@
 
 .img-show-second {
 	opacity: 0;
-	animation: profile-opacity 1s 3.7s both;
+	animation: profile-opacity 1s 4.5s both;
 }
 
 @keyframes profile-opacity {

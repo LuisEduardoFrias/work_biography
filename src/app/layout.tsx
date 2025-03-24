@@ -28,8 +28,8 @@ export default function RootLayout({ children, }: Readonly<{ children: ReactNode
 			<body className={`${days_one.className} antialiased flex flex-col`}>
 				<Meteors />
 				<div className="w-full flex flex-row justify-between p-2">
-					<div className="relative text-3xl w-full flex flex-row space-x-5 justify-end p-2">
-						<span className="absolute left-2  top-1/2 translate-y-[-50%] text-contrast ">In Developer</span>
+					<div className="relative w-full flex flex-row space-x-5 justify-end p-2">
+						<span className="absolute text-2xl left-2 text-red-600 top-1/2 translate-y-[-50%] text-contrast ">In Developer</span>
 					</div>
 					<div className="w-full flex flex-row space-x-5 justify-end">
 						<SelectLanguage />

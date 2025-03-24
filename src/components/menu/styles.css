@@ -165,23 +165,23 @@
 
 .ul-show-first {
 	>li:nth-child(1) {
-		animation: move 1s 10.5s linear both;
+		animation: move 1s 10s linear both;
 	}
 	
 	>li:nth-child(2) {
-		animation: move 1s 10.8s linear both;
+		animation: move 1s 10.4s linear both;
 	}
 	
 	>li:nth-child(3) {
-		animation: move 1s 11.1s linear both;
+		animation: move 1s 10.8s linear both;
 	}
 	
 	>li:nth-child(4) {
-		animation: move 1s 11.4s linear both;
+		animation: move 1s 11.2s linear both;
 	}
 	
 	>li:nth-child(5) {
-		animation: move 1s 11.7s linear both;
+		animation: move 1s 11.6s linear both;
 	}
 }
 

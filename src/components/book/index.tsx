@@ -91,7 +91,7 @@ export default function Book({ children }: { children: ReactNode }) {
 			centerRef.current.classList.add('center-finish');
 		}
 
-		if (pathname !== "/about_me" &&
+		if (
 			pageRef1.current &&
 			pageRef2.current &&
 			pageRef3.current &&
@@ -103,20 +103,39 @@ export default function Book({ children }: { children: ReactNode }) {
 			pageRef9.current &&
 			pageRef10.current
 		) {
-			pageRef1.current.classList.add('remove-left-border');
-			pageRef2.current.classList.add('remove-left-border');
-			pageRef3.current.classList.add('remove-left-border');
-			pageRef4.current.classList.add('remove-left-border');
-			pageRef5.current.classList.add('remove-left-border');
-			pageRef6.current.classList.add('remove-left-border');
-			pageRef7.current.classList.add('remove-left-border');
-			pageRef8.current.classList.add('remove-left-border');
-			pageRef9.current.classList.add('remove-left-border');
-			pageRef10.current.classList.add('remove-left-border');
+			if (pathname !== "/about_me") {
+				pageRef1.current.classList.add('remove-left-border');
+				pageRef2.current.classList.add('remove-left-border');
+				pageRef3.current.classList.add('remove-left-border');
+				pageRef4.current.classList.add('remove-left-border');
+				pageRef5.current.classList.add('remove-left-border');
+				pageRef6.current.classList.add('remove-left-border');
+				pageRef7.current.classList.add('remove-left-border');
+				pageRef8.current.classList.add('remove-left-border');
+				pageRef9.current.classList.add('remove-left-border');
+				pageRef10.current.classList.add('remove-left-border');
+				pageRef10.current.classList.remove('about-extends-page');
+			} else {
+				pageRef1.current.classList.remove('remove-left-border');
+				pageRef2.current.classList.remove('remove-left-border');
+				pageRef3.current.classList.remove('remove-left-border');
+				pageRef4.current.classList.remove('remove-left-border');
+				pageRef5.current.classList.remove('remove-left-border');
+				pageRef6.current.classList.remove('remove-left-border');
+				pageRef7.current.classList.remove('remove-left-border');
+				pageRef8.current.classList.remove('remove-left-border');
+				pageRef9.current.classList.remove('remove-left-border');
+				pageRef10.current.classList.remove('remove-left-border');
+			}
 		}
 
 		//about
 		if (pathname === "/about_me" &&
+			pageRef1.current &&
+			pageRef2.current &&
+			pageRef3.current &&
+			pageRef4.current &&
+			pageRef5.current &&
 			pageRef6.current &&
 			pageRef7.current &&
 			pageRef8.current &&
@@ -150,7 +169,7 @@ export default function Book({ children }: { children: ReactNode }) {
 			pageRef10.current.classList.remove('origin-move-right-page-r10');
 			pageRef10.current.classList.remove('move-right-page-r10');
 			void pageRef10.current.offsetWidth;
-			pageRef10.current.classList.add('move-right-page-r10');
+			pageRef10.current.classList.add('move-right-page-r10', "about-extends-page");
 
 			markPageRef.current.classList.remove('mark-page-move');
 			void markPageRef.current.offsetWidth;
@@ -164,6 +183,9 @@ export default function Book({ children }: { children: ReactNode }) {
 			bookRef.current.classList.remove('book-animate');
 			void bookRef.current.offsetWidth;
 			bookRef.current.classList.add('book-animate2');
+
+
+
 
 			removeClassCenter();
 			void centerRef.current.offsetWidth;
@@ -200,7 +222,6 @@ export default function Book({ children }: { children: ReactNode }) {
 			pageRef10.current.classList.remove('move-right-page-r10');
 			pageRef10.current.classList.remove('origin-move-right-page-r10');
 			void pageRef10.current.offsetWidth;
-			pageRef10.current.classList.add('origin-move-right-page-r10');
 		}
 
 		//experiences
@@ -392,6 +413,22 @@ export default function Book({ children }: { children: ReactNode }) {
 		data.current.oldPathname = pathname;
 	}, [pathname])
 
+	function Cover() {
+		return (
+			<div className={`${orbitron.className} cover top-0 left-0 absolute z-10 h-[700px] space-y-6 p-5 pt-10`}>
+
+				<h1 className="text-6xl font-extrabold" >{translate("Una pasión")}</h1>
+
+				<h2 className="text-3xl font-extrabold pl-5 text-pretty" >{translate("Trayectoria de un ingeniero de software")}</h2>
+
+				<div className="w-full h-[460px] rounded-[0_0_var(--border-page-radius)_0] overflow-auto">
+
+					<Image src="/imgs/cover.webp" priority={true} width={450} height={600} alt="Image of cover" />
+				</div>
+			</div>
+		)
+	}
+
 	return (
 		<div className="container_ relative flex-col overflow-hidden relative w-full h-full p-3 flex justify-center items-center">
 
@@ -399,16 +436,8 @@ export default function Book({ children }: { children: ReactNode }) {
 
 				<div className="pages"></div>
 
-				<div ref={pageRef1} className="page left_ p_1 relative pb-5 overflow-hidden">
-					{//					<div className="top-0 left-0 absolute bg-[--base] h-full w-full z-0 backface"></div>
-					}
-					<div className={`${orbitron.className} cover top-0 left-0 absolute z-10 h-[700px] space-y-6 p-5 pt-10`}>
-						<h1 className="text-6xl font-extrabold" >{translate("cover_title")}</h1>
-						<h2 className="text-3xl font-extrabold pl-5 text-pretty" >{translate("cover_subtitle")}</h2>
-						<div className="w-full h-[460px] rounded-[0_0_var(--border-page-radius)_0] overflow-auto">
-							<Image src="/imgs/cover.webp" priority={true} width={450} height={600} alt="Image of cover" />
-						</div>
-					</div>
+				<div ref={pageRef1} className="page left_  p_1 pb-5 overflow-hidden">
+					<Cover />
 				</div>
 
 				<div ref={pageRef2} className="page left_ p_2"></div>
