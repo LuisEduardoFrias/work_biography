@@ -75,7 +75,7 @@ function ImageLoading({ url, index }: { url: string, index: number, key: string 
 	const [error, setError] = useState<boolean>(false);
 
 	return (
-		<div className="relative border border-contrast rounded w-32 h-44">
+		<div className="relative z-0 border border-contrast rounded w-32 h-44">
 			{loading &&
 				<div className="w-full h-full flex justify-center items-center">
 					<div className="refresh_icon"></div>

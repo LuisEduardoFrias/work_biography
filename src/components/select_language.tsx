@@ -12,7 +12,7 @@ type TypeLanguage = {
 }
 
 export default function SelectLanguage() {
-	const [{ language: lang }, { changeLanguage }] = useSubscriberState<State, Actions>('language', true);
+	const [{ language: lang }, { changeLanguage }] = useSubscriberState<State, Actions>('language');
 	const [language, setLanguage] = useState<string>(lang);
 	const translate = useTranslate();
 

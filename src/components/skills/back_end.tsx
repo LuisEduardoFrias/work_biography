@@ -1,5 +1,3 @@
-"use client"
-//import { useState } from 'react'
 import Image from 'next/image'
 import Skills from '../../jsons/skills.json'
 import './back_end.css'
@@ -8,15 +6,12 @@ type Sk = {
 	href: string;
 	alt: string;
 	name: string;
-	/*  description: string;
-	  showDesc: boolean;*/
 }
 
 type TDrawProps = {
 	key: number,
 	skill: Sk,
 	index: number,
-	//selectInd: number,
 	onclick: () => void
 }
 
@@ -28,8 +23,8 @@ export function Draw({ skill, index, onclick }: TDrawProps) {
 
 	return (
 		<div key={index} style={Styles} onClick={onclick} >
-			<div>
-				{skill.href && <Image src={skill.href} width={70} height={70} alt={skill.alt} />}
+			<div className="border border-theme-1 bg-[#a7a7a78b] group transition-shadow hover:scale-110 hover:shadow-[2px_2px_3px_5px_var(--theme-6)] shadow-[2px_2px_3px_0_var(--theme-4)] p-2 flex flex-col justify-center gap-1 items-center rounded-2xl">
+				{skill.href && <Image src={skill.href} className="group-hover:rotate-45 transition-transform min-w-[100px] min-h-fit" width={70} height={70} alt={skill.alt} />}
 				{skill.name && <span>{skill.name}</span>}
 			</div>
 			<div></div>
@@ -38,27 +33,12 @@ export function Draw({ skill, index, onclick }: TDrawProps) {
 }
 
 export default function BackEnd() {
-	//	const [selectInd, setSelect] = useState(-1)
-
-	const skills: Sk[] = [...Skills.backend.advancedExperience, ...Skills.backend.middleExperience];
-	// 	let count = skills.length;
-	// 	count = count / 2 === 0 ? count : count + 1;
-
-	const StyleGrid = {
-		//	gridTemplateColumns: `repeat(6, 50px`,
-		//gridTemplateRows: `repeat(6, 50px`,
-
-		gridTemplateColumns: `repeat(${12}, Calc(60px - 30px))`,
-		gridTemplateRows: `repeat(${8}, Calc(60px - 20px))`,
-	}
-
 	return (
-		<div className="backend-page">
+		<div className="w-full px-5 space-y-10">
 			<h2>Back End</h2>
-
-			<div style={StyleGrid}>
+			<div className="flex flex-wrap gap-12">
 				{
-					skills.map((e: Sk, index: number) => <Draw key={index} onclick={() => { }} skill={e} index={index} />)
+					Skills.backend.map((e: Sk, index: number) => <Draw key={index} onclick={() => { }} skill={e} index={index} />)
 				}
 			</div>
 		</div>
