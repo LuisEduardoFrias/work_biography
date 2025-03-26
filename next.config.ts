@@ -18,6 +18,30 @@ const nextConfig: NextConfig = {
 			},
 			{
 				protocol: 'https',
+				hostname: 'yt3.googleusercontent.com',
+				port: '',
+				pathname: '/**',
+			},
+			{
+				protocol: 'https',
+				hostname: 'avatars.githubusercontent.com',
+				port: '',
+				pathname: '/u/**',
+			},
+			{
+				protocol: 'https',
+				hostname: 'refactoring.guru',
+				port: '',
+				pathname: '/images/patterns/book/**',
+			},
+			{
+				protocol: 'https',
+				hostname: 'm.media-amazon.com',
+				port: '',
+				pathname: '/images/I/**',
+			},
+			{
+				protocol: 'https',
 				hostname: 'images.icon-icons.com',
 				port: '',
 				pathname: '/2389/PNG/512/**',
