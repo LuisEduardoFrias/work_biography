@@ -12,6 +12,12 @@ const nextConfig: NextConfig = {
 			},
 			{
 				protocol: 'https',
+				hostname: 'x.com',
+				port: '',
+				pathname: '/powerhdeleon/photo',
+			},
+			{
+				protocol: 'https',
 				hostname: 'icon.icepanel.io',
 				port: '',
 				pathname: '/Technology/**',
