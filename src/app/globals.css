@@ -227,8 +227,3 @@ body:has(#switch-theme:not(:checked)) {
 	left: -11px;
 	top: -2px;
 }
-
-.mi-contenedor article:last-child {
-	transform: translateX(-53%);
-	position: relative;
-}

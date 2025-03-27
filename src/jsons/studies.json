@@ -1,0 +1,113 @@
+{
+	"titles": [
+		{
+			"name": "Tegnico superior en desarollo de software",
+			"img": "/imgs/diploma.webp",
+			"alt": "titulo tegnico superior en desarrollo de software"
+		}
+	],
+	"youtubers": [
+		{
+			"sector": "web y infirmativo",
+			"name": "Miguel Ángel Durán",
+			"img": "https://avatars.githubusercontent.com/u/1561955?v=4",
+			"url": "https://github.com/midudev"
+		},
+		{
+			"sector": "web",
+			"name": "Fernando Herrera",
+			"img": "https://yt3.googleusercontent.com/wi0ZUvM16CDMJSP1CDqY8QLskk6y7-Un7ztvMDC2Xdbkm8KHR3BWg08bd0EgPgfEHqUpZGkzyA=s160-c-k-c0x00ffffff-no-rj",
+			"url": "https://m.youtube.com/channel/UCuaPTYj15JSkETGnEseaFFg"
+		},
+		{
+			"sector": "C#",
+			"name": "Hector D' Leon",
+			"img": "https://avatars.githubusercontent.com/u/1091493?v=4",
+			"url": "https://m.youtube.com/c/hdeleonnet"
+		},
+		{
+			"sector": "C#",
+			"name": "Felipe Gavilan",
+			"img": "https://yt3.googleusercontent.com/12nnBdRb96DZy82FSic7S7G6c1ug5yt-htli72JD5fPKxQYgFEcc7rD9DzXaAZN6T5ZxHyKChnQ=s160-c-k-c0x00ffffff-no-rj",
+			"url": "https://m.youtube.com/@gavilanch2"
+		},
+		{
+			"sector": "Arquitectura",
+			"name": "Manuel Zapata",
+			"img": "https://yt3.googleusercontent.com/ytc/AIdro_lSSmKLguZg8Gq4by9HhanhKQm8uvp_sFgTjODsjd9IoA=s160-c-k-c0x00ffffff-no-rj",
+			"url": "https://m.youtube.com/manuelzapata"
+		},
+		{
+			"sector": "infirmativo",
+			"name": "EDTeam",
+			"img": "https://yt3.googleusercontent.com/gVPEp1RFXTNqaImY4yOnIjamU1AFDGNEpI1B7g_D4PBX10esTrtQpqejAaj0sNx_hl7lugPEYA=s160-c-k-c0x00ffffff-no-rj",
+			"url": "https://m.youtube.com/EDteam"
+		}
+	],
+	"books": [
+		{
+			"img": "https://m.media-amazon.com/images/I/815Cko39rUL._AC_UF1000,1000_QL80_FMwebp_.jpg",
+			"name": "Patrones de diseño",
+			"autor": "Erich Gamma",
+			"url": "https://drive.google.com/file/d/1HItkw-GQweclpdukgA3a5paX6lvDnfsK/view?usp=drivesdk"
+		},
+		{
+			"img": "https://m.media-amazon.com/images/I/61IYQs-mEZL._AC_UF1000,1000_QL80_FMwebp_.jpg",
+			"name": "El Libro Negro del Programador",
+			"autor": "Rafael Gómez Blanes",
+			"url": "https://drive.google.com/file/d/124qN2gc13Ln-buSKW5QsiodEsLcnt9uQ/view?usp=drivesdk"
+		},
+		{
+			"img": "https://m.media-amazon.com/images/I/61foCyDAF1L._AC_UF1000,1000_QL80_FMwebp_.jpg",
+			"name": "Introducción a la arquitectura de software: Un enfoque práctico",
+			"autor": "Oscar Javier Blancarte Iturralde",
+			"url": "https://drive.google.com/file/d/1lNvmmbSZxLkH432927tmrxPlAI7Toaiy/view?usp=drivesdk"
+		},
+		{
+			"img": "https://m.media-amazon.com/images/I/81hqaXB5dbL._AC_UF1000,1000_QL80_FMwebp_.jpg",
+			"name": "Introducción a los patrones de diseño: Un enfoque práctico",
+			"autor": "Oscar J Blancarte Iturralde",
+			"url": "https://drive.google.com/file/d/1UCdW3bDP2OpCc-_LCURUE2NXnAjxB4_V/view?usp=drivesdk"
+		},
+		{
+			"img": "https://m.media-amazon.com/images/I/614tCf6nhfL._AC_UF1000,1000_QL80_FMwebp_.jpg",
+			"name": "Guía de Arquitectura N-Capas orientada al Dominio con .NET 4.0",
+			"autor": "Cesar de la Torre",
+			"url": "https://drive.google.com/file/d/1V-VUJUGMpj866BNXzIG8lrC3XZgjM892/view?usp=drivesdk"
+		},
+		{
+			"img": "https://refactoring.guru/images/patterns/book/web-cover-es-3x.png",
+			"name": "Sumérgete en los patrones de diseño",
+			"autor": "alexander shvert",
+			"url": "https://drive.google.com/file/d/133w2lidyUtRygQCOyTBGhjqEky1ahuMx/view?usp=drivesdk"
+		},
+		{
+			"img": "https://m.media-amazon.com/images/I/61orja1+P7L._AC_UF1000,1000_QL80_FMwebp_.jpg",
+			"name": "Código limpio / Clean code",
+			"autor": "Robert C. Martin",
+			"url": "https://drive.google.com/file/d/1I9Gx00BdDvBZjJGkgOPv6O4_anwVL23o/view?usp=drivesdk"
+		}
+	],
+	"otherResourves": [
+		{
+			"name": "Refactoring guru",
+			"url": "https://refactoring.guru/es/design-patterns"
+		},
+		{
+			"name": "Free code camp",
+			"url": "https://www.freecodecamp.org/espanol/news/"
+		},
+		{
+			"name": "RJ code Advance",
+			"url": "https://youtube.com/playlist?list=PLqjdFmR_HdQRPDrw00oKVGHJ5sXf1H21z&si=oh_tMKLnpbztAz9r"
+		},
+		{
+			"name": "Arquitectura",
+			"url": "https://youtube.com/playlist?list=PLqjdFmR_HdQRPDrw00oKVGHJ5sXf1H21z&si=LXIiqABxFWsw-3lK"
+		},
+		{
+			"name": "Clear code js",
+			"url": "https://github.com/andersontr15/clean-code-javascript-es"
+		}
+	]
+}

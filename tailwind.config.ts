@@ -50,6 +50,8 @@ export default {
 				"book-h": "695px",
 			},
 			animation: {
+				"image-scale-top": "img_scale_top 1s 2s ease forwards",
+				"image-scale-bottom": "img_scale_bottom 1s 0s ease forwards",
 				"meteor-effect": "meteor 50s 0s linear infinite",
 				"points1": "show_point 3s 0.5s linear infinite",
 				"points2": "show_point 3s 1.5s linear infinite",
@@ -57,6 +59,20 @@ export default {
 				"move-loading": "move_loading 3s 0s linear infinite",
 			},
 			keyframes: {
+				img_scale_top: {
+					"0%": {
+						transform: "scale(0)"
+					},
+					"100%": {
+						transform: "scale(1)"
+					}
+				},
+				img_scale_bottom: {
+					"100%": {
+						transform: "scale(0)",
+						display: 'none'
+					}
+				},
 				meteor: {
 					"0%": {
 						transform: "rotate(215deg) translateX(0)",
@@ -71,19 +87,19 @@ export default {
 					"100%": {
 						transform: "rotate(215deg) translateX(-800px)",
 						boxShadow: '0 0 0 1px var(--meteor_n)',
-						opacity: "0",
-					},
+						opacity: "0"
+					}
 				},
 				move_loading: {
 					"0%": {
-						transform: "translateX(0)",
+						transform: "translateX(0)"
 					},
 					"50%": {
-						transform: "translateX(40px)",
+						transform: "translateX(40px)"
 					},
 					"100%": {
-						transform: "translateX(80px)",
-					},
+						transform: "translateX(80px)"
+					}
 				},
 				show_point: {
 					"0%": {
@@ -91,7 +107,7 @@ export default {
 					},
 					"100%": {
 						opacity: '0'
-					},
+					}
 				},
 			},
 		},
