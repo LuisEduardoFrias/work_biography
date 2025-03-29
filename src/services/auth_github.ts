@@ -2,6 +2,18 @@ import { Octokit } from "octokit";
 
 const octokit = new Octokit({ auth: process.env.NEXT_PUBLIC_GITHUB_TOKEN });
 
+type TypeRepository = {
+	name: string,
+	description: string,
+	created_at: string,
+	updated_at: string,
+	pushed_at: string,
+	topics: string[],
+	language: string,
+	html_url: string,
+	gifUrls: string[],
+}
+
 export async function getUserName() {
 	try {
 		const { data } = await octokit.rest.users.getAuthenticated();
@@ -34,7 +46,7 @@ export async function getRepoInfoWithProfile() {
 	}
 
 	const repos = await getRepos(username);
-	const reposWithProfile = [];
+	const reposWithProfile: TypeRepository[] = [];
 
 	for (const repo of repos) {
 		try {
@@ -61,10 +73,10 @@ export async function getRepoInfoWithProfile() {
 		}
 	}
 
-	return reposWithProfile;
+	return sortByCreationDate(reposWithProfile);
 }
 
-async function getFilesInFolder(username: string, repoName: string, folderPath: string): Promise<TypeFile[] >{
+async function getFilesInFolder(username: string, repoName: string, folderPath: string): Promise<TypeFile[]> {
 	try {
 		const response = await octokit.request(
 			`GET /repos/${username}/${repoName}/contents/${folderPath}`
@@ -80,10 +92,34 @@ async function getFilesInFolder(username: string, repoName: string, folderPath: 
 	}
 }
 
-export type TypeFile ={ name: string, download_url: string }
+export type TypeFile = { name: string, download_url: string }
 
 function getGifUrls(files: TypeFile[]) {
 	return files
 		.filter((file: TypeFile) => file.name.toLowerCase().endsWith(".gif"))
 		.map((file) => file.download_url);
 }
+
+
+
+function sortByCreationDate(arrayOfObjects: TypeRepository[]): TypeRepository[] {
+	if (!Array.isArray(arrayOfObjects)) {
+		console.log("Invalid input. An array was expected.");
+	}
+
+	return arrayOfObjects.slice().sort((a, b) => {
+		const dateA = new Date(a.created_at).getTime();
+		const dateB = new Date(b.created_at).getTime();
+		return dateA - dateB;
+	}).reverse();
+}
+
+
+
+
+
+
+
+
+
+
