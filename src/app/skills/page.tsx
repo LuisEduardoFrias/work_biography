@@ -6,7 +6,8 @@ import Other from 'cp/skills/other'
 import useTranslate from 'hk/use_translate'
 
 export default function Skill() {
-	const translate = useTranslate();
+	const {translate} = useTranslate();
+	
 	return (
 		<Page>
 			<div className="col-start-1 col-end-2 -md:row-start-1 md:row-end-3 row-start-1 -md:row-end-3 md:row-end-2 h-full pt-7 relative">

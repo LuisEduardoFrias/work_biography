@@ -14,7 +14,7 @@ export type TypeProjectCard = {
 };
 
 export default function ProjectCard(state: TypeProjectCard) {
-	const translate = useTranslate();
+	const {translate} = useTranslate();
 	const {
 		name,
 		description,

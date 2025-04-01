@@ -5,7 +5,7 @@ import experiences from '../../jsons/experiences.json'
 import useTranslate from 'hk/use_translate'
 
 export default function Experiences() {
-	const translate = useTranslate();
+	const {translate} = useTranslate();
 
 	return (
 		<Page>
@@ -38,7 +38,7 @@ type TypeExperience = {
 }
 
 function ExperienceCard(experience: TypeExperience) {
-	const translate = useTranslate();
+	const {translate} = useTranslate();
 
 	return (
 		<div className="bg-base text-contrast rounded-lg w-full h-[300px] border overflow-y-scroll shadow-[2px_2px_6px_2px_var(--theme-6)] p-4">

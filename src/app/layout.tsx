@@ -14,9 +14,9 @@ const days_one = localFont({
 
 export const metadata: Metadata = {
 	title: "Mi Camino en la Programación: De la Decepción a la Autodidaxia",
-	description: "Descubre mi viaje personal en el mundo de la programación, desde mis inicios en soporte informático hasta convertirme en un 'ingeniero de software' autodidacta.",
+	description: "Descubre mi viaje personal en el mundo de la programación.",
 	authors: [{ name: "Luis Eduardo Frias" }],
-	keywords: "programación, autodidacta, desarrollo de software, HTML, CSS, JavaScript, educación, experiencia, carrera profesional, ITLA, ITSC, UASD"
+	keywords: "programación, autodidacta, desarrollo de software, carrera profesional"
 };
 
 export default function RootLayout({ children, }: Readonly<{ children: ReactNode; }>) {

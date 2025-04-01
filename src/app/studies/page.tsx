@@ -5,7 +5,7 @@ import data from "js/studies.json";
 import useTranslate from "hk/use_translate";
 
 export default function Studies() {
-	const translate = useTranslate();
+	const {translate} = useTranslate();
 
 	return (
 		<Page>

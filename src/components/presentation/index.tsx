@@ -7,7 +7,7 @@ const orbitron = localFont({
 });
 
 export default function Presentation() {
-	const translate = useTranslate();
+const { translate } = useTranslate();
 
 	return (
 		<div className="presentation-container w-full h-auto px-2 flex flex-col align-middle gap-3">
@@ -20,8 +20,9 @@ export default function Presentation() {
 
 			<h2 className={`${orbitron.className} text-color-shine`} >BackEnd y FrontEnd</h2>
 			<div>
-				<p dangerouslySetInnerHTML={{ __html: translate('I have over 4 years of experience in the job market, specializing as a backend developer with the language of') }} />
-				<p dangerouslySetInnerHTML={{ __html: translate('I also develop websites using') }} />
+				<p dangerouslySetInnerHTML={{ __html: translate('presentation-p1') }} />
+				<br />
+				<p dangerouslySetInnerHTML={{ __html: translate('presentation-p2') }} />
 			</div>
 		</div>
 	);

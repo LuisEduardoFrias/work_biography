@@ -1,0 +1,38 @@
+
+.pronter {
+	opacity: 0;
+	animation: show 1s 0.5s ease forwards;
+}
+
+@keyframes show {
+	100% {
+		opacity: 1;
+	}
+}
+
+.text-shadow {
+	text-shadow: #ffd11a 0 0 15px;
+}
+
+.dropdown-open {
+	height: 35px;
+	animation: open 1s 0s ease forwards;
+}
+
+@keyframes open {
+	100% {
+		height: 80px;
+	}
+}
+
+.dropdown-close {
+	height: 80px;
+	animation: close 1s 0s ease forwards;
+}
+
+@keyframes close {
+	100% {
+		top: 50%;
+		height: 0px;
+	}
+}

@@ -6,7 +6,7 @@ import sections from '../../jsons/about.json';
 import useTranslate from 'hk/use_translate';
 
 export default function About() {
-	const translate = useTranslate();
+	const {translate} = useTranslate();
 	const mainRef = useRef<HTMLElement>(null);
 	const h1Ref = useRef<HTMLHeadingElement>(null);
 	const h2Ref = useRef<HTMLHeadingElement>(null);

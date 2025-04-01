@@ -1,5 +1,3 @@
-'use client'
-
 import { createWarehouse, update } from "subscriber_state";
 import { setCookie, getCookie } from 'hp/cookies'
 
@@ -23,7 +21,6 @@ function changeTheme(isDark: boolean) {
 	setCookie('isDark', isDark)
 }
 
-
 createWarehouse<State, Actions>({
 	language: getCookie('language') ?? 'es',
 	isDark: getCookie('isDark') ?? true,
@@ -31,4 +28,3 @@ createWarehouse<State, Actions>({
 	changeLanguage,
 	changeTheme,
 });
-

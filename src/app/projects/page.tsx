@@ -7,7 +7,7 @@ import useTranslate from 'hk/use_translate'
 import { getRepoInfoWithProfile } from 'sv/auth_github'
 
 export default function Projects() {
-	const translate = useTranslate();
+	const {translate} = useTranslate();
 	const [state, setState] = useState<TypeProjectCard[] | null>(null)
 
 	useEffect(() => {

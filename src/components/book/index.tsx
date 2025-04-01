@@ -36,7 +36,7 @@ export function Page({ children, className }: TyoePage) {
 
 export default function Book({ children }: { children: ReactNode }) {
 	const data = useRef({ count: 0, oldPathname: "/" });
-	const translate = useTranslate();
+	const {translate} = useTranslate();
 	const pathname = usePathname();
 
 	const bookRef = useRef<HTMLDivElement>(null);
