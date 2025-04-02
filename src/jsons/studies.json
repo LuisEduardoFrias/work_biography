@@ -8,7 +8,7 @@
 	],
 	"youtubers": [
 		{
-			"sector": "web y infirmativo",
+			"sector": "web e infirmativo",
 			"name": "Miguel Ángel Durán",
 			"img": "https://avatars.githubusercontent.com/u/1561955?v=4",
 			"url": "https://github.com/midudev"
@@ -78,7 +78,7 @@
 		{
 			"img": "https://refactoring.guru/images/patterns/book/web-cover-es-3x.png",
 			"name": "Sumérgete en los patrones de diseño",
-			"autor": "alexander shvert",
+			"autor": "Alexander shvert",
 			"url": "https://drive.google.com/file/d/133w2lidyUtRygQCOyTBGhjqEky1ahuMx/view?usp=drivesdk"
 		},
 		{

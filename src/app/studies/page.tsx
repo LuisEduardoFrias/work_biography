@@ -5,7 +5,7 @@ import data from "js/studies.json";
 import useTranslate from "hk/use_translate";
 
 export default function Studies() {
-	const {translate} = useTranslate();
+	const { translate } = useTranslate();
 
 	return (
 		<Page>
@@ -16,7 +16,7 @@ export default function Studies() {
 
 				<div className="flex flex-col items-center overflow-y-scroll gap-4 pb-10">
 					<h2 className="text-center font-extrabold text-2xl my-6">
-						Titles
+						{translate("Titles")}
 					</h2>
 
 					<section className="w-full flex flex-row flex-wrap gap-4 justify-center items-center">
@@ -25,7 +25,7 @@ export default function Studies() {
 								key={index}
 								className="select-none w-[90%] -md:h-[300px] shadow-[var(theme-6)] rounded-[10px] p-2 flex flex-col items-center"
 							>
-								<h3>{title.name}</h3>
+								<h3>{translate(title.name)}</h3>
 								<LoadingImage
 									contentCss="h-full w-full flex justify-center items-center"
 									className="w-full h-auto"
@@ -37,7 +37,7 @@ export default function Studies() {
 					</section>
 
 					<h2 className="text-center font-extrabold text-2xl my-6">
-						Books
+						{translate("Books")}
 					</h2>
 
 					<section className="w-full flex flex-row flex-wrap gap-4 justify-center align-middle">
@@ -64,24 +64,24 @@ export default function Studies() {
 					</section>
 
 					<div className="-md:visible md:hidden">
-						<SectionTwo />
+						<SectionTwo translate={translate} />
 					</div>
 				</div>
 			</div>
 			<div className="-md:hidden -md:col-start-1 -md:col-end-2 -md:row-start-2 -md:row-end-3 md:col-start-2 -md:col-end-3 -md:row-start-1 -md:row-end-2 h-full pt-10 overflow-y-scroll relative">
 				<div className="-md:hidden md:visible ">
-					<SectionTwo />
+					<SectionTwo translate={translate} />
 				</div>
 			</div>
 		</Page>
 	);
 }
 
-function SectionTwo() {
+function SectionTwo({ translate }: { translate: (value: string) => string }) {
 	return (
 		<>
 			<h2 className="text-center font-extrabold text-2xl mb-6">
-				Youtubers favoritos
+				{translate("Youtubers")}
 			</h2>
 
 			<section className="flex flex-row flex-wrap gap-2 justify-center">
@@ -90,7 +90,7 @@ function SectionTwo() {
 						key={index}
 						className="select-none border-4 border-theme-2 shadow-[var(theme-6)] p-2 rounded-[10px] w-[200px] h-auto flex flex-col items-center gap-2"
 					>
-						<h2>{youtuber.name}</h2>
+						<h2>{translate(youtuber.name)}</h2>
 						<a
 							href={youtuber.url}
 							aria-label={`youtuber: ${youtuber.name}`}
@@ -98,7 +98,7 @@ function SectionTwo() {
 						>
 							<LoadingImage
 								contentCss="h-full w-full flex justify-center items-center"
-								className="transition rounded-full hover:rounded"
+								className="transition rounded-full transition-[border-radius_1s_ease] hover:rounded"
 								url={youtuber.img}
 								alt={`youtuber: ${youtuber.name}`}
 							/>
@@ -109,7 +109,7 @@ function SectionTwo() {
 			</section>
 
 			<h2 className="text-center font-extrabold text-2xl my-6">
-				Otros recursos
+				{translate("Other-resouces")}
 			</h2>
 
 			<section className="flex flex-row flex-wrap gap-2 justify-center pb-10">
