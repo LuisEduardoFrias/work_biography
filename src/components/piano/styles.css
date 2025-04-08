@@ -1,7 +1,8 @@
 #piano {
   background-color: #cfcfcf4a;
   border-radius: 5px;
-  width: 400px;
+  max-width: 400px;
+  width: 100%;
   height: 110px;
   display: flex;
   flex-direction: column;

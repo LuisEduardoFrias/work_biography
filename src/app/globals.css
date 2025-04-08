@@ -253,5 +253,5 @@ body:has(#switch-theme:not(:checked)) {
 }
 
 ::view-transition-new(page) {
-  animation: slide_in 3s 0s ease-out forwards;
+  animation: slide_int 3s 0s ease-out forwards;
 }
