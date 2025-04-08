@@ -1,5 +1,5 @@
 'use client'
-import { Page } from 'cp/book'
+import Page from 'cp/book/page'
 import Profile from 'cp/profile'
 import Menu from 'cp/menu'
 import Presentation from 'cp/presentation'

@@ -1,5 +1,5 @@
 'use client'
-import { Page } from 'cp/book'
+import  Page from 'cp/book/page'
 import KeyBoard from 'cp/keyboard'
 import experiences from '../../jsons/experiences.json'
 import useTranslate from 'hk/use_translate'

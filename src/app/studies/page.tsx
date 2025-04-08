@@ -1,6 +1,6 @@
 "use client";
 import LoadingImage from "cp/loading_image";
-import { Page } from "cp/book";
+import  Page from 'cp/book/page'
 import data from "js/studies.json";
 import useTranslate from "hk/use_translate";
 

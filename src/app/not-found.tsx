@@ -1,7 +1,7 @@
 'use client'
 import Image from "next/image"
 import Link from "next/link"
-import { Page } from 'cp/book'
+import Page from 'cp/book/page'
 import { useSearchParams } from 'next/navigation'
 import useTranslate from 'hk/use_translate'
 

@@ -1,6 +1,6 @@
 'use client';
 import { useRef, useEffect } from 'react';
-import { Page } from 'cp/book';
+import  Page from 'cp/book/page'
 import Image from 'next/image';
 import sections from '../../jsons/about.json';
 import useTranslate from 'hk/use_translate';

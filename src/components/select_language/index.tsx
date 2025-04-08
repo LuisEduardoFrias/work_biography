@@ -42,7 +42,7 @@ export default function SelectLanguage() {
 
 	return (
 		<div className="relative w-28" ref={dropdownRef}>
-			<div className="absolute z-50 select-none min-h-[34px] flex flex-col justify-center items-center text-font-color bg-base w-full border-2 border-border-color-ctt rounded-[20px]">
+			<div className="absolute z-40 select-none min-h-[34px] flex flex-col justify-center items-center text-font-color bg-base w-full border-2 border-border-color-ctt rounded-[20px]">
 
 				{!isOpen &&
 					<button

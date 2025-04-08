@@ -1,64 +1,73 @@
 {
-	"compilerOptions": {
-		"target": "ES2017",
-		"lib": [
-			"dom",
-			"dom.iterable",
-			"esnext"
-		],
-		"allowJs": true,
-		"skipLibCheck": true,
-		"strict": true,
-		"noEmit": true,
-		"esModuleInterop": true,
-		"module": "esnext",
-		"moduleResolution": "bundler",
-		"resolveJsonModule": true,
-		"isolatedModules": true,
-		"jsx": "preserve",
-		"incremental": true,
-		"plugins": [
-			{
-				"name": "next"
-			}
-		],
-		"paths": {
-			"@/*": [
-				"./src/*"
-			],
-			"cp/*": [
-				"./src/components/*"
-			],
-			"assets/*": [
-				"./src/app/assets/*"
-			],
-			"hk/*": [
-				"./src/hooks/*"
-			],
-			"hp/*": [
-				"./src/helps/*"
-			],
-			"tls/*": [
-				"./src/translates/*"
-			],
-			"svg/*": [
-				"./src/svg/*"
-			],
-			"js/*": [
-				"./src/jsons/*"
-			],
-			"sv/*": [
-				"./src/services/*"
-			]
-		}
-	},
-	"include": [
-		"next-env.d.ts",
-		"**/*.ts",
-		"**/*.tsx",
-		".next/types/**/*.ts"
-	],
-	"exclude": [
-		"node_modules"
-	]
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "cp/*": [
+        "./src/components/*"
+      ],
+      "assets/*": [
+        "./src/app/assets/*"
+      ],
+      "hk/*": [
+        "./src/hooks/*"
+      ],
+      "hp/*": [
+        "./src/helps/*"
+      ],
+      "tls/*": [
+        "./src/translates/*"
+      ],
+      "svg/*": [
+        "./src/svg/*"
+      ],
+      "js/*": [
+        "./src/jsons/*"
+      ],
+      "dwh/*": [
+        "./src/data_warehouse/*"
+      ],
+      "ett/*": [
+        "./src/entities/*"
+      ],
+      "at/*": [
+        "./src/actions/*"
+      ],
+      "sv/*": [
+        "./src/services/*"
+      ]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
