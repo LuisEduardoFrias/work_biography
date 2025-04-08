@@ -157,7 +157,7 @@
   transform: translateX(20px);
   width: Calc(100% - 42px);
   opacity: 0;
-  animation: center-opacity 1s 6s forwards;
+  animation: center-opacity 1s 5s forwards;
 }
 
 .center {

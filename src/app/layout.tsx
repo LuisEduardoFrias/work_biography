@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { ReactNode, unstable_ViewTransition as ViewTransition } from 'react'//unstable_ViewTrasition as ViewTrasition
+import { ReactNode } from 'react'//unstable_ViewTransition as ViewTransition
 import localFont from 'next/font/local'
 import Book from 'cp/book'
 import Meteors from 'cp/meteors'
@@ -37,9 +37,10 @@ export default function RootLayout({ children, }: Readonly<{ children: ReactNode
           </div>
         </div>
         <Book>
-          <ViewTransition name="page">
-            {children}
-          </ViewTransition>
+          {children}
+          {  // <ViewTransition name="page">
+            //           </ViewTransition>
+          }
         </Book>
       </body>
     </html>
