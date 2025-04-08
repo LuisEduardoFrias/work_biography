@@ -248,10 +248,10 @@ body:has(#switch-theme:not(:checked)) {
   }
 }
 
-::view-transition-old(view-trasition) {
-  animation: slide_out 3s ease-out forwards;
+::view-transition-old(page) {
+  animation: slide_out 3s 0s ease-out forwards;
 }
 
-::view-transition-new(view-trasition) {
-  animation: slide_in 3s ease-out forwards;
+::view-transition-new(page) {
+  animation: slide_in 3s 0s ease-out forwards;
 }

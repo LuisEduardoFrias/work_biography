@@ -156,53 +156,53 @@
 .center-finish {
   transform: translateX(20px);
   width: Calc(100% - 42px);
-  opacity: 1;
+  opacity: 0;
   animation: center-opacity 1s 6s forwards;
 }
 
 .center {
   transform: translateX(20px);
   width: Calc(100% - 42px);
-  opacity: 1;
+  opacity: 0;
   animation: center-opacity 1s 9s forwards;
 }
 
 .center-skills {
   transform: translateX(10px);
   width: Calc(100% - 25px);
-  opacity: 1;
+  opacity: 0;
   animation: center-opacity 1s 4s forwards;
 }
 
 .center-studies {
   transform: translateX(5px);
   width: Calc(100% - 15px);
-  opacity: 1;
+  opacity: 0;
   animation: center-opacity 1s 4s forwards;
 }
 
 .center-projects {
   transform: translateX(5px);
   width: Calc(100% - 5px);
-  opacity: 1;
-  animation: center-opacity 1s 4s forwards;
+  opacity: 0;
+  animation: center-opacity 1s 5s forwards;
 }
 
 .center-experiences {
   transform: translateX(15px);
   width: Calc(100% - 25px);
-  opacity: 1;
+  opacity: 0;
   animation: center-opacity 1s 4s forwards;
 }
 
 .center-about {
   transform: translateX(0px);
   width: Calc(100% - 0px);
-  opacity: 1;
+  opacity: 0;
   animation: center-opacity 1s 7s forwards;
 }
 
-@keyframes center-opacitya {
+@keyframes center-opacity {
   100% {
     opacity: 1;
   }

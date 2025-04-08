@@ -37,7 +37,7 @@ export default function RootLayout({ children, }: Readonly<{ children: ReactNode
           </div>
         </div>
         <Book>
-          <ViewTransition name="view-trasition">
+          <ViewTransition name="page">
             {children}
           </ViewTransition>
         </Book>

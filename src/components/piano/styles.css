@@ -1,0 +1,89 @@
+#piano {
+  background-color: #cfcfcf4a;
+  border-radius: 5px;
+  width: 400px;
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+#panel {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  border-radius: 5px 5px 0 0;
+  background-color: #ededed;
+  box-shadow: inset 2px 10px 10px -8px #505050d0;
+}
+
+#screen {
+  width: 80px;
+  height: 30px;
+  background-color: #979797;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 6px;
+  border-radius: 3px;
+}
+
+#teclas {
+  overflow-x: scroll;
+  position: relative;
+  width: 100%;
+  height: 50px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+
+.tc {
+  position: relative;
+  background-color: #fff;
+  width: 10px;
+  height: 50px;
+  z-index: 0;
+  box-shadow: inset 0 10px 5px -10px #ff5959bb;
+}
+
+.tcS {
+  background-color: #000;
+  position: absolute;
+  z-index: 9;
+  right: 0;
+  width: 2.5px;
+  height: 35px;
+}
+
+.tcS2 {
+  background-color: #000;
+  position: absolute;
+  z-index: 9;
+  left: 0;
+  width: 2.5px;
+  height: 35px;
+}
+
+.tcS3 {
+  background-color: #955555;
+  position: absolute;
+  z-index: 9;
+  left: 0;
+  bottom: 0;
+  width: 1px;
+  height: 15px;
+}
+
+.tcS4 {
+  background-color: #955555;
+  position: absolute;
+  z-index: 9;
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  height: 50px;
+}

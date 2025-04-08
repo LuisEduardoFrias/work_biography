@@ -50,6 +50,7 @@ export default {
         "book-h": "695px",
       },
       animation: {
+        "show": "skill_show 2s 0s forwards",
         "skill-move": "skill_rotate 2s 0s linear infinite",
         "image-scale-top": "img_scale_top 1s 2s ease forwards",
         "image-scale-bottom": "img_scale_bottom 1s 0s ease forwards",
@@ -60,6 +61,14 @@ export default {
         "move-loading": "move_loading 3s 0s linear infinite",
       },
       keyframes: {
+        skill_show: {
+          "0%": {
+            transform: "scale(1)"
+          },
+          "100%": {
+            transform: "scale(1)"
+          }
+        },
         skill_rotate: {
           "0%": {
             transform: "rotate(0deg)"
