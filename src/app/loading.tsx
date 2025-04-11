@@ -1,8 +1,8 @@
 'use client'
-import useTranslate from 'hk/use_translate'
+//import useTranslate from 'hk/use_translate'
 
 export default function Loading() {
-	const {translate} = useTranslate();
+	const { translate } = {translate:(p) => p};// useTranslate("loading");
 
 	return (
 		<div className="w-full h-full absolute top-0 left-0 z-50 m-1 ">

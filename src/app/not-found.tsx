@@ -6,7 +6,7 @@ import { useSearchParams } from 'next/navigation'
 import useTranslate from 'hk/use_translate'
 
 export default function NotFoundPage() {
-	const {translate} = useTranslate();
+	const {translate} = useTranslate('not-found');
 	const params = useSearchParams()
 	const error = params.get('error')
 

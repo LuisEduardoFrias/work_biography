@@ -7,8 +7,9 @@ const orbitron = localFont({
 });
 
 export default function Presentation() {
-  const { translate } = useTranslate();
-
+  console.log(" 1 ------presentation")
+  const { translate } = useTranslate('Presentation');
+  console.log(" 2 ------presentation")
   return (
     <div className="presentation-container w-full h-auto px-2 flex flex-col align-middle gap-3">
 

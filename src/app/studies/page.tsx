@@ -1,19 +1,18 @@
 "use client";
-import LoadingImage from "cp/loading_image";
+import LoadingImage from "cp/loading_image"
 import  Page from 'cp/book/page'
-import data from "js/studies.json";
-import useTranslate from "hk/use_translate";
+import TitlePage from 'cp/title_page'
+import data from "js/studies.json"
+import useTranslate from "hk/use_translate"
 
 export default function Studies() {
-	const { translate } = useTranslate();
+	const { translate } = useTranslate("studies");
 
 	return (
 		<Page>
 			<div className="-md:col-start-1 -md:col-end-2 md:col-start-1 md:col-end-2 row-start-1 md:row-end-2 -md:row-end-3 flex flex-col items-center pt-16 h-full relative">
-				<h1 className="absolute z-40 text-2xl bg-transluxed backdrop-blur px-7 py-2 rounded-2xl font-extrabold left-1/2 top-[5px] translate-x-[-50%] ">
-					{translate("Studies")}
-				</h1>
-
+        <TitlePage title="Studies" />
+        
 				<div className="flex flex-col items-center overflow-y-scroll gap-4 pb-10">
 					<h2 className="text-center font-extrabold text-2xl my-6">
 						{translate("Titles")}

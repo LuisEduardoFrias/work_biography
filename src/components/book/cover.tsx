@@ -7,7 +7,7 @@ const orbitron = localFont({
 });
 
 export default function Cover() {
-  const { translate } = useTranslate();
+  const { translate } = useTranslate("cover");
   
   return (
     <div className={`${orbitron.className} cover h-full w-full p-5 rounded-[0_var(--border-page-radius)_var(--border-page-radius)_0] overflow-hidden`}>

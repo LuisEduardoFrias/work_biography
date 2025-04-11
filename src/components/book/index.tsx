@@ -382,7 +382,7 @@ export default function Book({ children }: { children: ReactNode }) {
     }
     data.current.oldPathname = pathname;
   }, [pathname])
-
+  
   return (
     <div className="container_ relative flex-col overflow-hidden relative w-full h-full p-3 flex justify-center items-center">
 

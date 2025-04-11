@@ -1,30 +1,40 @@
-import Draw, { Sk } from './drawm'
-import Skills from '../../jsons/skills.json'
+'use client'
+import { useState, useEffect } from 'react'
+import DrawSkill from './draw_skill'
 import useTranslate from 'hk/use_translate'
+import ActionFetchApi from '../../actions/action_fetch_api'
+import { skillEnum } from 'ett/skill_enum'
+import { SkillEntity } from 'ett/skill_entity'
 
 type TypeSection = {
   title: string,
-  section: string
+  skillType: skillEnum
 }
 
-type TypeSkills = {
-  backend: Sk[];
-  frontend: Sk[];
-  another: Sk[];
-  interest: Sk[];
-}
+export default function Section({ title, skillType }: TypeSection) {
+  const [skills, setSkills] = useState<SkillEntity[]>([])
+  const { translate } = useTranslate('section');
+  
+  useEffect(() => {
+    (async () => {
+      const _ActionFetchApi = ActionFetchApi.bind(null, "skill", 'GET');
 
-export default function Section({ title, section }: TypeSection) {
- const { translate } = useTranslate();
- 
+      const skills_ = await _ActionFetchApi();
+
+      setSkills(skills_.filter(
+        (skill: SkillEntity) => skill.skillType === skillType
+      ))
+    })()
+  }, [])
+
   return (
     <div className="w-full px-5 space-y-10">
       <h2>{translate(title)}</h2>
 
       <section className="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-3 justify-center">
         {
-          Skills[section as keyof TypeSkills].map((e: Sk, index: number) =>
-            <Draw key={index} skill={e} index={index} />)
+          skills.map((skill: SkillEntity) =>
+            <DrawSkill key={skill.id} {...skill} />)
         }
       </section>
     </div>

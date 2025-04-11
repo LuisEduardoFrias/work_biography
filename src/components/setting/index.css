@@ -1,0 +1,61 @@
+#icon-setting {
+  animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.container-open {
+  opacity: 1;
+  transition: all 2s ease-in-out;
+  border: 3px solid var(--theme-4);
+  box-shadow: inset 2px 2px 15px 1px var(--theme-7),
+    inset -2px -2px 15px 1px var(--theme-8);
+  border-radius: 5px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container-closed {
+  border-radius: 0 0 100% 0;
+  transition: all 2s ease-in-out;
+  width: 0vw;
+  height: 0vh;
+}
+
+.block_ {
+  opacity: 0;
+  animation: block_ 1s 2s linear forwards;
+}
+
+.hidden_ {
+  opacity: 1;
+  animation: hidden_ 1s linear forwards;
+}
+
+@keyframes block_ {
+  90% {
+    display: block;
+  }
+  
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes hidden_ {
+  90% {
+    opacity: 0;
+  }
+  
+  100% {
+    display: none;
+  }
+}

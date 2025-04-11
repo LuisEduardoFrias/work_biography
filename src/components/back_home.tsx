@@ -5,7 +5,7 @@ import useTranslate from 'hk/use_translate'
 
 export default function BackHome({ position }: { position: 'left' | 'right' }) {
 	const router = useRouter()
-	const {translate} = useTranslate()
+	const {translate} = useTranslate('backhome')
 
 	function handleClick() {
 		router.push('/');

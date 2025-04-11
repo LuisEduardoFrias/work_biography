@@ -5,7 +5,7 @@ import { State, Actions } from '@/state_warehouse'
 import './styles.css'
 
 export default function SwitchTheme() {
-	const [{ isDark }, { changeTheme }] = useSubscriberState<State, Actions>('isDark');
+	const [{ isDark }, { changeTheme }] = useSubscriberState<State, Actions>('isDark','switch_theme');
 
 	function handleChange(event: ChangeEvent<HTMLInputElement>) {
 		changeTheme(event.target.checked)

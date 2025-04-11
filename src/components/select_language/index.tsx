@@ -14,7 +14,7 @@ type TypeLanguage = {
 
 export default function SelectLanguage() {
 	const [{ language: lang }, { changeLanguage }] = useSubscriberState<State, Actions>('language');
-	const { translate } = useTranslate();
+	const { translate } = useTranslate('select-langues');
 	const [isOpen, setIsOpen] = useState(false);
 	const dropdownRef = useRef<HTMLDivElement>(null);
 

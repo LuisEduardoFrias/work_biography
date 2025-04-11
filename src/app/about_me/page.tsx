@@ -1,12 +1,13 @@
 'use client';
 import { useRef, useEffect } from 'react';
 import  Page from 'cp/book/page'
+import  Paragraph from 'cp/paragraph'
 import Image from 'next/image';
 import sections from '../../jsons/about.json';
 import useTranslate from 'hk/use_translate';
 
 export default function About() {
-	const {translate} = useTranslate();
+	const {translate} = useTranslate("about");
 	const mainRef = useRef<HTMLElement>(null);
 	const h1Ref = useRef<HTMLHeadingElement>(null);
 	const h2Ref = useRef<HTMLHeadingElement>(null);
@@ -80,9 +81,9 @@ export default function About() {
 								<h2 className="text-[16px] font-semibold mb-2 text-theme-5">
 									{translate(section.section)}
 								</h2>
-								<P text={translate(section.p1)} />
+								<Paragraph text={translate(section.p1)} />
 								<br />
-								<P text={translate(section.p2)} />
+								<Paragraph text={translate(section.p2)} />
 							</article>
 						))}
 					</main>
@@ -95,17 +96,6 @@ export default function About() {
 		</Page>
 	);
 }
-
-function P({ text }: { text: string }) {
-	return (
-		<p style={{
-			textWrap: 'pretty',
-			hyphens: 'auto',
-			hyphenateLimitChars: '3 2',
-		}} className="text-[12px]" dangerouslySetInnerHTML={{ __html: text }} />
-	)
-}
-
 
 /*
 resiliencia y persistencia
