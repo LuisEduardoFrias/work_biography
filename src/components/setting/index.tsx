@@ -17,7 +17,7 @@ export default function Setting() {
 
   return (
     <div className="absolute  top-[-4px] left-[-4px] z-50">
-      <div className={`${open ? 'container-open' : 'container-closed'} opacity-0 bg-base absolute top-[-2px] left-[-4px] z-50`}>
+      {/*<div className={`${open ? 'container-open' : 'container-closed'} opacity-0 bg-base absolute top-[-2px] left-[-4px] z-50`}>
         <div className={`${open ? 'block_' : 'hidden_'} flex flex-row items-center justify-center w-full h-full absolute`}>
           <button onClick={() => setOpen(false)} className="absolute top-1 left-1 bg-transluxed shadow-gray-700" >
             <CloseIcon fill="var(--theme-3)" className="shadow-gray-700" />
@@ -55,7 +55,7 @@ export default function Setting() {
             </div>
           </div>
         </div>
-      </div>
+      </div>*/}
       <button onClick={() => setOpen(true)}>
         <SettingIcon id="icon-setting" fill="var(--theme-3)" />
       </button>

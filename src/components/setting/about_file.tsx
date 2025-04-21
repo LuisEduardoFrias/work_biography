@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import ActionFetchApi from '../../actions/action_fetch_api'
 
 type AboutEntity = {
-  
+  title:string
 }
 
 export default function AboutFile() {
@@ -43,17 +43,17 @@ function ShowAbout({ action }: { action: (value) => void, key: string }) {
           abouts?.length > 0 &&
           <div>
             <div>
-              {(Object?.keys(abouts[0])).map((key: string) =>
-                <div>{key}</div>
+              {(Object?.keys(abouts[0])).map((key: string, index: number) =>
+                <div key={index}>{key}</div>
               )}
             </div>
             <div>
               {
-                abouts?.map((about: AboutEntity) =>
-                  <div>
+                abouts?.map((about: AboutEntity, inde: number) =>
+                  <div key={inde}>
                     {
-                      Object?.values(about).map((value) =>
-                        <div>{value}</div>
+                      Object?.values(about).map((value: string, index: number) =>
+                        <div key={index}>{value}</div>
                       )
                     }
                   </div>
@@ -69,7 +69,7 @@ function ShowAbout({ action }: { action: (value) => void, key: string }) {
 
 function AddAbout({ about, action }: { about?: AboutEntity, action: (value) => void, key: string }) {
   const _ActionFetchApi = ActionFetchApi.bind(null, "about", 'POST')
-
+  console.log(about)
   return (
     <div>
       <button onClick={() => action(0)}>volver</button>

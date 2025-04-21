@@ -5,11 +5,12 @@ import Piano from 'cp/piano'
 import ProjectCard, { TypeProjectCard } from 'cp/project_card'
 import Loading from '../loading'
 import TitlePage from 'cp/title_page'
-import useTranslate from 'hk/use_translate'
+import { useStore } from 'swh/index'
 import { getRepoInfoWithProfile } from 'sv/auth_github'
 
 export default function Projects() {
-  const { translate } = useTranslate("projects");
+  const isLoading = useStore((state) => state.isLoading)
+  const translate = useStore((state) => state.translate)
   const [state, setState] = useState<TypeProjectCard[] | null>(null)
 
   useEffect(() => {
@@ -21,7 +22,7 @@ export default function Projects() {
   return (
     <Page>
       <div className="-md:col-start-1 -md:col-end-2 md:col-start-1 md:col-end-2 row-start-1 md:row-end-2 -md:row-end-3 h-full relative pb-3">
-              <TitlePage title="Projects" />
+        <TitlePage title="Projects" />
         <div className="rounded-[var(--border-page-radius)_0_0_var(--border-page-radius)] w-full h-full box-border pt-14 grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-3 justify-center  p-3 overflow-y-scroll" >
 
           {state ?

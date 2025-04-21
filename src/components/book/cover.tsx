@@ -1,14 +1,15 @@
 import Image from 'next/image'
 import localFont from "next/font/local";
-import useTranslate from 'hk/use_translate'
+import { useStore } from 'swh/index'
 
 const orbitron = localFont({
   src: "../../../public/fonts/Orbitron/Orbitron-VariableFont_wght.ttf"
 });
 
 export default function Cover() {
-  const { translate } = useTranslate("cover");
-  
+  const isLoading = useStore((state) => state.isLoading)
+  const translate = useStore((state) => state.translate)
+
   return (
     <div className={`${orbitron.className} cover h-full w-full p-5 rounded-[0_var(--border-page-radius)_var(--border-page-radius)_0] overflow-hidden`}>
 

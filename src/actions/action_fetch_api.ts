@@ -1,12 +1,11 @@
-'use server';
+'use client';
 
-export default async function ActionFetchApi(path_: string, method: string = 'GET', formData: FormData) {
+export default function ActionFetchApi(path_: string, method: string = 'GET', formData?: FormData) {
   let body = null;
 
-  if (method !== 'GET') {
+  if (method !== 'GET' && method !== 'DELETE' && formData) {
 
     const props = Array.from(formData.keys());
-    const _path_ = path_;
 
     const valoresARemover = ['$ACTION_REF_1', '$ACTION_1:0', '$ACTION_1:1'];
 
@@ -21,23 +20,26 @@ export default async function ActionFetchApi(path_: string, method: string = 'GE
     body = JSON.stringify(bodyObj);
   }
 
-  try {
-    const response = await fetch(`http://localhost:3000/api/${path_}`, {
-      method,
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body,
+  return fetch(`http://localhost:3000/api/${path_}`, {
+    method,
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body,
+  })
+    .then(response => {
+      if (!response.ok) {
+        console.error('Error en la petición:', response.status, response.statusText);
+        return; // No necesitamos un return explícito de una promesa rechazada aquí, el error no se propagará automáticamente
+      }
+      return response.json(); // Esto devuelve otra promesa
+    })
+    .then(data => {
+      return data; // Aquí puedes retornar los datos procesados si es necesario
+    })
+    .catch(error => {
+      console.error('Error al realizar la petición:', error);
+      return null; // Indica que hubo un error y devuelve null
     });
 
-    if (!response.ok) {
-      console.error('Error en la petición:', response.status, response.statusText);
-      return;
-    }
-
-    return await response.json();
-  } catch (error) {
-    console.error('Error al realizar la petición:', error);
-    return null;
-  }
 }

@@ -1,6 +1,6 @@
 import { wolfPackCreate } from 'wolf-db'
 import { SkillEntity } from 'ett/skill_entity'
-import { LangTransEntity } from 'ett/translate_entity'
+import { TranslateEntity, LanguageEntity} from 'ett/translate_entity'
 import { ExperienceEntity } from 'ett/experience_entity'
 import {
   TitleEntity, YoutuberEntity,
@@ -9,7 +9,7 @@ import {
 
 const wolfpack = wolfPackCreate([
   {
-    member: [LangTransEntity],
+    member: [LanguageEntity,TranslateEntity],
     wolfpack: "translate"
   },
   {

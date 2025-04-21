@@ -1,0 +1,37 @@
+.tfoot {
+  border-color: var(--border-color-line);
+  
+  & > :first-child {
+    background-color: var(--border-color-line);
+    border-radius: 10px;
+  }
+
+  & .tr {
+    user-select: none;
+    font-size: 14px;
+    
+    &>span {
+      margin-left: 5px;
+    }
+    
+    & .td {
+      min-height: 25px;
+      background-color: transparent;
+    }
+    
+    & button {
+      width: 100%;
+      border: none;
+      border-radius: 10px;
+      background-color: transparent;
+      -webkit-tap-highlight-color:transparent;
+      transition: border-radius ease 1s;
+      display: flex;
+      align-items: center;
+    }
+    
+    & button:active {
+      background-color: #373737;
+    }
+  }
+}

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Loading from '@/app/loading'
-//import useTranslate from 'hk/use_translate'
 import { Suspense, lazy } from 'react'
+import { useStore } from 'swh/index'
 
 export type TypeOption = {
   name: string;
@@ -10,7 +10,8 @@ export type TypeOption = {
 };
 
 export default function Option({ name, href, src }: TypeOption) {
-  const { translate } = {translate:(p) => p};// useTranslate('option');
+  const isLoading = useStore((state) => state.isLoading)
+  const translate = useStore((state) => state.translate)
   const DynamicComponent = lazy(() => import(`../../svg/${src}.tsx`));
 
   return (

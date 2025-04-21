@@ -4,10 +4,11 @@ import  Page from 'cp/book/page'
 import  Paragraph from 'cp/paragraph'
 import Image from 'next/image';
 import sections from '../../jsons/about.json';
-import useTranslate from 'hk/use_translate';
+	import { useStore } from 'swh/index'
 
 export default function About() {
-	const {translate} = useTranslate("about");
+  const isLoading = useStore((state) => state.isLoading)
+  const translate = useStore((state) => state.translate)
 	const mainRef = useRef<HTMLElement>(null);
 	const h1Ref = useRef<HTMLHeadingElement>(null);
 	const h2Ref = useRef<HTMLHeadingElement>(null);

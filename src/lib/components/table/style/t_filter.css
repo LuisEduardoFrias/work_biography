@@ -1,0 +1,178 @@
+.container-filters {
+  padding-block: 5px;
+  padding-inline-start: 5px;
+  overflow: hidden;
+  
+  display: flex;
+  align-items: center;
+  align-content: stretch;
+  gap: 8px;
+  
+  & .option-filter {
+    & button {
+      width: 100%;
+      padding-inline: 3px;
+      border-radius: 5px;
+      border: 2px solid #5a5757;
+    }
+    
+    & .off {
+      background-color: #484848;
+      color: #888888;
+    }
+  }
+}
+
+#progress {
+  width: 24px;
+  height: 24px;
+  animation: rotatde 1s linear 0s infinite both;
+}
+
+@keyframes rotatde {
+  from {
+    transform: rotate(0deg);
+  }
+  
+  to {
+    transform: rotate(369deg);
+  }
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  align-content: stretch;
+  padding-inline-start: 2px;
+  border: 1px solid #3f3f3f;
+  border-radius: 50px;
+
+  &:has(input[type='search']:focus) {
+    border: 1.5px solid #e7e7e7;
+  }
+  
+  &:has(input[type='search']:autofill) {
+    background-color: transparent;
+  }
+  
+  & input[type='search'] {
+    border: none;
+    background-color: transparent;
+    padding-inline-start: 2px;
+    margin-inline-end: 8px;
+    width: 60px;
+    
+    &:focus {
+      width: 150px;
+      outline: none;
+    }
+    
+    &:autofill {
+      transition: background-color 5000s ease-in-out 0s;
+    }
+  }
+  
+  & div {
+    width: 24px;
+    height: 24px;
+    margin-inline-end: 6px;
+    
+    & button {
+      background-color: transparent;
+      border: none;
+    }
+  }
+}
+
+.filters {
+  & button {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-content: stretch;
+    align-items: center;
+    padding: 2px;
+    text-wrap: nowrap;
+    
+    &:active {
+      transform: scale(.9);
+      -webkit-tap-highlight-color: transparent;
+    }
+  }
+}
+
+/*///////////////*/
+
+fieldset {
+  border-radius: 4px;
+}
+
+.filter-number-option {
+  display: flex;
+  flex-direction: column;
+  padding-block: 10px;
+  padding-inline: 10px 50px;
+  margin-bottom: 10px;
+  
+  & label {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.filter-number-data {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  
+  & fieldset {
+    display: inherit;
+    flex-direction: inherit;
+    padding-block: 10px;
+    padding-inline: 10px 50px;
+    margin-bottom: 10px;
+    
+    & label {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  
+  &>label input {
+    padding: 3px;
+    width: 100%;
+  }
+  
+}
+
+/******* add-filter *******/
+
+.add-filter {
+  min-width: 200px;
+  padding-inline: 0;
+  
+  .slide-add-filter {
+    width: 100%;
+    
+    & .options-filter {
+      padding-inline: 10px;
+    }
+    
+    & .content-add-filter {
+      width: 100%;
+      
+      
+      & label {
+        padding-inline-start: 10px;
+      }
+      
+      & ul li button {
+        padding-inline-start: 10px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+    }
+  }
+}

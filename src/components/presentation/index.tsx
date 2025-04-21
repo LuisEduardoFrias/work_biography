@@ -1,5 +1,6 @@
+'use client'
 import localFont from 'next/font/local'
-import useTranslate from 'hk/use_translate'
+import { useStore } from 'swh/index'
 import './styles.css'
 
 const orbitron = localFont({
@@ -7,9 +8,9 @@ const orbitron = localFont({
 });
 
 export default function Presentation() {
-  console.log(" 1 ------presentation")
-  const { translate } = useTranslate('Presentation');
-  console.log(" 2 ------presentation")
+  const isLoading = useStore((state) => state.isLoading)
+  const translate = useStore((state) => state.translate)
+
   return (
     <div className="presentation-container w-full h-auto px-2 flex flex-col align-middle gap-3">
 

@@ -1,4 +1,5 @@
 // lib/posts.js
+/*
 import fs from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
@@ -47,3 +48,4 @@ export default async function Page({ params }) {
     </Layout>
   );
 }
+*/

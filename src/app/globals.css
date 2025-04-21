@@ -174,10 +174,10 @@ body:has(#switch-theme:not(:checked)) {
   border-top-right-radius: 1px;
   border-bottom-right-radius: 1px;
   margin-left: 5px;
-  animation: rotate 3s 0s linear infinite;
+  animation: write 3s 0s linear infinite;
 }
 
-@keyframes rotate {
+@keyframes write {
   0% {
     transform: rotate(-90deg) translateY(0px);
   }

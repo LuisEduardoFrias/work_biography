@@ -40,17 +40,17 @@ function ShowExperience({ action }: { action: (value) => void, key: string }) {
           experiences.length > 0 &&
           <div>
             <div>
-              {(Object?.keys(experiences[0])).map((key: string) =>
-                <div>{key}</div>
+              {(Object?.keys(experiences[0])).map((key: string,index:number) =>
+                <div key={index}>{key}</div>
               )}
             </div>
             <div>
               {
-                experiences?.map((experience: ExperienceEntity) =>
-                  <div>
+                experiences?.map((experience: ExperienceEntity,inde:number) =>
+                  <div key={inde}>
                     {
-                      Object?.values(experience).map((value) =>
-                        <div>{value}</div>
+                      Object?.values(experience).map((value, index:number) =>
+                        <div key={index}>{value}</div>
                       )
                     }
                   </div>
@@ -66,7 +66,7 @@ function ShowExperience({ action }: { action: (value) => void, key: string }) {
 
 function AddExperience({ experience, action }: { experience?: ExperienceEntity, action: (value) => void, key: string }) {
   const _ActionFetchApi = ActionFetchApi.bind(null, "experience", 'POST')
-
+console.log(experience)
   return (
     <div>
       <button onClick={() => action(0)}>volver</button>

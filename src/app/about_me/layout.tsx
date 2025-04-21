@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 
 export const metadata: Metadata = {
 	title: "About me",
-	description: "Aqui hablo de mi hisyoria como programador.",
+	description: "Aqui hablo de mi historia como programador.",
 }
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode; }>) {

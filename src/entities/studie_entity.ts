@@ -1,5 +1,12 @@
 import { alpha } from 'wolf-db'
 
+export type StudiesEntity = {
+  titles: TitleEntity,
+  books: BookEntity,
+  youtubers: YoutuberEntity,
+  otherResourves: OtherResourveEntity
+}
+
 export class TitleEntity extends alpha {
   name: string;
   img: string;

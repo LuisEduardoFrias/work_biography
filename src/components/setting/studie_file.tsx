@@ -1,8 +1,10 @@
-import createTitleEntity from '../../actions/action_studie'
+import ActionFetchApi from '../../actions/action_fetch_api'
 
 export default function StudieFile() {
+  const _ActionFetchApi = ActionFetchApi.bind(null, "studie", 'POST')
+
   return (
-    <form action={createTitleEntity} className="max-w-md mx-auto p-6">
+    <form action={_ActionFetchApi} className="max-w-md mx-auto p-6">
       <h2 className="text-2xl font-semibold mb-4">Add Title</h2>
 
       <div className="mb-4">

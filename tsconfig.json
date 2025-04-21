@@ -50,6 +50,9 @@
       "dwh/*": [
         "./src/data_warehouse/*"
       ],
+      "swh/*": [
+        "./src/state_warehouse/*"
+      ],
       "ett/*": [
         "./src/entities/*"
       ],

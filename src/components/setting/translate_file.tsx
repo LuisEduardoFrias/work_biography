@@ -40,17 +40,17 @@ function ShowTranslate({ action }: { action: (value) => void, key: string }) {
           translates?.length > 0 &&
           <div>
             <div>
-              {(Object?.keys(translates[0])).map((key: string) =>
-                <div>{key}</div>
+              {(Object?.keys(translates[0])).map((key: string, index: number) =>
+                <div key={index}>{key}</div>
               )}
             </div>
             <div>
               {
-                translates?.map((translate: TranslateEntity) =>
-                  <div>
+                translates?.map((translate: TranslateEntity, index: number) =>
+                  <div key={index}>
                     {
-                      Object?.values(translate).map((value) =>
-                        <div>{value}</div>
+                      Object?.values(translate).map((value: string, index: number) =>
+                        <div key={index}>{value}</div>
                       )
                     }
                   </div>
@@ -66,7 +66,7 @@ function ShowTranslate({ action }: { action: (value) => void, key: string }) {
 
 function AddTranslate({ translate, action }: { translate?: TranslateEntity, action: (value) => void, key: string }) {
   const _ActionFetchApi = ActionFetchApi.bind(null, "translate", 'POST')
-
+  console.log(translate)
   return (
     <div>
       <button onClick={() => action(0)}>volver</button>

@@ -1,13 +1,9 @@
-'use client'
 import Page from 'cp/book/page'
 import Section from 'cp/skills/section'
 import TitlePage from 'cp/title_page'
 import { skillEnum } from 'ett/skill_enum'
-import useTranslate from 'hk/use_translate'
 
 export default function Skill() {
-  const { translate } = useTranslate("skills");
-
   function Another() {
     return (
       <>

@@ -1,7 +1,9 @@
-import useTranslate from 'hk/use_translate'
+'use client'
+  import { useStore } from 'swh/index'
 
 export default function TitlePage({ title }: { title: string }) {
-  const { translate } = useTranslate(title);
+const isLoading = useStore((state) => state.isLoading)
+  const translate = useStore((state) => state.translate)
 
   return (
     <h1 className="absolute z-40 text-2xl bg-transluxed backdrop-blur px-7 py-2 rounded-2xl font-extrabold left-1/2 top-[5px] translate-x-[-50%]" >
