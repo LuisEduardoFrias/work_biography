@@ -2,27 +2,32 @@
 import { useState } from 'react'
 import SettingIcon from './setting_icon'
 import StudieFile from './studie_file'
-// import CloseIcon from './close_icon'
-// import ExperienceFile from './experience_file'
-// import AboutFile from './about_file'
-// import TranslateFile from './translate_file'
-// import SkillFile from './skill_file'
+import CloseIcon from './close_icon'
+import ExperienceFile from './experience_file'
+import AboutFile from './about_file'
+import TranslateFile from './translate_file'
+import SkillFile from './skill_file'
 import './index.css'
 
 export default function Setting() {
-  //const [open, setOpen] = useState(false);
-  //  const [file, setFile] = useState("skill");
+  const [open, setOpen] = useState(false);
+  const [file, setFile] = useState("skill");
 
-  // const class_ = "text-[12px] p-x-2 w-24 h-full flex justify-center items-center";
+  const class_ = "text-[12px] p-x-2 w-24 h-full flex justify-center items-center";
 
   return (
-    <div className="absolute  top-[-4px] left-[-4px] z-50">
-      {/*<div className={`${open ? 'container-open' : 'container-closed'} opacity-0 bg-base absolute top-[-2px] left-[-4px] z-50`}>
+    <div className="absolute top-[-4px] left-[-4px] z-50">
+
+      <div className={`${open ? 'container-open' : 'container-closed'} opacity-0 bg-base absolute top-[-2px] left-[-4px] z-50 border-2 border-theme-4 rounded-md shadow-[inset_2px_2px_15px_1px_var(--theme-7),inset_-2px_-2px_15px_1px_var(--theme-8)] rounded[5px]`}>
+
         <div className={`${open ? 'block_' : 'hidden_'} flex flex-row items-center justify-center w-full h-full absolute`}>
-          <button onClick={() => setOpen(false)} className="absolute top-1 left-1 bg-transluxed shadow-gray-700" >
+
+          <button onClick={() => setOpen(false)} className="absolute top-1 left-1 rounded-full bg-transluxed shadow-gray-700" >
             <CloseIcon fill="var(--theme-3)" className="shadow-gray-700" />
           </button>
+
           <div className="flex flex-col border border-theme-3 rounded w-11/12 h-5/6">
+            {/*
             <div className="border-0 border-b-2  border-b-theme-3 w-full h-8 flex flex-row">
               <button onClick={() => setFile("skill")} className={`${class_} ${file === 'skill' ? 'bg-[#fffe003f]' : 'bg-[#0076ff3f]'}`}>
                 <span>Skill</span>
@@ -53,13 +58,17 @@ export default function Setting() {
                         <TranslateFile />
               }
             </div>
+      */}
           </div>
+
         </div>
-      </div>*/}
-      <button> {// onClick={() => setOpen(true)}>
-      }
+
+      </div>
+
+      <button onClick={() => setOpen(true)}>
         <SettingIcon id="icon-setting" fill="var(--theme-3)" />
       </button>
+
     </div >
   )
 }

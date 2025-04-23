@@ -50,7 +50,7 @@ export default function SelectLanguage() {
         {!isOpen &&
           <button
             type="button"
-            className="absolute top-0 w-full h-full pronter rounded-[20px]"
+            className="absolute top-0 flex flex-row justify-center items-center w-full h-full pronter rounded-[20px]"
             onClick={toggleOpen}
           >
             {translate(textLanguage ?? '')}
@@ -61,7 +61,7 @@ export default function SelectLanguage() {
         <ul className={`top-0 w-full h-0 top-1/2 ${isOpen ? 'dropdown-open' : 'dropdown-close'} list-none bg-base rounded-[20px] transition-[height_1s_ease] h-0 overflow-hidden`}>
 
           {languages?.map((languageItem: TypeLanguage, index: number) => (
-            <li key={languageItem.id}>
+            <li key={index}>
               <button
                 type="button"
                 className={`block w-full ${index === 0 ? 'rounded-[20px_20px_0_0]' : 'rounded-[0_0_20px_20px]'} bg-transparent text-center px-4 py-2 text-font-color hover:text-base hover:bg-gray-100`}
