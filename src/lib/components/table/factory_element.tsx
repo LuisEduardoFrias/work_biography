@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import type { CSSProperties, ChangeEvent, ReactNode } from 'react'
 import type { InfoColumn } from './types/info_column'
 import type { fildsTypes } from './types/filds_types';
@@ -222,11 +222,11 @@ function Boxes({ name, id, style, value, data, onChange, onFocus, onBlur }: Type
 
   useEffect(() => {
     setNewValue(value)
-    console.log(newValue)
-    console.log(data)
-    console.log(onChange)
-    console.log(onFocus)
-    console.log(onBlur)
+    // console.log(newValue)
+    //     console.log(data)
+    //     console.log(onChange)
+    //     console.log(onFocus)
+    //     console.log(onBlur)
   }, [value])
 
   return (
@@ -304,11 +304,11 @@ function MultiCheckBox({ name, id, style, value, data, onChange, onFocus, onBlur
 
   useEffect(() => {
     setNewValue(value)
-    console.log(newValue)
-    console.log(data)
-    console.log(onChange)
-    console.log(onFocus)
-    console.log(onBlur)
+    // console.log(newValue)
+    //     console.log(data)
+    //     console.log(onChange)
+    //     console.log(onFocus)
+    //     console.log(onBlur)
   }, [value])
 
   return (
@@ -325,7 +325,7 @@ function MultiCheckBox({ name, id, style, value, data, onChange, onFocus, onBlur
 //date, time, week, month,
 function DateTime({ name, id, style, value, data, onChange, onFocus, onBlur }: TypeElementProps) {
 
-  const getDefaultValue = () => {
+  const getDefaultValue = useCallback(() => {
     if (!value) {
       const _date = new Date();
       const _value = (
@@ -340,13 +340,13 @@ function DateTime({ name, id, style, value, data, onChange, onFocus, onBlur }: T
     }
 
     return value;
-  };
+  }, [value,data.type]);
 
   const [inputValue, setInputValue] = useState(getDefaultValue());
 
   useEffect(() => {
     setInputValue(getDefaultValue());
-  }, [value, data.type]);
+  }, [value, data.type, getDefaultValue]);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setInputValue(event.target.value);

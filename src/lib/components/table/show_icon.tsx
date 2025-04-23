@@ -11,7 +11,7 @@ import Date from '../../svgs/date';
 import Time from '../../svgs/time';
 import File from '../../svgs/file';
 
-export default function ShowIcon({ type, fill }: { type: keyof fildsTypes, fill: string }) {
+export default function ShowIcon({ type, fill }: { type: keyof fildsTypes, fill?: string }) {
   const icons: { [key: string]: () => ReactElement } = {
     text: () => <Text fill={fill} />,
     boxes: () => <Boxes fill={fill} />,

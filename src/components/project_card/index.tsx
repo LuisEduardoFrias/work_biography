@@ -1,5 +1,4 @@
 import LoadingImage from "cp/loading_image";
-import useTranslate from "hk/use_translate";
 import { useStore } from 'swh/index'
 
 export type TypeProjectCard = {
@@ -54,6 +53,7 @@ export default function ProjectCard(state: TypeProjectCard) {
 
       <p className="text-sm text-gray-500 mb-1">
         {translate("Lenguaje:")} {language || translate("Desconocido")}
+                  {isLoading && <div className="refresh_icon"></div>}
       </p>
 
       <p className="text-sm text-gray-500 mb-1">

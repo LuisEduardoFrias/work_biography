@@ -1,4 +1,4 @@
-export default function MultiCheckBox(props) {
+export default function MultiCheckBox(props: any) {
   return (
     <svg
       width="24px"

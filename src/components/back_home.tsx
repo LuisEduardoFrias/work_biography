@@ -17,7 +17,8 @@ export default function BackHome({ position }: { position: 'left' | 'right' }) {
         <div className="relative text-white clip-path-right bg-base border border-contrast w-7 h-7" >
           <div className="w-full h-3 rotate-45 absolute top-[12px] right-[5px] flex justify-center align-middle" >
             <span className="text-contrast text-center font-bold text-[5px] origin-bottom-left ">{translate('back')}</span>
-          </div>
+                  {isLoading && <div className="refresh_icon"></div>}
+         </div>
         </div>
       </button >
     )

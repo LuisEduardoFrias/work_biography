@@ -1,5 +1,5 @@
 /**/
-export default function Remove(props) {
+export default function Remove(props: any) {
   return (
     <svg
       width="24px"

@@ -1,10 +1,10 @@
 import { alpha } from 'wolf-db'
 
 export type StudiesEntity = {
-  titles: TitleEntity,
-  books: BookEntity,
-  youtubers: YoutuberEntity,
-  otherResourves: OtherResourveEntity
+  titles: TitleEntity[],
+  books: BookEntity[],
+  youtubers: YoutuberEntity[],
+  otherResourves: OtherResourveEntity[]
 }
 
 export class TitleEntity extends alpha {
@@ -23,8 +23,8 @@ export class YoutuberEntity extends alpha {
   sector: string;
   name: string;
   img: string;
-  url: string;
   alt: string;
+  url: string;
   constructor(sector: string, name: string, img: string, alt: string, url: string) {
     super()
     this.sector = sector;

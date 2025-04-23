@@ -1,4 +1,4 @@
-export default function Number(props) {
+export default function Number(props: any) {
   return (
     <svg
       width="24px"

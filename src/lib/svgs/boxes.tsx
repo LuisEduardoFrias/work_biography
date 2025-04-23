@@ -1,4 +1,4 @@
-export default function Boxes(props) {
+export default function Boxes(props: any) {
   return (
     <svg
       width="24px"

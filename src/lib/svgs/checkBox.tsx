@@ -1,4 +1,4 @@
-export default function CheckBox(props) {
+export default function CheckBox(props: any) {
   return (
     <svg
       width="24px"

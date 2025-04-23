@@ -39,10 +39,11 @@ export default function RootLayout({ children, }: Readonly<{ children: ReactNode
           </div>
         </div>
         <Book>
-          {children}
-          {  // <ViewTransition name="page">
-            //           </ViewTransition>
-          }
+{children}
+{//           <ViewTransition name="page">
+//             {children}
+//           </ViewTransition>
+}
         </Book>
       </body>
     </html>

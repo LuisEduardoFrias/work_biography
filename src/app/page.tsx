@@ -10,8 +10,8 @@ import { useStore } from 'swh/index'
 export default function Home() {
   const initializeStore = useStore((state) => state.initializeStore)
   useEffect(() => {
-initializeStore()
-  }, [])
+    initializeStore()
+  }, [initializeStore])
 
   return (
     <Page>

@@ -1,4 +1,4 @@
-export default function MistStartString(props) {
+export default function MistStartString(props: any) {
   return (
     <svg
       width="24px"

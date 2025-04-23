@@ -1,4 +1,4 @@
-export default function Add(props) {
+export default function Add(props: any) {
 
   return (
     <svg

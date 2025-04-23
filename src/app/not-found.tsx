@@ -17,6 +17,7 @@ export default function NotFoundPage() {
 				<div className="flex flex-col space-y-6 text-color pt-3">
 					<h2 className="text-5xl font-extrabold text-center" >{translate('Something went wrong!')}</h2>
 					{error && <span className="text-center" >{translate(error)}</span>}
+					            {isLoading && <div className="refresh_icon"></div>}
 					<Link href={"/"} className="text-2xl text-primary underline font-extrabold text-center" >
 						{translate('Go to the home')}
 					</Link>

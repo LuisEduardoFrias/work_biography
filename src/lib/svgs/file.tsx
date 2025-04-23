@@ -1,4 +1,4 @@
-export default  function File(props) {
+export default  function File(props: any) {
   return (
     <svg
       width="24px"

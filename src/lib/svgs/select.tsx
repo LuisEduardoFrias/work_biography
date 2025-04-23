@@ -1,4 +1,4 @@
-export default function Select(props) {
+export default function Select(props: any) {
   return (
     <svg
       width="24px"

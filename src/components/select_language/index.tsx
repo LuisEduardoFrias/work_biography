@@ -4,6 +4,7 @@ import { useStore } from 'swh/index'
 import './styles.css'
 
 type TypeLanguage = {
+  id: string,
   key: string;
   value: string;
 }
@@ -20,6 +21,12 @@ export default function SelectLanguage() {
   const [textLanguage, setTextLanguage] = useState(languages?.find(l => l.key === seleLang)?.value);
   const toggleOpen = useCallback(() => setIsOpen(!isOpen), [isOpen]);
 
+  const handleClickOutside = useCallback((event: MouseEvent) => {
+    if (isOpen && dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      setIsOpen(false);
+    }
+  }, [isOpen, dropdownRef]);
+
   useEffect(() => {
     setTextLanguage(languages?.find(l => l.key === seleLang)?.value)
   }, [seleLang, languages]);
@@ -29,18 +36,12 @@ export default function SelectLanguage() {
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [isOpen]);
+  }, [isOpen, handleClickOutside]);
 
   const handleLanguageSelect = useCallback((selectedLanguage: string) => {
     changeLanguage(selectedLanguage);
     setIsOpen(false);
   }, [changeLanguage]);
-
-  const handleClickOutside = useCallback((event: MouseEvent) => {
-    if (isOpen && dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-      setIsOpen(false);
-    }
-  }, [isOpen, dropdownRef]);
 
   return (
     <div className="relative w-28" ref={dropdownRef}>
@@ -52,7 +53,8 @@ export default function SelectLanguage() {
             className="absolute top-0 w-full h-full pronter rounded-[20px]"
             onClick={toggleOpen}
           >
-            {translate(textLanguage)}
+            {translate(textLanguage ?? '')}
+            {isLoading && <div className="refresh_icon"></div>}
           </button>
         }
 

@@ -1,4 +1,4 @@
-export default function Search(props) {
+export default function Search(props: any) {
   return (
     <svg
       width="24px"

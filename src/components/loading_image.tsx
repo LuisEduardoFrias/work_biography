@@ -27,6 +27,7 @@ export default function LoadingImage({ src, alt, width, height, contentCss, clas
 
       {error && (
         <div className={`w-full h-full flex justify-center items-center`}>
+                    {isLoading && <div className="refresh_icon"></div>}
           <Image
             className="w-20 h-auto"
             src="/imgs/hide_image.png"
@@ -46,7 +47,7 @@ export default function LoadingImage({ src, alt, width, height, contentCss, clas
           setError(true);
         }}
         alt={alt}
-        className={`${className} scale-0 ${(!loading && !error) && 'animate-image-scale-top'}`}
+        className={`scale-0 ${(!loading && !error) && 'animate-image-scale-top'} ${className} `}
       />
     </div>
   );

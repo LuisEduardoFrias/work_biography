@@ -1,14 +1,15 @@
+import { NextRequest } from 'next/server'
 import { experience } from 'dwh/index'
 import { ExperienceEntity } from 'ett/experience_entity'
 
- export async function GET() {
-   const _experiences = await experience.ExperienceEntity.get();
- 
-   return new Response(JSON.stringify(_experiences), {
-     status: 200,
-     headers: { 'Content-Type': 'application/json' }
-   });
- }
+export async function GET() {
+  const _experiences = await experience.ExperienceEntity.get();
+
+  return new Response(JSON.stringify(_experiences), {
+    status: 200,
+    headers: { 'Content-Type': 'application/json' }
+  });
+}
 
 // export async function GET() {
 // 
@@ -89,6 +90,13 @@ export async function PUT(request: NextRequest) {
 
   const searchParams = request.nextUrl.searchParams;
   const id = searchParams.get('id');
+
+if(!id){
+  return new Response(JSON.stringify({ message: 'Experiences no a dido creada' }), {
+    status: 404,
+    headers: { 'Content-Type': 'application/json' }
+  });
+}
 
   const obj = new ExperienceEntity(institution, position, responsibilities, technologies);
   obj.id = id;

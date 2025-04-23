@@ -1,4 +1,4 @@
-export default function MistSubstring(props) {
+export default function MistSubstring(props: any) {
   return (
     <svg
       width="24px"

@@ -1,21 +1,20 @@
 'use client'
-import { useRef, useState, useEffect } from 'react'
+import { useRef, useState, useEffect, useCallback } from 'react'
 import type { ChangeEvent } from 'react'
-import { useActions } from "subscriber_state"
-import type { Actions } from '../types/global_state'
-import  { typeSearchFilter } from '../types/global_state'
+import { typeSearchFilter } from '../types/global_state'
+import { useStore } from '../warehouse/index'
 
 export default function useFilter() {
-  const { search: onSearch } = useActions<Actions>('search');
+  const onSearch = useStore((state) => state.search)
   const [search, setSearch] = useState<string>('');
   const [loading, setLoading] = useState<boolean>();
   const [tsf, setTsf] = useState<typeSearchFilter>(typeSearchFilter.substringFilter);
-  const timer = useRef<NodeJS.Timeout | null>();
+  const timer = useRef<NodeJS.Timeout | null>(null);
 
-  const executeDispatch = () => {
+  const executeDispatch = useCallback(() => {
     onSearch({ search, tsf })
     setLoading(false);
-  }
+  },[setLoading,onSearch, search, tsf])
 
   useEffect(() => {
     setLoading(true);
@@ -32,11 +31,11 @@ export default function useFilter() {
     timer.current = setTimeout(() => {
       executeDispatch();
     }, 1300);
-  }, [search])
+  }, [search, executeDispatch])
 
   useEffect(() => {
     executeDispatch();
-  }, [tsf])
+  }, [tsf, executeDispatch])
 
   function handlerSearch(event: ChangeEvent<HTMLInputElement>) {
     setSearch(event.target.value.trim())

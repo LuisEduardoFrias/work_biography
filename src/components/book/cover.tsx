@@ -18,7 +18,7 @@ export default function Cover() {
       <h2 className="text-3xl font-extrabold pl-5 text-pretty" >{translate("Trayectoria de un ingeniero de software")}</h2>
 
       <div className="w-full h-full overflow-hidden">
-
+            {isLoading && <div className="refresh_icon"></div>}
         <Image src="/imgs/cover.webp" priority={true} width={450} height={600} alt="Image of cover" />
       </div>
     </div>

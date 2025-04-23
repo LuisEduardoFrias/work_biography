@@ -1,4 +1,4 @@
-export default function Text(props) {
+export default function Text(props: any) {
   return (
     <svg
       width="24px"

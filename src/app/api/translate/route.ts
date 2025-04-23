@@ -1,7 +1,7 @@
+import { NextRequest } from 'next/server'
 import { translate } from 'dwh/index'
-import { NextRequest } from 'next/server';
 import { arrayToObject } from 'hp/array_to_object'
-import { TranslateEntity, ECategory, LanguageEntity } from 'ett/translate_entity'
+import { TranslateEntity, /*ECategory, LanguageEntity*/ } from 'ett/translate_entity'
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
@@ -12,9 +12,22 @@ export async function GET(request: NextRequest) {
     translate.LanguageEntity.get()
   ]);
 
-  const translate_ = result[0].filter((t: TranslateEntity) => t.language === language);
 
+  if (!result) {
+    return new Response(JSON.stringify({}), {
+      status: 404,
+      headers: { 'Content-Type': 'application/json' }
+    });
+  }
+  const translate_ = result[0]?.filter((t: TranslateEntity) => t.language === language);
 
+  if (!translate_) {
+    return new Response(JSON.stringify({}), {
+      status: 404,
+      headers: { 'Content-Type': 'application/json' }
+    });
+  }
+  
   return new Response(JSON.stringify({ translations: arrayToObject<TranslateEntity>(translate_, 'key'), languages: result[1] }), {
     status: 200,
     headers: { 'Content-Type': 'application/json' }
@@ -39,6 +52,13 @@ export async function PUT(request: NextRequest) {
 
   const searchParams = request.nextUrl.searchParams;
   const id = searchParams.get('id');
+
+  if (!id) {
+    return new Response(JSON.stringify({ message: 'Experiences no a dido creada' }), {
+      status: 404,
+      headers: { 'Content-Type': 'application/json' }
+    });
+  }
 
   const obj = new TranslateEntity(key, value, language, category);
   obj.id = id;

@@ -3,14 +3,15 @@ import { Table } from '@/lib'
 import { useState, useEffect } from 'react'
 import { SkillEntity } from 'ett/skill_entity'
 import { skillEnum } from 'ett/skill_enum'
+import { fildsTypes } from '../../lib/index';
 import ActionFetchApi from '../../actions/action_fetch_api'
 
 const columns = [
-  { text: 'Href', prop: 'href', icon: null, type: "text", data: { isNull: false, optionSearch: true } },
-  { text: 'Alt', prop: 'alt', icon: null, type: "text", data: { isNull: false } },
-  { text: 'Name', prop: 'name', icon: null, type: "text", data: { isNull: false } },
-  { text: 'Tooltip', prop: 'tooltipText', icon: null, type: "text", data: { isNull: false } },
-  { text: 'Type', prop: 'skillType', icon: null, type: "select", data: { option: [skillEnum.backend, skillEnum.frontend, skillEnum.another, skillEnum.interest] }, isNull: false },
+  { text: 'Href', prop: 'href', icon: null, type: fildsTypes.text, data: { isNull: false, optionSearch: true } },
+  { text: 'Alt', prop: 'alt', icon: null, type: fildsTypes.text, data: { isNull: false } },
+  { text: 'Name', prop: 'name', icon: null, type: fildsTypes.text, data: { isNull: false } },
+  { text: 'Tooltip', prop: 'tooltipText', icon: null, type: fildsTypes.text, data: { isNull: false } },
+  { text: 'Type', prop: 'skillType', icon: null, type: fildsTypes.select, data: { option: [skillEnum.backend, skillEnum.frontend, skillEnum.another, skillEnum.interest], isNull: false } },
 ];
 
 const options = {
@@ -50,7 +51,7 @@ export default function SkillFile() {
     }
   }
 
-  async function handleUpdate(value) {
+  async function handleUpdate(value: any) {
     console.log('update')
     //let _ActionFetchApi = null;
 

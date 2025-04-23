@@ -1,19 +1,19 @@
 'use client'
 import { useState } from 'react'
 import SettingIcon from './setting_icon'
-import CloseIcon from './close_icon'
 import StudieFile from './studie_file'
-import ExperienceFile from './experience_file'
-import AboutFile from './about_file'
-import TranslateFile from './translate_file'
-import SkillFile from './skill_file'
+// import CloseIcon from './close_icon'
+// import ExperienceFile from './experience_file'
+// import AboutFile from './about_file'
+// import TranslateFile from './translate_file'
+// import SkillFile from './skill_file'
 import './index.css'
 
 export default function Setting() {
-  const [open, setOpen] = useState(false);
-  const [file, setFile] = useState("skill");
+  //const [open, setOpen] = useState(false);
+  //  const [file, setFile] = useState("skill");
 
-  const class_ = "text-[12px] p-x-2 w-24 h-full flex justify-center items-center";
+  // const class_ = "text-[12px] p-x-2 w-24 h-full flex justify-center items-center";
 
   return (
     <div className="absolute  top-[-4px] left-[-4px] z-50">
@@ -56,7 +56,8 @@ export default function Setting() {
           </div>
         </div>
       </div>*/}
-      <button onClick={() => setOpen(true)}>
+      <button> {// onClick={() => setOpen(true)}>
+      }
         <SettingIcon id="icon-setting" fill="var(--theme-3)" />
       </button>
     </div >

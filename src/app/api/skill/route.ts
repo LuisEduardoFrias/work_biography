@@ -1,3 +1,4 @@
+import { NextRequest } from 'next/server'
 import { skills } from 'dwh/index'
 import { SkillEntity } from 'ett/skill_entity'
 
@@ -28,6 +29,13 @@ export async function PUT(request: NextRequest) {
 
   const searchParams = request.nextUrl.searchParams;
   const id = searchParams.get('id');
+
+if(!id){
+  return new Response(JSON.stringify({ message: 'Experiences no a dido creada' }), {
+    status: 404,
+    headers: { 'Content-Type': 'application/json' }
+  });
+}
 
   const obj = new SkillEntity(href, alt, name, tooltipText, skillType);
   obj.id = id;

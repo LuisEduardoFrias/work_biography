@@ -1,4 +1,4 @@
-export default function Calendar(props) {
+export default function Calendar(props: any) {
   return (
     <svg
       width="24px"

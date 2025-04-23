@@ -1,4 +1,4 @@
-export default function Progress(props) {
+export default function Progress(props: any) {
   return (
     <svg
       width="24px"

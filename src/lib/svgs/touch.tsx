@@ -1,5 +1,5 @@
 /**/
-export default function Touch(props) {
+export default function Touch(props: any) {
   return (
     <svg
       width="24px"

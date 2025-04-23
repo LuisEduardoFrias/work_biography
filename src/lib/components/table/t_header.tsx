@@ -2,18 +2,19 @@
 import { memo, lazy, Suspense } from 'react'
 import type { CSSProperties } from 'react'
 import type { InfoColumn } from './types/info_column'
-import type { GlobalState, Actions } from './types/global_state'
+import { THeader as theader } from './types/style'
 import { fildsTypes } from './types/filds_types'
-import { useSubscriberState } from 'subscriber_state'
 import ShowIcon from './show_icon'
 import useDialog from './hooks/use_dialog'
 import PointMenu from '../../svgs/point_menu'
+import { useStore } from './warehouse/index'
 import './style/t_header.css'
 
 const OptionColumn_ = lazy(() => import('./modals/option_column'));
 
-const THeader = memo(function _THeader({ isAddColumn, style: st, className: cn }: { isAddColumn: boolean, style: CSSProperties, className: string }) {
-  const [{ columns, showSelectRow }, _] = useSubscriberState<GlobalState, Actions>(["columns", "showSelectRow"]);
+const THeader = memo(function THeader({ isAddColumn, style: st, className: cn }: { isAddColumn: boolean, style: theader, className: string }) {
+  const columns = useStore((state) => state.columns)
+  const showSelectRow = useStore((state) => state.showSelectRow)
   const { dialogRef, open, close } = useDialog();
 
   return (
@@ -31,8 +32,8 @@ const THeader = memo(function _THeader({ isAddColumn, style: st, className: cn }
               <button>
                 {
                   fild.icon ?
-                    <fild.icon fill={st.iconColor} /> :
-                    <ShowIcon fill={st.iconColor} type={fild.type === 'datetime' ? fild.data.type : fild.type} />
+                    <fild.icon fill={st?.iconColor} /> :
+                    <ShowIcon fill={st?.iconColor} type={fild.type === 'datetime' ? fild?.data?.type : fild?.type} />
                 }
                 <span style={{ color: st?.color }}>{fild.text}</span>
               </button>

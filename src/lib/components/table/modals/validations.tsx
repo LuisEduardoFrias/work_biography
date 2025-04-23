@@ -9,7 +9,8 @@ type TypeValidstionsProps = {
   cancel: () => void
 }
 
-function _Validations({ children, okey, cancel }: TypeValidstionsProps, ref: ForwardedRef<HTMLDialogElement>) {
+
+const Validations = forwardRef<HTMLDialogElement, TypeValidstionsProps>(function Validations({ children, okey, cancel }: TypeValidstionsProps, ref: ForwardedRef<HTMLDialogElement>) {
   const identity = useId();
 
   return (
@@ -32,7 +33,6 @@ function _Validations({ children, okey, cancel }: TypeValidstionsProps, ref: For
       </dialog>
       , document.body)
   );
-}
+});
 
-const Validations = forwardRef<HTMLDialogElement, TypeValidstionsProps>(_Validations);
 export default Validations;

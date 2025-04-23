@@ -1,4 +1,4 @@
-export default function Delete(props) {
+export default function Delete(props: any) {
   return (
     <svg
       width="24px"

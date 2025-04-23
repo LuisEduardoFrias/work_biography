@@ -2,12 +2,11 @@
 import { useState, forwardRef, useEffect } from 'react'
 import type { ForwardedRef, ChangeEvent, ReactNode } from 'react'
 import type { InfoColumn } from '../types/info_column'
-import type { GlobalState, Actions } from '../types/global_state'
-import  { numberConfi, textConfi } from "../types/filters_types"
+import { numberConfi, textConfi } from "../types/filters_types"
 import { fildsTypes } from '../types/filds_types'
 import { createPortal } from 'react-dom'
-import { useSubscriberState } from 'subscriber_state'
 import ShowIcon from '../show_icon'
+import { useStore } from '../warehouse/index'
 
 import '../style/t_filter.css'
 
@@ -15,9 +14,8 @@ type AddFilterProps = {
   callback: (column?: InfoColumn) => void,
 }
 
-function _AddFilter({ callback }: AddFilterProps, ref: ForwardedRef<HTMLDialogElement>) {
-
-  const [{ columns }] = useSubscriberState<GlobalState, Actions>('columns')
+const AddFilter = forwardRef<HTMLDialogElement, AddFilterProps>(function AddFilter({ callback }: AddFilterProps, ref: ForwardedRef<HTMLDialogElement>) {
+  const columns = useStore((state) => state.columns)
   const [data, setData] = useState<InfoColumn | null>(null)
   const [onBtn, setOnBtn] = useState(false)
 
@@ -102,9 +100,8 @@ function _AddFilter({ callback }: AddFilterProps, ref: ForwardedRef<HTMLDialogEl
       document.body
     )
   );
-}
+});
 
-const AddFilter = forwardRef<HTMLDialogElement, AddFilterProps>(_AddFilter);
 export default AddFilter;
 
 type OptionFilterProps = {
@@ -167,7 +164,7 @@ function Text({ callback, onBtn }: TypeOptionConfiProps) {
   useEffect(() => {
     callback({ order: textConfi.Asc });
     onBtn(true)
-  }, [])
+  }, [callback, onBtn])
 
   return (
     <ul>
@@ -193,7 +190,7 @@ function Boxes({ callback, onBtn }: TypeOptionConfiProps) {
   useEffect(() => {
     console.log(callback)
     onBtn(true)
-  }, [])
+  }, [callback, onBtn])
 
   return <></>
 }
@@ -214,7 +211,7 @@ function Number({ callback, onBtn, data }: TypeOptionConfiProps) {
       onBtn(false)
     }
     callback({ select, operator, inputs });
-  }, [select, operator, inputs])
+  }, [select, operator, inputs, callback, onBtn])
 
   return (
     <>
@@ -273,7 +270,7 @@ function CheckBox({ callback, onBtn }: TypeOptionConfiProps) {
   useEffect(() => {
     console.log(callback)
     onBtn(true)
-  }, [])
+  }, [callback, onBtn])
   return <></>
 }
 
@@ -281,7 +278,7 @@ function MultiCheckBox({ callback, onBtn }: TypeOptionConfiProps) {
   useEffect(() => {
     console.log(callback)
     onBtn(true)
-  }, [])
+  }, [callback, onBtn])
   return <></>
 }
 
@@ -291,7 +288,7 @@ function Select({ callback, onBtn, data }: TypeOptionConfiProps) {
   useEffect(() => {
     callback({ options: data.data, select });
     onBtn(true)
-  }, [])
+  }, [callback, data.data, select,onBtn])
 
   function handlerClick(key: string) {
     callback({ ...data.data, select: key });
@@ -315,7 +312,7 @@ function DateTime({ callback, onBtn }: TypeOptionConfiProps) {
   useEffect(() => {
     console.log(callback)
     onBtn(true)
-  }, [])
+  }, [callback, onBtn])
 
   return <></>
 }

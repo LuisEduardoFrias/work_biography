@@ -1,4 +1,4 @@
-export default function ArrowDown(props) {
+export default function ArrowDown(props: any) {
   return (
     <svg
       width="24px"

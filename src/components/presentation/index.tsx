@@ -23,6 +23,7 @@ export default function Presentation() {
       <h2 className={`${orbitron.className} text-color-shine`} >BackEnd y FrontEnd</h2>
       <div>
         <p dangerouslySetInnerHTML={{ __html: translate('presentation-p1') }} />
+                    {isLoading && <div className="refresh_icon"></div>}
         <br />
         <p dangerouslySetInnerHTML={{ __html: translate('presentation-p2') }} />
       </div>

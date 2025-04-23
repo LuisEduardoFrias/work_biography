@@ -21,6 +21,7 @@ export default function Option({ name, href, src }: TypeOption) {
           <DynamicComponent />
         </Suspense>
         <p className='footer_tooltip'>{translate(name)}</p>
+                    {isLoading && <div className="refresh_icon"></div>}
       </Link>
     </li>
   )

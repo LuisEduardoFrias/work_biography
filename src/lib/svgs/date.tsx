@@ -1,4 +1,4 @@
-export default function Date(props) {
+export default function Date(props: any) {
   return (
     <svg
       width="24px"

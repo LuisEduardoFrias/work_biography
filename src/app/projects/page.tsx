@@ -24,7 +24,7 @@ export default function Projects() {
       <div className="-md:col-start-1 -md:col-end-2 md:col-start-1 md:col-end-2 row-start-1 md:row-end-2 -md:row-end-3 h-full relative pb-3">
         <TitlePage title="Projects" />
         <div className="rounded-[var(--border-page-radius)_0_0_var(--border-page-radius)] w-full h-full box-border pt-14 grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-3 justify-center  p-3 overflow-y-scroll" >
-
+            {isLoading && <div className="refresh_icon"></div>}
           {state ?
             state?.map((obj: TypeProjectCard) => <ProjectCard key={obj.name} {...obj} />) :
             <span className="text-center w-full">{translate("Loading data")}</span>

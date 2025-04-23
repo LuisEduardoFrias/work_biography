@@ -1,4 +1,4 @@
-export default function PointMenu(props) {
+export default function PointMenu(props: any) {
   return (
     <svg
       width="24px"

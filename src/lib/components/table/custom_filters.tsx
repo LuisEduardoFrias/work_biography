@@ -7,7 +7,7 @@ import useCustomFilters from './hooks/use_custom_filters'
 
 const AddFilter = lazy(() => import('./modals/add_filter'));
 
-function _CustomFilters() {
+const CustomFilters = memo(function CustomFilters() {
 	const { dialogRef, open, close } = useDialog();
 	const { filters, handlerAddFilter, handlerActive } = useCustomFilters(close);
 
@@ -39,6 +39,5 @@ function _CustomFilters() {
 			</div>
 		</div>
 	)
-}
-const CustomFilters = memo(_CustomFilters)
+})
 export default CustomFilters;

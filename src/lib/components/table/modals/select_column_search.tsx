@@ -3,10 +3,9 @@ import { forwardRef, useState, useId } from 'react'
 import type { ForwardedRef } from 'react'
 import { createPortal } from 'react-dom'
 import { firstLowerCase } from '../../../helpers/first_lowercase'
-import { useSubscriberState } from "subscriber_state"
-import type { GlobalState, Actions } from '../types/global_state'
 import type { InfoColumn } from '../types/info_column'
 import { fildsTypes } from '../types/filds_types'
+import { useStore } from '../warehouse/index'
 //import Remove from '../../../svgs/remove';
 
 type columnSearchProp = {
@@ -15,7 +14,11 @@ type columnSearchProp = {
 
 function SelectColumnSearch({ close }: columnSearchProp, ref: ForwardedRef<HTMLDialogElement>) {
   const identity = useId();
-  const [{ columns, optionSearch }, { onChangeColumnSearch }] = useSubscriberState<GlobalState, Actions>(['columns', 'optionSearch'], true);
+
+  const columns = useStore((state) => state.columns)
+  const optionSearch = useStore((state) => state.optionSearch)
+  const onChangeColumnSearch = useStore((state) => state.onChangeColumnSearch)
+
   const [columnIndex, setColumn] = useState(columns.findIndex((column: InfoColumn) => firstLowerCase(column.text) === optionSearch));
 
   function handlerSelect(index: number) {

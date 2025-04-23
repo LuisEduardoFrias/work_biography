@@ -3,21 +3,29 @@ import { useState, useEffect, useRef } from 'react'
 import type { CSSProperties } from 'react'
 import type { UIEvent } from 'react'
 import { useGlobalRef } from '../../hooks/use_globalRef'
-import { useSubscriberState, useActions } from 'subscriber_state'
 import useDialog from './hooks/use_dialog'
 import FactoryElement from './factory_element'
 import { fildsTypes } from './types/filds_types'
-import type { GlobalState, Actions, Row } from './types/global_state'
+import type { Row } from './types/global_state'
 import type { InfoColumn } from './types/info_column'
 import Validations from './modals/validations'
 import Delete from '../../svgs/delete'
+import { TMain } from './types/style'
 import PointMenu from '../../svgs/point_menu'
+import { useStore } from './warehouse/index'
 import './style/t_body.css'
 
-export default function TBody({ style: st, className: cn }: { style: CSSProperties, className: string }) {
+export default function TBody({ style: st, className: cn }: { style: TMain, className: string }) {
   const { ref, get } = useGlobalRef<HTMLDivElement>();
-  const [{ isMoveRow, isMoveColumn }, { onMoveBoth }] = useSubscriberState<GlobalState, Actions>(['isMoveRow', "isMoveColumn"], true);
-  const [{ columns, filteredRows, showSelectRow }, { removeRow }] = useSubscriberState<GlobalState, Actions>(["columns", "filteredRows", "showSelectRow"]);
+
+  const isMoveRow = useStore((state) => state.isMoveRow)
+  const isMoveColumn = useStore((state) => state.isMoveColumn)
+  const onMoveBoth = useStore((state) => state.onMoveBoth)
+  const columns = useStore((state) => state.columns)
+  const filteredRows = useStore((state) => state.filteredRows)
+  const showSelectRow = useStore((state) => state.showSelectRow)
+  const removeRow = useStore((state) => state.removeRow)
+
   const { dialogRef, open, close } = useDialog();
   const [indexSelected, setIndexSelected] = useState(-1);
   const tbodyRef = useRef<HTMLButtonElement>(null);
@@ -76,7 +84,7 @@ export default function TBody({ style: st, className: cn }: { style: CSSProperti
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [tbodyRef]);
+  }, [tbodyRef, dialogRef]);
 
   function handleScroll(event: UIEvent<HTMLDivElement>) {
     const divElement = event.currentTarget as HTMLDivElement;
@@ -150,7 +158,7 @@ type TTRow = {
 
 function TRow({ columns, row, isSelectd, style: st, rowIndex }: TTRow) {
   const [rowState, setRowState] = useState(structuredClone(row));
-  const { onRowChange } = useActions<Actions>("onRowChange");
+  const onRowChange = useStore((state) => state.onRowChange)
   const { dialogRef, open, close } = useDialog();
   const timer = useRef<NodeJS.Timeout | null>(null);
 
@@ -217,13 +225,16 @@ function TRow({ columns, row, isSelectd, style: st, rowIndex }: TTRow) {
         const key = `${column?.text}-${rowIndex}-${index}`;
 
         return (
-          <div key={key} className="td" style={{ width: column?.type === fildsTypes.datetime ? '120px' : '100px', borderBlockWidth: '0', borderRightWidth: '0', orderleftWidth: '2px', borderStyle: 'solid', ...st, borderColor: st?.borderColor ?? 'var(--border-color-line)' }}>
+          <div key={key} className="td" style={{
+            width: column?.type === fildsTypes.datetime ? '120px' : '100px', borderBlockWidth: '0',
+            borderRightWidth: '0', borderLeftWidth: '2px', borderStyle: 'solid', ...st, borderColor: st?.borderColor ?? 'var(--border-color-line)'
+          }}>
             <FactoryElement
               fild={column}
               value={cellValue}
-              color={st?.color}
+              color={st?.color ?? ''}
               selected={isSelectd}
-              index={rowState.id ?? rowState.Id ?? rowState.key ?? rowState.Key}
+              index={(rowState.id ?? rowState.Id ?? rowState.key ?? rowState.Key).toString()}
               onChange={(value: any) => handlerChange(column.text, value)}
               onFocus={handleChildFocus}
               onBlur={handleChildBlur}

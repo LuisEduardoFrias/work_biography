@@ -2,15 +2,14 @@
 import { forwardRef, useRef, memo, useState, useEffect, useId } from 'react'
 import type { ChangeEvent, ForwardedRef, CSSProperties } from 'react'
 import { createPortal } from 'react-dom'
-import { useActions } from "subscriber_state"
-import type { Actions } from '../types/global_state'
-import type { InfoColumn } from '../types/info_column'
 import { fildsTypes } from '../types/filds_types'
+import { InfoColumn } from '../types/info_column'
 import Add from '../../../svgs/add'
 import ArrowDown from '../../../svgs/arrow_down'
 import Remove from '../../../svgs/remove'
 import Delete from '../../../svgs/delete';
 import useDialog from '../hooks/use_dialog'
+import { useStore } from '../warehouse/index'
 import '../style/option_column.css'
 
 ////////////////////////////
@@ -26,9 +25,9 @@ const defaultColumn: InfoColumn = { text: '', prop: '', icon: null, data: null, 
 
 function OptionColumn({ columns, close }: AddColumnProps, ref: ForwardedRef<HTMLDialogElement>) {
   const identity = useId();
+  const addColumn = useStore((state) => state.addColumn)
   const divRef = useRef<HTMLDivElement>(null)
   const [isOpen, setIsOpen] = useState(false);
-  const { addColumn } = useActions<Actions>('addColumn');
 
   const { dialogRef, open, close: addClose } = useDialog();
 
@@ -180,8 +179,8 @@ type TypeColumnsList = { columns: InfoColumn[] };
 function ColumnsList({ columns }: TypeColumnsList) {
   const [index, setIndex] = useState(-1);
   const { dialogRef, open, close } = useDialog();
-  const { removeColumn } = useActions<Actions>('removeColumn');
 
+  const removeColumn = useStore((state) => state.removeColumn)
   function handlerRemoveColumn(data: any) {
     close();
 
@@ -259,7 +258,7 @@ type AddDataProps = {
   callback: (header: InfoColumn) => void,
 }
 
-const AddData = forwardRef<HTMLDialogElement, AddDataProps>(function _AddData({ type, close, callback }, ref: ForwardedRef<HTMLDialogElement>) {
+const AddData = forwardRef<HTMLDialogElement, AddDataProps>(function AddData({ type, close, callback }, ref: ForwardedRef<HTMLDialogElement>) {
   const identity = useId();
   const [data, setData] = useState<string[] | object | null>(null)
 
@@ -339,7 +338,7 @@ function SelectAddData({ data, set }: TypeSelectAddDataProps) {
       if (selects[0] !== '' && selects[1] !== '')
         set(selects);
     }
-  }, [selects])
+  }, [selects,set])
 
   function handleChange(event: ChangeEvent<HTMLInputElement>, index: number) {
     setSelects((prev: string[]) => {
@@ -409,7 +408,7 @@ function MultiCheckBox() {
 
 function Others({ set }: TypeSelectAddDataProps) {
 
-  useEffect(() => set([]), []);
+  useEffect(() => set([]), [set]);
   return (<></>)
 }
 
@@ -421,7 +420,7 @@ function Text({ set }: TypeSelectAddDataProps) {
 
   const [defValue, setDefValue] = useState({ readonly: false, nulable: true })
 
-  useEffect(() => set(defValue), [defValue]);
+  useEffect(() => set(defValue), [defValue,set]);
 
   function handlerChange(event: ChangeEvent<HTMLInputElement>) {
     const obj = {};

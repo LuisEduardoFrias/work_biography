@@ -39,7 +39,7 @@ export function useGlobalRef<T extends HTMLElement = HTMLElement>() {
     if (ref.current && id) {
       refs.set(ref.current, id);
     }
-  }, [ref.current]);
+  }, [ref,refs]);
 
   return { ref, get: <T extends HTMLElement = HTMLElement>(key: string) => refs.get<T>(key) };
 }

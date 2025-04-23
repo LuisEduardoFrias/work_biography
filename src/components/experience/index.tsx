@@ -16,7 +16,12 @@ export default function Experiences() {
   return (
     <>
       {experiences.map((experience: ExperienceEntity) => (
-        <ExperienceCard key={`${experience.id}`} {...experience} />
+        <ExperienceCard key={`${experience.id as string}`}
+          institution={experience.institution}
+          position={experience.position}
+          responsibilities={experience.responsibilities}
+          technologies={experience.technologies}
+        />
       ))}
     </>
   );

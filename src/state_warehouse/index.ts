@@ -9,7 +9,7 @@ interface Translation {
 interface StoreState {
   selectedLanguage: string;
   translations: Translation[];
-  languages: string[];
+  languages: { id:string, key: string, value: string }[];
   isDark: boolean;
   isLoading: boolean;
   changeLanguage: (selectedLanguage: string) => Promise<void>;
@@ -75,7 +75,7 @@ const useStore = create<StoreState>((set, get) => ({
 
     if (translations)
       return Reflect.get(translations, text) || text;
-      
+
     return text;
   },
 }));

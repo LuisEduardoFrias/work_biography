@@ -7,6 +7,7 @@ export default function Loading() {
 
   return (
     <div className="w-full h-full absolute top-0 left-0 z-50 m-1 ">
+                {isLoading && <div className="refresh_icon"></div>}
       <span className="text-contrast absolute bottom-4 pr-2" >{translate('Loading')} </span>
       <div className="w-full h-full absolute z-50 left-16">
         <div className="w-5 h-40 animate-move-loading absolute bottom-[60px]" >

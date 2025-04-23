@@ -2,8 +2,12 @@ import { useStore } from 'swh/index'
 import  Paragraph from 'cp/paragraph'
 import { ExperienceEntity } from 'ett/experience_entity'
 
-type TypeExperience = ExperienceEntity & {
+type TypeExperience =  {
   key: string;
+  institution: string;
+  position: string;
+  responsibilities: string[];
+  technologies: string[];
 }
 
 export default function ExperienceCard({ institution, position, technologies, responsibilities }: TypeExperience) {
@@ -13,6 +17,7 @@ export default function ExperienceCard({ institution, position, technologies, re
   return (
     <div className="bg-base text-contrast rounded-lg w-full h-[300px] border overflow-y-scroll shadow-[2px_2px_6px_2px_var(--theme-6)] p-4">
       <h2 className="text-xl font-semibold mb-2">{institution}</h2>
+                  {isLoading && <div className="refresh_icon"></div>}
       <p className="text-gray-600 mb-2">{translate('Cargo:')} {translate(position)}</p>
       <div className="flex flex-wrap mb-2">
         {technologies.map((tech) => (

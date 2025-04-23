@@ -1,3 +1,4 @@
+import { NextRequest } from 'next/server'
 import { studies } from 'dwh/index'
 import { TitleEntity, YoutuberEntity, OtherResourveEntity, BookEntity } from 'ett/studie_entity'
 
@@ -13,8 +14,8 @@ export async function GET() {
     const result_ = {
       titles: result[0],
       youtubers: result[1],
-      books: result[2],
-      otherResourves: result[3],
+      otherResourves: result[2],
+      books: result[3],
     }
 
     return new Response(JSON.stringify(result_), {
@@ -165,13 +166,32 @@ export async function POST(request: Request) {
   try {
 
     if (titles)
-      await studies.TitleEntity.post(new TitleEntity(titles));
+      await studies.TitleEntity.post(new TitleEntity(
+        titles.name,
+        titles.img,
+        titles.alt,
+      ));
     if (youtubers)
-      await studies.YoutuberEntity.post(new YoutuberEntity(youtubers));
+      await studies.YoutuberEntity.post(new YoutuberEntity(
+        youtubers.sector,
+        youtubers.name,
+        youtubers.img,
+        youtubers.alt,
+        youtubers.url,
+      ));
     if (otherResourves)
-      await studies.OtherResourveEntity.post(new OtherResourveEntity(otherResourves));
+      await studies.OtherResourveEntity.post(new OtherResourveEntity(
+        otherResourves.name,
+        otherResourves.url,
+      ));
     if (books)
-      await studies.BookEntity.post(new BookEntity(books));
+      await studies.BookEntity.post(new BookEntity(
+        books.img,
+        books.alt,
+        books.name,
+        books.autor,
+        books.url,
+      ));
 
     return new Response(JSON.stringify({ message: 'Experiences creada exitosamente' }), {
       status: 201,
@@ -189,30 +209,55 @@ export async function PUT(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
   const id = searchParams.get('id');
 
+  if (!id) {
+    return new Response(JSON.stringify({ message: 'Experiences no a dido creada' }), {
+      status: 404,
+      headers: { 'Content-Type': 'application/json' }
+    });
+  }
+
   if (titles) {
-    const obj = new TitleEntity(titles);
+    const obj = new TitleEntity(
+      titles.name,
+      titles.img,
+      titles.alt,
+    );
     obj.id = id;
     await studies.TitleEntity.put(obj, { id });
   }
 
   if (youtubers) {
-    const obj = new YoutuberEntity(youtubers);
+    const obj = new YoutuberEntity(
+      youtubers.sector,
+      youtubers.name,
+      youtubers.img,
+      youtubers.alt,
+      youtubers.url,
+    );
     obj.id = id;
-    await studies.YoutuberEntit.put(obj, { id });
+    await studies.YoutuberEntity.put(obj, { id });
   }
 
   if (otherResourves) {
-    const obj = new OtherResourveEntity(otherResourves);
+    const obj = new OtherResourveEntity(
+      otherResourves.name,
+      otherResourves.url,
+    );
     obj.id = id;
     await studies.OtherResourveEntity.put(obj, { id });
   }
 
   if (books) {
-    const obj = new BookEntity(books);
+    const obj = new BookEntity(
+      books.img,
+      books.alt,
+      books.name,
+      books.autor,
+      books.url,
+    );
     obj.id = id;
-    await studies.BookEntity.post(obj, { id });
+    await studies.BookEntity.put(obj, { id });
   }
-
 
   return new Response(JSON.stringify({ message: 'Experiences creada exitosamente' }), {
     status: 201,
@@ -225,6 +270,13 @@ export async function DELETE(request: NextRequest) {
   const id = searchParams.get('id');
   const type = searchParams.get('type');
 
+  if (!id || !type) {
+    return new Response(JSON.stringify({ message: 'Experiences no a dido creada' }), {
+      status: 404,
+      headers: { 'Content-Type': 'application/json' }
+    });
+  }
+
   if (type.toLowerCase() === "BookEntity".toLowerCase()) {
     await studies.BookEntity.delete({ id });
   }
@@ -232,7 +284,7 @@ export async function DELETE(request: NextRequest) {
     await studies.OtherResourveEntity.delete({ id });
   }
   if (type.toLowerCase() === "YoutuberEntit".toLowerCase()) {
-    await studies.YoutuberEntit.delete({ id });
+    await studies.YoutuberEntity.delete({ id });
   }
   if (type.toLowerCase() === "TitleEntity".toLowerCase()) {
     await studies.TitleEntity.delete({ id });

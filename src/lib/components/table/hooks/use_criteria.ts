@@ -1,16 +1,16 @@
 'use client'
-import { useEffect } from 'react'
-import { useSubscriberState } from 'subscriber_state'
+import { useEffect, useRef } from 'react'
 import type { InfoColumn } from '../types/info_column'
 import { numberConfi, textConfi } from "../types/filters_types"
-import type { GlobalState, Actions, Row } from '../types/global_state'
+import type { Row } from '../types/global_state'
 import { fildsTypes } from '../types/filds_types'
+import { useStore } from '../warehouse/index'
 
 export default function useCriteria(filters: InfoColumn[]) {
+  const isFilterActivated = useRef(false);
+  const rows = useStore((state) => state.rows)
+  const filterRows = useStore((state) => state.filterRows)
 
-  const [{ rows }, { filterRows }] = useSubscriberState<GlobalState, Actions>(["rows"], true);
-
-  let isFilterActivated = false;
 
   useEffect(() => {
     if (filters) {
@@ -21,14 +21,14 @@ export default function useCriteria(filters: InfoColumn[]) {
 
       filters.forEach((filter: InfoColumn) => {
         if (filter.data.on) {
-          isFilterActivated = true;
+          isFilterActivated.current = true;
           newRow = optionFilters[filter.type](filter, newRow);
         }
       })
 
-      filterRows(isFilterActivated ? newRow : rows);
+      filterRows(isFilterActivated.current ? newRow : rows);
     }
-  }, [filters])
+  }, [filters, isFilterActivated, filterRows, rows])
 }
 
 type optionFiltersFildsTypes = {

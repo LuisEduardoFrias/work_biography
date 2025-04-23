@@ -1,4 +1,4 @@
-export default function AboutSvg(props) {
+export default function AboutSvg(props: any) {
 
   return (
     <svg
