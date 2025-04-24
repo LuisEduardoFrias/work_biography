@@ -1,4 +1,3 @@
-import Section from '../skills/section';
 import Page from 'cp/book/page'
 import KeyBoard from 'cp/keyboard'
 import ExpeComp from 'cp/experience'

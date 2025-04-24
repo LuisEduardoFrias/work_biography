@@ -1,55 +1,5 @@
 import { alpha } from 'wolf-db'
 
-/*
-  //about page
-  aboutSubtitle: string;
-  aboutAddress: string;
-  aboutFooter: string;
-  //
-  introductionSection: string;
-  introductionP1: string;
-  introductionP2: string;
-  challengesSection: string;
-  challengesP1: string;
-  challengesP2: string;
-  selfTaughtSection: string;
-  selfTaughtP1: string;
-  selfTaughtP2: string;
-  fallSection: string;
-  fallP1: string;
-  fallP2: string;
-  reflectionsSection: string;
-  reflectionsP1: string;
-  reflectionsP2: string;
-  unaPasion: string;
-  trayectoriaDeUnIngenieroDeSoftware: string;
-  spanich: string;
-  english: string;
-  back: string;
-  iev: string;
-  hello: string;
-  fixesPrinter: string;
-  developer: string;
-  presentationP1: string;
-  presentationP2: string;
-  writeYourOwnStory: string;
-  others: string;
-  interests: string;
-  goToTheHome: string;
-  somethingWentWrong: string;
-  page5: string;
-  otherResouces: string;
-  tecnicoSuperiorEnDesarolloDeSoftware: string;
-  books: string;
-  titles: string;
-  //title pages
-  studies: string;
-  skills: string;
-  projects: string;
-  experiences: string;
-  aboutMe: string;
-  */
-
 export enum ECategory {
   home = 'home',
   skill = 'skill',
@@ -61,6 +11,16 @@ export enum ECategory {
   setting = 'setting',
 }
 
+
+
+export class TransLangEntity  {
+  languages: LanguageEntity[];
+  translations: TranslateEntity[];
+  constructor(languages: LanguageEntity[], translations: TranslateEntity[]) {
+    this.languages = languages;
+    this.translations = translations;
+  }
+}
 
 export class LanguageEntity extends alpha {
   key: string;

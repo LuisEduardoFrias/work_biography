@@ -18,16 +18,17 @@ export default function Setting() {
   return (
     <div className="absolute top-[-4px] left-[-4px] z-50">
 
-      <div className={`${open ? 'container-open' : 'container-closed'} opacity-0 bg-base absolute top-[-2px] left-[-4px] z-50 border-2 border-theme-4 rounded-md shadow-[inset_2px_2px_15px_1px_var(--theme-7),inset_-2px_-2px_15px_1px_var(--theme-8)] rounded[5px]`}>
+      <div className={`${open ? 'container-open' : 'container-closed'} opacity-0 bg-base absolute top-[-2px] left-[-4px] z-50 border-2
+        border-theme-4 shadow-[inset_2px_2px_15px_1px_var(--theme-7),inset_-2px_-2px_15px_1px_var(--theme-8)] rounded-[8px]`}>
 
-        <div className={`${open ? 'block_' : 'hidden_'} flex flex-row items-center justify-center w-full h-full absolute`}>
+        <div className={`${open ? 'block' : 'hidden'} flex flex-row items-center justify-center w-full h-full absolute`}>
 
           <button onClick={() => setOpen(false)} className="absolute top-1 left-1 rounded-full bg-transluxed shadow-gray-700" >
             <CloseIcon fill="var(--theme-3)" className="shadow-gray-700" />
           </button>
 
           <div className="flex flex-col border border-theme-3 rounded w-11/12 h-5/6">
-            {/*
+
             <div className="border-0 border-b-2  border-b-theme-3 w-full h-8 flex flex-row">
               <button onClick={() => setFile("skill")} className={`${class_} ${file === 'skill' ? 'bg-[#fffe003f]' : 'bg-[#0076ff3f]'}`}>
                 <span>Skill</span>
@@ -35,14 +36,14 @@ export default function Setting() {
               <button onClick={() => setFile("expirience")} className={`${class_} ${file === 'expirience' ? 'bg-[#fffe003f]' : 'bg-[#0076ff3f]'}`}>
                 <span>Expirience</span>
               </button>
+              <button onClick={() => setFile("translate")} className={`${class_} ${file === 'translate' ? 'bg-[#fffe003f]' : 'bg-[#0076ff3f]'}`}>
+                <span>Translate</span>
+              </button>
               <button onClick={() => setFile("studie")} className={`${class_} ${file === 'studie' ? 'bg-[#fffe003f]' : 'bg-[#0076ff3f]'}`}>
                 <span>Studie</span>
               </button>
               <button onClick={() => setFile("about")} className={`${class_} ${file === 'about' ? 'bg-[#fffe003f]' : 'bg-[#0076ff3f]'}`}>
                 <span>About</span>
-              </button>
-              <button onClick={() => setFile("translate")} className={`${class_} ${file === 'translate' ? 'bg-[#fffe003f]' : 'bg-[#0076ff3f]'}`}>
-                <span>Translate</span>
               </button>
             </div>
             <div className="w-full h-full overflow-y-scroll">
@@ -53,12 +54,12 @@ export default function Setting() {
                     <ExperienceFile /> :
                     file === "studie" ?
                       <StudieFile /> :
-                      file === "about" ?
-                        <AboutFile /> :
-                        <TranslateFile />
+                      file === "translate" ?
+                        <TranslateFile /> :
+                        <AboutFile />
               }
             </div>
-      */}
+
           </div>
 
         </div>

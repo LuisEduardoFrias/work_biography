@@ -31,7 +31,8 @@ export default function ExperienceCard({ institution, position, technologies, re
 
         <ul className="list-inside flex flex-row flex-wrap gap-y-1 ">
           {technologies.map((tech) => (
-            <li key={tech} className="bg-theme-1 text-contrast font-[100] text-xs shadow-[inset_1px_1px_1px_0_var(--contrast),2px_2px_4px_0_var(--theme-5)] rounded-full px-3 py-1 text-xs font-semibold mr-2 mb-2">
+            <li key={tech} className="bg-theme-1 font-[100] text-xs shadow-[inset_1px_1px_1px_0_var(--contrast),2px_2px_4px_0_var(--theme-5)]
+            rounded-full px-3 py-1 text-xs font-semibold text-base mr-2 mb-2">
               {tech}
             </li>
           ))}

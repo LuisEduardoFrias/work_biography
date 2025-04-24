@@ -14,42 +14,14 @@
 
 .container-open {
   opacity: 1;
-  transition: opacity 1s ease-in-out;
+  transition: opacity 2s ease-in-out;
   width: 100vw;
   height: 100vh;
 }
 
 .container-closed {
-  opacity: 1;
-  transition: opacity 1s ease-in-out;
-}
-
-.blockr_ {
   opacity: 0;
-  animation: block_ 1s 2s linear forwards;
-}
-
-.hiddetn_ {
-  opacity: 1;
-  animation: hidden_ 1s linear forwards;
-}
-
-@keyframes block_ {
-  90% {
-    display: block;
-  }
-  
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes hidden_ {
-  90% {
-    opacity: 0;
-  }
-  
-  100% {
-    display: none;
-  }
+  transition: opacity 2s ease-in-out,
+  width 1s 3s ease,
+  height 1s 3s ease;
 }

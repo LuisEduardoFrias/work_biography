@@ -3,7 +3,7 @@ import { SkillEntity } from 'ett/skill_entity';
 import Tooltip, { position } from 'cp/tooltip';
 import React, { useState } from 'react';
 
-type TDrawProps =  {
+type TDrawProps = {
   key: string,
   href: string,
   alt: string,

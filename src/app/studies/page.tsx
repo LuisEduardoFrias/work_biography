@@ -5,7 +5,7 @@ import Loading from '../loading'
 import ActionFetchApi from '../../actions/action_fetch_api'
 import Page from 'cp/book/page'
 import TitlePage from 'cp/title_page'
-import { YoutuberEntity, StudiesEntity, BookEntity ,OtherResourveEntity} from 'ett/studie_entity'
+import { YoutuberEntity, StudiesEntity, BookEntity, OtherResourveEntity } from 'ett/studie_entity'
 import { useStore } from 'swh/index'
 
 export default function Studies() {
@@ -58,7 +58,7 @@ export default function Studies() {
                 {data.books.map((book, index) => (
                   <article
                     key={index}
-                    className="select-none border-4 border-theme-2 shadow-[var(theme-6)] rounded-[10px] p-2 w-[200px] h-auto flex flex-col items-center"
+                    className="select-none border-4 border-theme-2 shadow-[var(theme-6)] rounded-[10px] p-2 w-[200px] min-h-[17rem] flex flex-col items-center"
                   >
                     <h3 className="text-center" >{book.autor}</h3>
                     <a
@@ -114,7 +114,7 @@ function SectionTwo({ translate, youtubers, otherResourves }: { translate: (valu
             >
               <LoadingImage
                 contentCss="h-full w-full flex justify-center items-center"
-                className="transition rounded-full transition-[border-radius_1s_ease] hover:rounded"
+                className="transition rounded-full transition-[border-radius_1s_ease] hover:rounded-none hover:object-cover"
                 src={youtuber.img}
                 alt={`youtuber: ${youtuber.name}`}
               />

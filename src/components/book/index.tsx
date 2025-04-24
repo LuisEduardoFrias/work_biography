@@ -1,6 +1,6 @@
 'use client'
 import { ReactNode } from 'react'
-import useAnimationManager from 'hk/use_animation_manager.ts'
+import useAnimationManager from 'hk/use_animation_manager'
 import Cover from './cover'
 import './styles.css'
 

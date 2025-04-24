@@ -19,15 +19,15 @@ export default function LoadingImage({ src, alt, width, height, contentCss, clas
   const [error, setError] = useState<boolean>(false);
 
   return (
-    <div className={`relative z-0 ${contentCss}`}>
+    <div className={`relative z-0 flex justify-center items-center w-full h-full ${contentCss}`}>
 
-      <div className={`w-full h-full flex justify-center items-center ${!loading && "animate-image-scale-bottom"}`}>
+      <div className={`absolute ${!loading && "animate-image-scale-bottom"}`}>
         <div className="refresh_icon"></div>
       </div>
 
       {error && (
-        <div className={`w-full h-full flex justify-center items-center`}>
-                    {isLoading && <div className="refresh_icon"></div>}
+        <div className={`absolute`}>
+          {isLoading && <div className="refresh_icon"></div>}
           <Image
             className="w-20 h-auto"
             src="/imgs/hide_image.png"

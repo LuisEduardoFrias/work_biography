@@ -1,9 +1,10 @@
 'use client'
-import { Table } from '@/lib'
 import { useState, useEffect } from 'react'
-import { SkillEntity } from 'ett/skill_entity'
 import { skillEnum } from 'ett/skill_enum'
+import { SkillEntity } from 'ett/skill_entity'
 import { fildsTypes } from '../../lib/index';
+import { Table } from '@/lib'
+import Loading from '@/app/loading'
 import ActionFetchApi from '../../actions/action_fetch_api'
 
 const columns = [
@@ -34,7 +35,7 @@ export default function SkillFile() {
     bg: 'var(--base)',
     color: 'var(--contrast)',
     iconColor: 'var(--contrast)',
-    borderColor: 'var(--theme-1)',
+    borderColor: 'var(--theme-7)',
     header: {
       borderInlineWidth: '0',
       borderBottomWidth: '4px',
@@ -42,8 +43,9 @@ export default function SkillFile() {
     mian: {
       borderLeftWidth: '2px',
     },
-    fooder: {
+    footer: {
       borderWidth: '0',
+      borderBottomWidth: '2px',
       addButton: {
         backgroundColor: 'var(--theme-3)',
         borderRadius: '10px',
@@ -52,7 +54,7 @@ export default function SkillFile() {
   }
 
   async function handleUpdate(value: any) {
-    console.log('update')
+    console.log(`value lenght: ${value.length} - skills.length: ${skills.length}`)
     //let _ActionFetchApi = null;
 
     if (value.length > skills.length) {
@@ -72,7 +74,9 @@ export default function SkillFile() {
 
   if (skills.length <= 0)
     return (
-      <span>esiera</span>
+      <>
+        <Loading />
+      </>
     )
 
   return (
