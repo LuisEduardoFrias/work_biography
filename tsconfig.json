@@ -6,6 +6,7 @@
       "dom.iterable",
       "esnext"
     ],
+    "noUnusedLocals": false,
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -49,6 +50,9 @@
       ],
       "dwh/*": [
         "./src/data_warehouse/*"
+      ],
+      "swh/*": [
+        "./src/state_warehouse/*"
       ],
       "ett/*": [
         "./src/entities/*"

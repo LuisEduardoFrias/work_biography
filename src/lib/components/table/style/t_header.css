@@ -1,0 +1,52 @@
+/**/
+.thead {
+  display: flex;
+  
+  & .tr {
+    width: 100%;
+    display: flex;
+    overflow-y: hidden;
+    border-color: var(--border-color-line);
+  }
+  
+  & .th {
+    min-width: var(--cell-width);
+    overflow-x: auto;
+    overflow-y: hidden;
+    user-select: none;
+    display: flex;
+    border-color: var(--border-color-line);
+    
+    & button {
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      & span {
+        margin-inline-start: 4px;
+      }
+    }
+  }
+  
+  & .th-middler {}
+  
+  & .columnDate {
+    min-width: Calc(var(--cell-width) + 9px);
+  }
+  
+  & .th:first-child {
+    min-width: var(--cell-mini-width);
+  }
+  
+  .th-last-child {
+    min-width: Calc(var(--cell-mini-width));
+    
+    & svg {
+      margin-inline: 5px;
+    }
+  }
+}

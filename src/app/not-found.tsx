@@ -3,10 +3,11 @@ import Image from "next/image"
 import Link from "next/link"
 import Page from 'cp/book/page'
 import { useSearchParams } from 'next/navigation'
-import useTranslate from 'hk/use_translate'
+import { useStore } from 'swh/index'
 
 export default function NotFoundPage() {
-	const {translate} = useTranslate();
+	const isLoading = useStore((state) => state.isLoading)
+  const translate = useStore((state) => state.translate)
 	const params = useSearchParams()
 	const error = params.get('error')
 
@@ -16,6 +17,7 @@ export default function NotFoundPage() {
 				<div className="flex flex-col space-y-6 text-color pt-3">
 					<h2 className="text-5xl font-extrabold text-center" >{translate('Something went wrong!')}</h2>
 					{error && <span className="text-center" >{translate(error)}</span>}
+					            {isLoading && <div className="refresh_icon"></div>}
 					<Link href={"/"} className="text-2xl text-primary underline font-extrabold text-center" >
 						{translate('Go to the home')}
 					</Link>

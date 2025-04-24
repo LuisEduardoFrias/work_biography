@@ -1,5 +1,6 @@
+'use client'
 import localFont from 'next/font/local'
-import useTranslate from 'hk/use_translate'
+import { useStore } from 'swh/index'
 import './styles.css'
 
 const orbitron = localFont({
@@ -7,7 +8,8 @@ const orbitron = localFont({
 });
 
 export default function Presentation() {
-  const { translate } = useTranslate();
+  const isLoading = useStore((state) => state.isLoading)
+  const translate = useStore((state) => state.translate)
 
   return (
     <div className="presentation-container w-full h-auto px-2 flex flex-col align-middle gap-3">
@@ -21,6 +23,7 @@ export default function Presentation() {
       <h2 className={`${orbitron.className} text-color-shine`} >BackEnd y FrontEnd</h2>
       <div>
         <p dangerouslySetInnerHTML={{ __html: translate('presentation-p1') }} />
+                    {isLoading && <div className="refresh_icon"></div>}
         <br />
         <p dangerouslySetInnerHTML={{ __html: translate('presentation-p2') }} />
       </div>

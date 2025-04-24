@@ -1,0 +1,27 @@
+#icon-setting {
+  animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.container-open {
+  opacity: 1;
+  transition: opacity 2s ease-in-out;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container-closed {
+  opacity: 0;
+  transition: opacity 2s ease-in-out,
+  width 1s 3s ease,
+  height 1s 3s ease;
+}

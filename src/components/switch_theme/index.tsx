@@ -1,22 +1,22 @@
-"use client"
-import {  ChangeEvent } from 'react'
-import { useSubscriberState } from 'subscriber_state'
-import { State, Actions } from '@/state_warehouse'
+'use client'
+import { ChangeEvent } from 'react'
+import { useStore } from 'swh/index'
 import './styles.css'
 
 export default function SwitchTheme() {
-	const [{ isDark }, { changeTheme }] = useSubscriberState<State, Actions>('isDark');
+  const isDark = useStore((state) => state.isDark)
+  const changeTheme = useStore((state) => state.changeTheme)
 
-	function handleChange(event: ChangeEvent<HTMLInputElement>) {
-		changeTheme(event.target.checked)
-	}
+  function handleChange(event: ChangeEvent<HTMLInputElement>) {
+    changeTheme(event.target.checked)
+  }
 
-	return (
-		<label htmlFor="switch-theme" className="container-switch-theme" >
-			<input id="switch-theme" type="checkbox" defaultChecked={isDark} onChange={handleChange} />
-			<span></span>
-		</label>
-	)
+  return (
+    <label htmlFor="switch-theme" className="container-switch-theme" >
+      <input id="switch-theme" type="checkbox" defaultChecked={isDark} onChange={handleChange} />
+      <span></span>
+    </label>
+  )
 }
 
 

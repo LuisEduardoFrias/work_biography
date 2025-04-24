@@ -4,6 +4,7 @@ export default {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/lib/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
@@ -59,8 +60,28 @@ export default {
         "points2": "show_point 3s 1.5s linear infinite",
         "points3": "show_point 3s 2.5s linear infinite",
         "move-loading": "move_loading 3s 0s linear infinite",
+        'show-tooltip-left': 'show_tooltip_left 0.5s ease-out forwards',
+        'close-tooltip-left': 'close_tooltip_left 0.5s ease-out forwards',
+        'show-tooltip-right': 'show_tooltip_right 0.5s ease-out forwards',
+        'close-tooltip-right': 'close_tooltip_right 0.5s ease-out forwards',
       },
       keyframes: {
+        show_tooltip_left: {
+          '0%': { width: '0px', opacity: '0' },
+          '100%': { width: '208px', opacity: '1' },
+        },
+        show_tooltip_right: {
+          '0%': { width: '0px', opacity: '0' },
+          '100%': { width: '208px', opacity: '1' },
+        },
+        close_tooltip_right: {
+          '0%': { width: '208px', opacity: '1' },
+          '100%': { width: '0px', opacity: '0' },
+        },
+        close_tooltip_left: {
+          '0%': { width: '208px', opacity: '1' },
+          '100%': { width: '0px', opacity: '0' },
+        },
         skill_show: {
           "0%": {
             transform: "scale(1)"

@@ -1,0 +1,22 @@
+export enum fildsTypes {
+  'null' = 'null',
+  text = 'text',
+  mask = 'mask', //TODO sin implementar
+  boxes = 'boxes',
+  number = 'number',
+  checkbox = 'checkbox',
+  multi_checkBox = 'multi_checkBox',
+  select = 'select',
+  datetime = 'datetime',
+  //datetime-local = 'datetime-local',
+  date = 'date',
+  time = 'time',
+  week = 'week',
+  month = 'month',
+  color = 'color',
+  email = 'email',
+  password = 'password',
+  tel = 'tel',
+  url = 'url',
+  file = 'file',
+}

@@ -13,20 +13,46 @@
   position: relative;
   width: 100%;
   height: 60px;
-  border-radius: 5px 5px 0 0;
+  border-radius: 0px 0px 0 0;
   background-color: #ededed;
   box-shadow: inset 2px 10px 10px -8px #505050d0;
 }
 
-#screen {
+#screen-content {
   width: 80px;
   height: 30px;
-  background-color: #979797;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  border: 1px solid gray;
   top: 6px;
   border-radius: 3px;
+  background-color: #898989b3;
+}
+
+#screen-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  padding: 2px;
+  border-radius: 3px;
+  width: 100%;
+  height: 100%;
+  color: #333;
+}
+
+#screen-glass {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+  backdrop-filter: blur(.5px);
+  -webkit-backdrop-filter: blur(.5px);
 }
 
 #teclas {

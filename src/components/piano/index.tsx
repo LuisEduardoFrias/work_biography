@@ -3,10 +3,15 @@ import './styles.css'
 export default function Piano() {
   return (
     <div className="w-full h-full flex justify-center items-center">
-      <div id="piano">
+      <div id="piano" className="border-x-4 border-b-4 border-[#ededed]" >
         <div id="panel">
-          <div id="screen">
+          <div id="screen-content">
+            <div id="screen-text">
+              <span className="text-[8px]">C-D-E-F-G-A-B</span>
+            </div>
+            <div id="screen-glass">
 
+            </div>
           </div>
         </div>
         <div id="teclas">
