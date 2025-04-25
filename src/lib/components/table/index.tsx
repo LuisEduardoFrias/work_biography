@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 import { useGlobalRef } from '../../hooks/use_globalRef'
 import type { Styles, ClassName } from './types/style';
-import type { GlobalState, Row } from './types/global_state';
+import type { Row } from './types/global_state';
 import { InfoColumn } from './types/info_column';
 import Update from './update';
 import TFilter from './t_filter';

@@ -52,7 +52,7 @@ export default function ExperienceFile() {
   }
 
   async function handleUpdate(value: any) {
-    console.log(`value lenght: ${value.length} - experiences.length: ${experiences.length}`)
+    console.log(`value lenght: ${(value as typeof Array<any>).length} - experiences.length: ${experiences.length}`)
     //let _ActionFetchApi = null;
 
     if (value.length > experiences.length) {

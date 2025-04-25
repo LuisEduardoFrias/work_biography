@@ -83,6 +83,8 @@ export default function TranslateFile() {
   }
 
   async function handleUpdate(value: any) {
+    if(value)
+    console.log(value)
     // console.log(`value lenght: ${value.length} - translates.length: ${translates.length}`)
     //     //let _ActionFetchApi = null;
     // 

@@ -1,5 +1,8 @@
-export default function AboutSvg(props: any) {
+import React from 'react';
 
+type Props = React.SVGProps<SVGSVGElement>;
+
+export default function AboutSvg(props: Props) {
   return (
     <svg
       width="24px"

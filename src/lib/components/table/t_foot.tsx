@@ -1,6 +1,6 @@
 'use client'
 import { memo } from 'react'
-import type { CSSProperties } from 'react'
+//import type { CSSProperties } from 'react'
 //import { useGlobalRef } from '../../hooks/use_globalRef'
 import { useStore } from './warehouse/index'
 import { TFooter } from './types/style'

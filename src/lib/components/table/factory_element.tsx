@@ -218,7 +218,18 @@ function Text({ name, id, style, value, data, onChange, onFocus, onBlur }: TypeE
 
 function Boxes({ name, id, style, value, data, onChange, onFocus, onBlur }: TypeElementProps) {
   //const { onInputChange } = useActions<Actions>("onInputChange");
+
   const [newValue, setNewValue] = useState(value);
+  const t = { newValue, name, id, style, value, data, onChange, onFocus, onBlur };
+
+  if (false) {
+    console.log(t)
+    console.log(newValue)
+    console.log(data)
+    console.log(onChange)
+    console.log(onFocus)
+    console.log(onBlur)
+  }
 
   useEffect(() => {
     setNewValue(value)
@@ -243,6 +254,14 @@ function Boxes({ name, id, style, value, data, onChange, onFocus, onBlur }: Type
 function Number({ name, id, style, value, data, onChange, onFocus, onBlur }: TypeElementProps) {
   //const { onInputChange } = useActions<Actions>("onInputChange");
   const [newValue, setNewValue] = useState(value);
+
+  if (false) {
+    console.log(newValue)
+    console.log(data)
+    console.log(onChange)
+    console.log(onFocus)
+    console.log(onBlur)
+  }
 
   useEffect(() => {
     setNewValue(value)
@@ -277,6 +296,14 @@ function CheckBox({ name, id, style, value, data, onChange, onFocus, onBlur }: T
     setNewValue(value)
   }, [value])
 
+  if (false) {
+    console.log(newValue)
+    console.log(data)
+    console.log(onChange)
+    console.log(onFocus)
+    console.log(onBlur)
+  }
+
   return (
     <input
       key={`checkbox-${id}-${name}`}
@@ -301,6 +328,14 @@ function MultiCheckBox({ name, id, style, value, data, onChange, onFocus, onBlur
   //const { onInputChange } = useActions<Actions>("onInputChange");
 
   const [newValue, setNewValue] = useState(value);
+
+  if (false) {
+    console.log(newValue)
+    console.log(data)
+    console.log(onChange)
+    console.log(onFocus)
+    console.log(onBlur)
+  }
 
   useEffect(() => {
     setNewValue(value)
@@ -340,7 +375,7 @@ function DateTime({ name, id, style, value, data, onChange, onFocus, onBlur }: T
     }
 
     return value;
-  }, [value,data.type]);
+  }, [value, data.type]);
 
   const [inputValue, setInputValue] = useState(getDefaultValue());
 

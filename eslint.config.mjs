@@ -1,12 +1,18 @@
-import js from '@eslint/js';
-import next from 'eslint-plugin-next';
+import { FlatCompat } from '@eslint/eslintrc'
 
-export default [
-  js.configs.recommended,
-  next.configs.recommended, 
-  {
+const compat = new FlatCompat({
+  // import.meta.dirname is available after Node.js v20.11.0
+  baseDirectory: import.meta.dirname,
+})
+
+const eslintConfig = [
+  ...compat.config({
+    extends: ['next'],
     rules: {
-
+      'react/no-unescaped-entities': 'off',
+      '@next/next/no-page-custom-font': 'off',
     },
-  },
-];
+  }),
+]
+
+export default eslintConfig

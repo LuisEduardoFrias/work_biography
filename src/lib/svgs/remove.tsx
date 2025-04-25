@@ -1,5 +1,8 @@
-/**/
-export default function Remove(props: any) {
+import React from 'react';
+
+type Props = React.SVGProps<SVGSVGElement>;
+
+export default function Remove(props: Props) {
   return (
     <svg
       width="24px"

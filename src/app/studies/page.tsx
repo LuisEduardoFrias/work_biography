@@ -5,7 +5,7 @@ import Loading from '../loading'
 import ActionFetchApi from '../../actions/action_fetch_api'
 import Page from 'cp/book/page'
 import TitlePage from 'cp/title_page'
-import { YoutuberEntity, StudiesEntity, BookEntity, OtherResourveEntity } from 'ett/studie_entity'
+import { YoutuberEntity, StudiesEntity, OtherResourveEntity } from 'ett/studie_entity'
 import { useStore } from 'swh/index'
 
 export default function Studies() {

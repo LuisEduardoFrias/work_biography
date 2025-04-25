@@ -1,5 +1,5 @@
 import LoadingImage from 'cp/loading_image';
-import { SkillEntity } from 'ett/skill_entity';
+//import { SkillEntity } from 'ett/skill_entity';
 import Tooltip, { position } from 'cp/tooltip';
 import React, { useState } from 'react';
 

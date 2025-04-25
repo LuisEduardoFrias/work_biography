@@ -1,4 +1,8 @@
-export default  function ArrowShort(props: any) {
+import React from 'react';
+
+type Props = React.SVGProps<SVGSVGElement>;
+
+export default function ArrowShort(props: Props) {
   return (
     <svg
       width="24px"

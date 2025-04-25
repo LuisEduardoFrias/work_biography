@@ -1,6 +1,6 @@
 'use client'
 import { memo, lazy, Suspense } from 'react'
-import type { CSSProperties } from 'react'
+//import type { CSSProperties } from 'react'
 import type { InfoColumn } from './types/info_column'
 import { THeader as theader } from './types/style'
 import { fildsTypes } from './types/filds_types'

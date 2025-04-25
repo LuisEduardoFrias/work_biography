@@ -1,4 +1,8 @@
-export default function Add(props: any) {
+import React from 'react';
+
+type Props = React.SVGProps<SVGSVGElement>;
+
+export default function Add(props: Props) {
 
   return (
     <svg

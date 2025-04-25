@@ -1,4 +1,8 @@
-export default function Boxes(props: any) {
+import React from 'react';
+
+type Props = React.SVGProps<SVGSVGElement>;
+
+export default function Boxes(props: Props) {
   return (
     <svg
       width="24px"

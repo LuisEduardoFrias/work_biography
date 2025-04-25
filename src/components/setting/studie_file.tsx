@@ -78,20 +78,21 @@ export default function StudieFile() {
     }
   }
 
-  async function handleUpdate(value: any) {
-   // console.log(`value lenght: ${value.length} - studies.length: ${studies.length}`)
+  async function handleUpdate(value: Array<any>) {
+    if (false)
+      console.log(`value lenght: ${value.length}`)
     //let _ActionFetchApi = null;
 
     // if (value.length > studies.length) {
-//       console.log('post')
-//       //const _ActionFetchApi = ActionFetchApi.bind(null, "study", 'POST')
-//     } else if (value.length === studies.length && JSON.stringify(value) !== JSON.stringify(studies)) {
-//       console.log('put')
-//       //const _ActionFetchApi = ActionFetchApi.bind(null, "study", 'PUT')
-//     } else if (value.length < studies.length) {
-//       console.log('delete')
-//       // const _ActionFetchApi = ActionFetchApi.bind(null, "study", 'DELETE')
-//     }
+    //       console.log('post')
+    //       //const _ActionFetchApi = ActionFetchApi.bind(null, "study", 'POST')
+    //     } else if (value.length === studies.length && JSON.stringify(value) !== JSON.stringify(studies)) {
+    //       console.log('put')
+    //       //const _ActionFetchApi = ActionFetchApi.bind(null, "study", 'PUT')
+    //     } else if (value.length < studies.length) {
+    //       console.log('delete')
+    //       // const _ActionFetchApi = ActionFetchApi.bind(null, "study", 'DELETE')
+    //     }
 
     //if (_ActionFetchApi)
     //await _ActionFetchApi(value);

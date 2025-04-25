@@ -1,4 +1,8 @@
-export default function ArrowDown(props: any) {
+import React from 'react';
+
+type Props = React.SVGProps<SVGSVGElement>;
+
+export default function ArrowDown(props: Props) {
   return (
     <svg
       width="24px"
@@ -8,7 +12,7 @@ export default function ArrowDown(props: any) {
       id="svg"
       {...props}
     >
-  <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/>
+      <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
     </svg>)
 
 }

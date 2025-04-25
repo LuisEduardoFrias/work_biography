@@ -1,6 +1,6 @@
 import { useStore } from 'swh/index'
 import Paragraph from 'cp/paragraph'
-import { ExperienceEntity } from 'ett/experience_entity'
+//import { ExperienceEntity } from 'ett/experience_entity'
 
 type TypeExperience = {
   key: string;

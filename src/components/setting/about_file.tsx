@@ -1,18 +1,19 @@
 'use client'
-import { useState, useEffect } from 'react'
-import ActionFetchApi from '../../actions/action_fetch_api'
+//import { useState, useEffect } from 'react'
+//import ActionFetchApi from '../../actions/action_fetch_api'
 
-type AboutEntity = {
-  title: string
-}
-
+// type AboutEntity = {
+//   title: string
+// }
+// 
 export default function AboutFile() {
-  const [change, setChange] = useState(0);
+ // const [change, setChange] = useState(0);
 
   return (
     <>
       {
-        change === 0 ? "":""
+        <span>about</span>
+       // change === 0 ? "":""
 //           <ShowAbout key="show" action={(value) => setChange(value)} />
 //           :
 //           <AddAbout key="add" action={(value) => setChange(value)} />

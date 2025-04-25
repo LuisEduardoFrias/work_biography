@@ -179,7 +179,7 @@ export default function useAnimationManager() {
     }
 
     data.oldPathname = pathname;
-  }, [pathname])
+  }, [pathname, data, refs])
 
   return setRef;
 
@@ -422,21 +422,26 @@ function retorneHomeToSkills(refs: TRefs) {
 //////////////////////////////////////////////////////
 
 function reloadingAboutPage(refs: TRefs) {
-
+  if (false)
+    console.log(refs)
 }
 
 function reloadingProjectsPage(refs: TRefs) {
-
+  if (false)
+    console.log(refs)
 }
 
 function reloadingExperiencesPage(refs: TRefs) {
-
+  if (false)
+    console.log(refs)
 }
 
 function reloadingStudiesPage(refs: TRefs) {
-
+  if (false)
+    console.log(refs)
 }
 
 function reloadingSkillsPage(refs: TRefs) {
-
+  if (false)
+    console.log(refs)
 }
