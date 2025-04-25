@@ -1,5 +1,5 @@
 import { wolfPackCreate } from 'wolf-db'
-import type { DbManager } from 'wolf-db'
+import type { TDbManager } from 'wolf-db'
 import { SkillEntity } from 'ett/skill_entity'
 import { TranslateEntity, LanguageEntity } from 'ett/translate_entity'
 import { ExperienceEntity } from 'ett/experience_entity'
@@ -10,20 +10,20 @@ import {
 
 type typeDt = {
   translate: {
-    LanguageEntity: DbManager<LanguageEntity>,
-    TranslateEntity: DbManager<TranslateEntity>,
+    LanguageEntity: TDbManager<LanguageEntity>,
+    TranslateEntity: TDbManager<TranslateEntity>,
   },
   experience: {
-    ExperienceEntity: DbManager<ExperienceEntity>,
+    ExperienceEntity: TDbManager<ExperienceEntity>,
   },
   skills: {
-    SkillEntity: DbManager<SkillEntity>,
+    SkillEntity: TDbManager<SkillEntity>,
   },
   studies: {
-    TitleEntity: DbManager<TitleEntity>,
-    YoutuberEntity: DbManager<YoutuberEntity>,
-    OtherResourveEntity: DbManager<OtherResourveEntity>,
-    BookEntity: DbManager<BookEntity>,
+    TitleEntity: TDbManager<TitleEntity>,
+    YoutuberEntity: TDbManager<YoutuberEntity>,
+    OtherResourveEntity: TDbManager<OtherResourveEntity>,
+    BookEntity: TDbManager<BookEntity>,
   },
 }
 

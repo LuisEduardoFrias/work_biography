@@ -27,8 +27,8 @@ importers:
         specifier: ^2.0.17
         version: 2.0.18(react@18.3.1)(uuid@11.1.0)
       wolf-db:
-        specifier: ^1.0.4
-        version: 1.0.5
+        specifier: ^1.0.8
+        version: 1.0.8
       zustand:
         specifier: ^5.0.3
         version: 5.0.3(@types/react@19.1.2)(react@18.3.1)
@@ -1977,8 +1977,8 @@ packages:
     engines: {node: '>= 8'}
     hasBin: true
 
-  wolf-db@1.0.5:
-    resolution: {integrity: sha512-yMBvrEiC8s3GXnqPVQ2NgkQobfMlYI3kseH3dPTusVxDzdn6aCt6MhZZKWvxpvAXpz6/QQnybDqubvWaAyO0oQ==}
+  wolf-db@1.0.8:
+    resolution: {integrity: sha512-6aU+SH5fvOvdM31b76lQOJINBvGyNqDa+X84T3sznEFEeFljaAqlyIxy4P/a5lsIUAPmQ0JY+tBsNEMG41iFTQ==}
 
   word-wrap@1.2.5:
     resolution: {integrity: sha512-BN22B5eaMMI9UMtjrGd5g5eCYPpCPDUy0FJXbYsaT5zYxjFOckS53SQDE3pWkVoWpHXVb3BrYcEN4Twa55B5cA==}
@@ -4242,7 +4242,7 @@ snapshots:
     dependencies:
       isexe: 2.0.0
 
-  wolf-db@1.0.5:
+  wolf-db@1.0.8:
     dependencies:
       guid-typescript: 1.0.9
       user: 0.0.0
