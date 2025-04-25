@@ -20,7 +20,7 @@ export default function ActionFetchApi(path_: string, method: string = 'GET', fo
     body = JSON.stringify(bodyObj);
   }
 
-  return fetch(`http://localhost:3000/api/${path_}`, {
+  return fetch(`${process.env.NEXT_PUBLIC_URL_BASE}api/${path_}`, {
     method,
     headers: {
       'Content-Type': 'application/json',
