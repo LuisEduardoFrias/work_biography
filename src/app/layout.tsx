@@ -29,8 +29,8 @@ export default function RootLayout({ children, }: Readonly<{ children: ReactNode
         <Meteors />
         <div className="w-full flex flex-row justify-between p-2">
           <div className="relative w-full flex flex-row">
-{//             <Setting />
-}
+            {//             <Setting />
+            }
             <span className="absolute text-2xl left-8 text-red-600 top-1/2 translate-y-[-50%] text-contrast ">In Developer</span>
           </div>
           <div className="w-full flex flex-row space-x-5 justify-end">
@@ -39,11 +39,11 @@ export default function RootLayout({ children, }: Readonly<{ children: ReactNode
           </div>
         </div>
         <Book>
-{children}
-{//           <ViewTransition name="page">
-//             {children}
-//           </ViewTransition>
-}
+          {children}
+          {//           <ViewTransition name="page">
+            //             {children}
+            //           </ViewTransition>
+          }
         </Book>
       </body>
     </html>

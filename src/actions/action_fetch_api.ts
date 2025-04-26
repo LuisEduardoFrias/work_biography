@@ -1,6 +1,6 @@
-'use client';
+'use server';
 
-export default function ActionFetchApi(path_: string, method: string = 'GET', formData?: FormData) {
+export default async function ActionFetchApi(path_: string, method: string = 'GET', formData?: FormData) {
   let body = null;
 
   if (method !== 'GET' && method !== 'DELETE' && formData) {
@@ -30,16 +30,15 @@ export default function ActionFetchApi(path_: string, method: string = 'GET', fo
     .then(response => {
       if (!response.ok) {
         console.error('Error en la petición:', response.status, response.statusText);
-        return; // No necesitamos un return explícito de una promesa rechazada aquí, el error no se propagará automáticamente
+        return;
       }
-      return response.json(); // Esto devuelve otra promesa
+      return response.json();
     })
     .then(data => {
-      return data; // Aquí puedes retornar los datos procesados si es necesario
+      return data
     })
     .catch(error => {
       console.error('Error al realizar la petición:', error);
-      return null; // Indica que hubo un error y devuelve null
+      return null;
     });
-
 }

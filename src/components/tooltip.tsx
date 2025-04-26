@@ -17,12 +17,20 @@ export enum position {
 
 export default function Tooltip({ text, position, show }: TyoeToolTip) {
 
+  // function tool() {
+  //     const sp = document.querySelector("#unico");
+  //     const text = sp.innerHTML;
+  //     const currentYear = new Date().getFullYear();
+  //     const newText = text.replace("{años}", currentYear - 2020);
+  //     sp.innerHTML = newText;
+  //   }
+
   const colors = [
-    'hsla(211.1,100%,50%,0.702)',
-    'hsla(120,100%,50%,0.702)',
-    'hsla(60,100%,50%,0.7)',
-    'hsla(38.8,100%,50%,0.7)',
-    'hsla(300,100%,50%,0.7)'
+    'hsla(211.1,100%,50%,0.4)',
+    'hsla(120,100%,50%,0.4)',
+    'hsla(60,100%,50%,0.4)',
+    'hsla(38.8,100%,50%,0.4)',
+    'hsla(300,100%,50%,0.4)'
   ];
 
   function getRandomColor() {
@@ -39,10 +47,11 @@ export default function Tooltip({ text, position, show }: TyoeToolTip) {
 
     const px = `${parts[1]}-0`;
     const py = `${parts[0]}-10`;
-    return `${animate} absolute top-10 right-0 ${px} ${py}`;
+    return `${animate} absolute ${px} ${py}`;
   }
 
   useEffect(() => { }, [show])
+  // useEffect(() => { tool(); }, [])
 
   return (
     <div style={getRandomColor()} className={`shadow-img transition-all text-black z-50 rounded opacity-0 w-[0px] max-h-[55px] h-auto p-2 overflow-y-scroll ${getAnimate()}`} >

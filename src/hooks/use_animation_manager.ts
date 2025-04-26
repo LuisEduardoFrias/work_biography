@@ -9,7 +9,6 @@ type AnimationData = {
   oldPathname: string;
 }
 
-
 export default function useAnimationManager() {
   const pathname = usePathname();
 
@@ -27,7 +26,8 @@ export default function useAnimationManager() {
       data.verifyPath = pathname;
     }
 
-    if (refs?.pageRef1 &&
+    if (
+      refs?.pageRef1 &&
       refs?.pageRef2 &&
       refs?.pageRef3 &&
       refs?.pageRef4 &&
@@ -40,7 +40,8 @@ export default function useAnimationManager() {
       refs?.markPageRef &&
       refs?.markPageRef2 &&
       refs?.bookRef &&
-      refs?.centerRef) {
+      refs?.centerRef
+    ) {
 
       if (data.verifyPath === '/') {
 
@@ -67,28 +68,9 @@ export default function useAnimationManager() {
         }
 
         if (pathname !== "/about_me") {
-          refs?.pageRef1.classList.add('remove-left-border');
-          refs?.pageRef2.classList.add('remove-left-border');
-          refs?.pageRef3.classList.add('remove-left-border');
-          refs?.pageRef4.classList.add('remove-left-border');
-          refs?.pageRef5.classList.add('remove-left-border');
-          refs?.pageRef6.classList.add('remove-left-border');
-          refs?.pageRef7.classList.add('remove-left-border');
-          refs?.pageRef8.classList.add('remove-left-border');
-          refs?.pageRef9.classList.add('remove-left-border');
-          refs?.pageRef0.classList.add('remove-left-border');
-          refs?.pageRef0.classList.remove('about-extends-page');
+          addRemoveCenterLine(refs)
         } else {
-          refs?.pageRef1.classList.remove('remove-left-border');
-          refs?.pageRef2.classList.remove('remove-left-border');
-          refs?.pageRef3.classList.remove('remove-left-border');
-          refs?.pageRef4.classList.remove('remove-left-border');
-          refs?.pageRef5.classList.remove('remove-left-border');
-          refs?.pageRef6.classList.remove('remove-left-border');
-          refs?.pageRef7.classList.remove('remove-left-border');
-          refs?.pageRef8.classList.remove('remove-left-border');
-          refs?.pageRef9.classList.remove('remove-left-border');
-          refs?.pageRef0.classList.remove('remove-left-border');
+          removeCenterLine(refs);
         }
 
         //about
@@ -116,31 +98,31 @@ export default function useAnimationManager() {
           toSkills(refs)
         }
 
+      } else {
+
+        //////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////
+
+        if (data.verifyPath === '/about_me') {
+          reloadingAboutPage(refs)
+        }
+
+        if (data.verifyPath === '/experiences') {
+          reloadingExperiencesPage(refs)
+        }
+
+        if (data.verifyPath === '/projects') {
+          reloadingProjectsPage(refs)
+        }
+
+        if (data.verifyPath === '/studies') {
+          reloadingStudiesPage(refs)
+        }
+
+        if ('/skills') {
+          reloadingSkillsPage(refs);
+        }
       }
-
-      //////////////////////////////////////////////////////
-      //////////////////////////////////////////////////////
-
-      if (data.verifyPath === '/about_me') {
-        reloadingAboutPage(refs)
-      }
-
-      if (data.verifyPath === '/experiences') {
-        reloadingExperiencesPage(refs)
-      }
-
-      if (data.verifyPath === '/projects') {
-        reloadingProjectsPage(refs)
-      }
-
-      if (data.verifyPath === '/studies') {
-        reloadingStudiesPage(refs)
-      }
-
-      if (data.verifyPath === '/skills') {
-        reloadingSkillsPage(refs)
-      }
-
       //////////////////////////////////////////////////////
       //////////////////////////////////////////////////////
 
@@ -185,6 +167,7 @@ export default function useAnimationManager() {
 
 }
 
+
 function removeClassCenter(refs: TRefs) {
   if (refs?.centerRef) {
     refs.centerRef?.classList.remove('center-finish');
@@ -195,6 +178,33 @@ function removeClassCenter(refs: TRefs) {
     refs.centerRef?.classList.remove('center-about');
     refs.centerRef?.classList.remove('center');
   }
+}
+
+function removeCenterLine(refs: TRefs) {
+  refs?.pageRef1.classList.remove('remove-left-border');
+  refs?.pageRef2.classList.remove('remove-left-border');
+  refs?.pageRef3.classList.remove('remove-left-border');
+  refs?.pageRef4.classList.remove('remove-left-border');
+  refs?.pageRef5.classList.remove('remove-left-border');
+  refs?.pageRef6.classList.remove('remove-left-border');
+  refs?.pageRef7.classList.remove('remove-left-border');
+  refs?.pageRef8.classList.remove('remove-left-border');
+  refs?.pageRef9.classList.remove('remove-left-border');
+  refs?.pageRef0.classList.remove('remove-left-border');
+}
+
+function addRemoveCenterLine(refs: TRefs) {
+  refs?.pageRef1.classList.add('remove-left-border');
+  refs?.pageRef2.classList.add('remove-left-border');
+  refs?.pageRef3.classList.add('remove-left-border');
+  refs?.pageRef4.classList.add('remove-left-border');
+  refs?.pageRef5.classList.add('remove-left-border');
+  refs?.pageRef6.classList.add('remove-left-border');
+  refs?.pageRef7.classList.add('remove-left-border');
+  refs?.pageRef8.classList.add('remove-left-border');
+  refs?.pageRef9.classList.add('remove-left-border');
+  refs?.pageRef0.classList.add('remove-left-border');
+  refs?.pageRef0.classList.remove('about-extends-page');
 }
 
 //////////////////////////////////////////////////////
@@ -235,7 +245,6 @@ function toAbout(refs: TRefs) {
   void refs.markPageRef2?.offsetWidth;
   refs.markPageRef2?.classList.add('mark-page-move2');
 
-  refs.bookRef?.classList.remove('book-animate');
   refs.bookRef?.classList.remove('book-animate');
   void refs.bookRef?.offsetWidth;
   refs.bookRef?.classList.add('book-animate2');
@@ -422,26 +431,21 @@ function retorneHomeToSkills(refs: TRefs) {
 //////////////////////////////////////////////////////
 
 function reloadingAboutPage(refs: TRefs) {
-  if (false)
-    console.log(refs)
+  addRemoveCenterLine(refs);
 }
 
 function reloadingProjectsPage(refs: TRefs) {
-  if (false)
-    console.log(refs)
+  addRemoveCenterLine(refs);
 }
 
 function reloadingExperiencesPage(refs: TRefs) {
-  if (false)
-    console.log(refs)
+  addRemoveCenterLine(refs);
 }
 
 function reloadingStudiesPage(refs: TRefs) {
-  if (false)
-    console.log(refs)
+  addRemoveCenterLine(refs);
 }
 
 function reloadingSkillsPage(refs: TRefs) {
-  if (false)
-    console.log(refs)
+  addRemoveCenterLine(refs);
 }

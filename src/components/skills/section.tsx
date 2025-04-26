@@ -29,6 +29,7 @@ export default function Section({ title, skillType }: TypeSection) {
   return (
     <div className="w-full px-5 space-y-10">
       <h2>{translate(title)}</h2>
+
       {isLoading && <div className="refresh_icon"></div>}
 
       <section className="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-3 justify-center">

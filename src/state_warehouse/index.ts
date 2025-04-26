@@ -41,7 +41,7 @@ const useStore = create<StoreState>((set, get) => ({
 
     set({ selectedLanguage: initialLanguage, isDark: storedIsDark ?? true, isLoading: true });
 
-    const ActionFetchApiGet = ActionFetchApi.bind(null, `translate?language=${initialLanguage}`, 'GET');
+    const ActionFetchApiGet = await ActionFetchApi.bind(null, `translate?language=${initialLanguage}`, 'GET');
 
     try {
       const result = await ActionFetchApiGet();
