@@ -1,0 +1,145 @@
+{
+    "titles": [
+        {
+            "id": "0898fdfe-e344-41a6-9063-1b180bcb63c8",
+            "name": "Tegnico superior en desarollo de software",
+            "img": "/imgs/diploma.webp",
+            "alt": "titulo tegnico superior en desarrollo de software"
+        }
+    ],
+    "youtubers": [
+        {
+            "id": "81afb2e5-3c45-4abb-86fa-ecec7ab3b1cd",
+            "sector": "web e infirmativo",
+            "name": "Miguel Ángel Durán",
+            "img": "https://avatars.githubusercontent.com/u/1561955?v=4",
+            "alt": "alt ",
+            "url": "https://github.com/midudev"
+        },
+        {
+            "id": "51a67577-fcc0-4b82-afca-545d9dbba3bf",
+            "sector": "web",
+            "name": "Fernando Herrera",
+            "img": "https://yt3.googleusercontent.com/wi0ZUvM16CDMJSP1CDqY8QLskk6y7-Un7ztvMDC2Xdbkm8KHR3BWg08bd0EgPgfEHqUpZGkzyA=s160-c-k-c0x00ffffff-no-rj",
+            "alt": "alt ",
+            "url": "https://m.youtube.com/channel/UCuaPTYj15JSkETGnEseaFFg"
+        },
+        {
+            "id": "ce11e8b2-46cf-4d90-8e35-8c228db79f61",
+            "sector": "C#",
+            "name": "Hector D' Leon",
+            "img": "https://avatars.githubusercontent.com/u/1091493?v=4",
+            "alt": "alt ",
+            "url": "https://m.youtube.com/c/hdeleonnet"
+        },
+        {
+            "id": "4da40b47-6d6e-4330-b5d2-db6dd0d2041e",
+            "sector": "C#",
+            "name": "Felipe Gavilan",
+            "img": "https://yt3.googleusercontent.com/12nnBdRb96DZy82FSic7S7G6c1ug5yt-htli72JD5fPKxQYgFEcc7rD9DzXaAZN6T5ZxHyKChnQ=s160-c-k-c0x00ffffff-no-rj",
+            "alt": "alt ",
+            "url": "https://m.youtube.com/@gavilanch2"
+        },
+        {
+            "id": "43f9cdba-24bc-4cdd-bfff-442d73946ecb",
+            "sector": "Arquitectura",
+            "name": "Manuel Zapata",
+            "img": "https://yt3.googleusercontent.com/ytc/AIdro_lSSmKLguZg8Gq4by9HhanhKQm8uvp_sFgTjODsjd9IoA=s160-c-k-c0x00ffffff-no-rj",
+            "alt": "alt ",
+            "url": "https://m.youtube.com/manuelzapata"
+        },
+        {
+            "id": "86ff2caa-d765-4b4d-b4b7-6d5ce255b9b5",
+            "sector": "infirmativo",
+            "name": "EDTeam",
+            "img": "https://yt3.googleusercontent.com/gVPEp1RFXTNqaImY4yOnIjamU1AFDGNEpI1B7g_D4PBX10esTrtQpqejAaj0sNx_hl7lugPEYA=s160-c-k-c0x00ffffff-no-rj",
+            "alt": "alt ",
+            "url": "https://m.youtube.com/EDteam"
+        }
+    ],
+    "otherResourves": [
+        {
+            "id": "35ee14e5-4b41-493c-b5cf-c69eec49f150",
+            "name": "Refactoring guru",
+            "url": "https://refactoring.guru/es/design-patterns"
+        },
+        {
+            "id": "bb008623-23cf-45da-8878-ffb29fbb8867",
+            "name": "Free code camp",
+            "url": "https://www.freecodecamp.org/espanol/news/"
+        },
+        {
+            "id": "d63b4372-8915-428b-b7fd-471f078ff8b1",
+            "name": "RJ code Advance",
+            "url": "https://youtube.com/playlist?list=PLqjdFmR_HdQRPDrw00oKVGHJ5sXf1H21z&si=oh_tMKLnpbztAz9r"
+        },
+        {
+            "id": "039c8b61-e952-4c76-9396-5f80fb57accb",
+            "name": "Arquitectura",
+            "url": "https://youtube.com/playlist?list=PLqjdFmR_HdQRPDrw00oKVGHJ5sXf1H21z&si=LXIiqABxFWsw-3lK"
+        },
+        {
+            "id": "ae334278-6a73-49ff-9ba5-99dd06a9a171",
+            "name": "Clear code js",
+            "url": "https://github.com/andersontr15/clean-code-javascript-es"
+        }
+    ],
+    "books": [
+        {
+            "id": "de4ce4ff-5f14-463a-a7e6-09c3ec74da0a",
+            "img": "https://m.media-amazon.com/images/I/815Cko39rUL._AC_UF1000,1000_QL80_FMwebp_.jpg",
+            "name": "Patrones de diseño",
+            "autor": "Erich Gamma",
+            "alt": "alt ",
+            "url": "https://drive.google.com/file/d/1HItkw-GQweclpdukgA3a5paX6lvDnfsK/view?usp=drivesdk"
+        },
+        {
+            "id": "8b5dad2c-4e26-413b-a73b-c68a61877ea0",
+            "img": "https://m.media-amazon.com/images/I/61IYQs-mEZL._AC_UF1000,1000_QL80_FMwebp_.jpg",
+            "name": "El Libro Negro del Programador",
+            "autor": "Rafael Gómez Blanes",
+            "alt": "alt ",
+            "url": "https://drive.google.com/file/d/124qN2gc13Ln-buSKW5QsiodEsLcnt9uQ/view?usp=drivesdk"
+        },
+        {
+            "id": "78203ace-8c30-47e5-afd2-7b0c5eed39f5",
+            "img": "https://m.media-amazon.com/images/I/61foCyDAF1L._AC_UF1000,1000_QL80_FMwebp_.jpg",
+            "name": "Introducción a la arquitectura de software: Un enfoque práctico",
+            "autor": "Oscar Javier Blancarte Iturralde",
+            "alt": "alt ",
+            "url": "https://drive.google.com/file/d/1lNvmmbSZxLkH432927tmrxPlAI7Toaiy/view?usp=drivesdk"
+        },
+        {
+            "id": "24ffd914-a17a-4c92-a9be-11326843fb03",
+            "img": "https://m.media-amazon.com/images/I/81hqaXB5dbL._AC_UF1000,1000_QL80_FMwebp_.jpg",
+            "name": "Introducción a los patrones de diseño: Un enfoque práctico",
+            "autor": "Oscar J Blancarte Iturralde",
+            "alt": "alt ",
+            "url": "https://drive.google.com/file/d/1UCdW3bDP2OpCc-_LCURUE2NXnAjxB4_V/view?usp=drivesdk"
+        },
+        {
+            "id": "4e26fb63-abab-44af-8943-e032a6555421",
+            "img": "https://m.media-amazon.com/images/I/614tCf6nhfL._AC_UF1000,1000_QL80_FMwebp_.jpg",
+            "name": "Guía de Arquitectura N-Capas orientada al Dominio con .NET 4.0",
+            "autor": "Cesar de la Torre",
+            "alt": "alt ",
+            "url": "https://drive.google.com/file/d/1V-VUJUGMpj866BNXzIG8lrC3XZgjM892/view?usp=drivesdk"
+        },
+        {
+            "id": "c4710c43-2cdd-4ee0-86d9-f9cf3cfbba26",
+            "img": "https://refactoring.guru/images/patterns/book/web-cover-es-3x.png",
+            "name": "Sumérgete en los patrones de diseño",
+            "autor": "Alexander shvert",
+            "alt": "alt ",
+            "url": "https://drive.google.com/file/d/133w2lidyUtRygQCOyTBGhjqEky1ahuMx/view?usp=drivesdk"
+        },
+        {
+            "id": "70ff2573-bb6a-4dd8-8d96-8bbfef53e32e",
+            "img": "https://m.media-amazon.com/images/I/61orja1+P7L._AC_UF1000,1000_QL80_FMwebp_.jpg",
+            "name": "Código limpio / Clean code",
+            "autor": "Robert C. Martin",
+            "alt": "alt ",
+            "url": "https://drive.google.com/file/d/1I9Gx00BdDvBZjJGkgOPv6O4_anwVL23o/view?usp=drivesdk"
+        }
+    ]
+}

@@ -1,0 +1,206 @@
+[
+    {
+        "id": "49ecd332-34a0-4f05-b537-eda24bb9a89b",
+        "href": "https://icon.icepanel.io/Technology/svg/C%23-%28CSharp%29.svg",
+        "alt": "Icon CSharp",
+        "name": "C Shart",
+        "skillType": "backend"
+    },
+    {
+        "id": "1580c038-034a-4f06-b44c-bdea8ec17325",
+        "href": "https://icon.icepanel.io/Technology/svg/.NET-core.svg",
+        "alt": "Icon .Net Core",
+        "name": ".Net core",
+        "skillType": "backend"
+    },
+    {
+        "id": "1613c220-fb58-443d-a235-00b6766733af",
+        "href": "https://icon.icepanel.io/Technology/svg/Swagger.svg",
+        "alt": "Icon Swagger",
+        "name": "Swagger",
+        "skillType": "backend"
+    },
+    {
+        "id": "9c586df7-47a4-4743-bc4b-3138af0e4b99",
+        "href": "https://icon.icepanel.io/Technology/png-shadow-512/Express.png",
+        "alt": "Icon Express",
+        "name": "Express",
+        "skillType": "backend"
+    },
+    {
+        "id": "7e4d75d2-4b5a-483c-9d63-d15f77bcd231",
+        "href": "https://icon.icepanel.io/Technology/svg/Node.js.svg",
+        "alt": "Icon NodeJS",
+        "name": "NodeJS",
+        "skillType": "backend"
+    },
+    {
+        "id": "002da3ba-78ae-43bd-ad69-203b2d0101fd",
+        "href": "https://icon.icepanel.io/Technology/svg/HTML5.svg",
+        "alt": "Icon HTML5",
+        "name": "HTML 5",
+        "skillType": "frentend"
+    },
+    {
+        "id": "71c69a70-6950-473c-a26f-cd7f5e9a71c7",
+        "href": "https://raw.githubusercontent.com/CSS-Next/logo.css/48f24dccd4e169118d17bab998c3d276e95167df/css.svg",
+        "alt": "Icon CSS",
+        "name": "CSS",
+        "skillType": "frentend"
+    },
+    {
+        "id": "c4074b40-d92d-4232-89dd-c8f0457eb8a8",
+        "href": "https://icon.icepanel.io/Technology/svg/JavaScript.svg",
+        "alt": "Icon JavaScript",
+        "name": "JavaScript",
+        "skillType": "frentend"
+    },
+    {
+        "id": "da16e92c-b681-47d6-94bd-6c1860b5b872",
+        "href": "https://icon.icepanel.io/Technology/svg/TypeScript.svg",
+        "alt": "Icon TypeScript",
+        "name": "TypeScript",
+        "skillType": "another"
+    },
+    {
+        "id": "d6eebfc4-044d-4143-aa9c-95672812c2bb",
+        "href": "https://icon.icepanel.io/Technology/svg/React.svg",
+        "alt": "Icon React",
+        "name": "React",
+        "skillType": "frentend"
+    },
+    {
+        "id": "70c49b0d-37ff-4760-a05e-ea0a1810d45d",
+        "href": "https://icon.icepanel.io/Technology/svg/Vite.js.svg",
+        "alt": "Icon ViteJS",
+        "name": "Vite JS",
+        "skillType": "frentend"
+    },
+    {
+        "id": "24462eef-6d5d-431b-932e-de64355ea0e1",
+        "href": "https://icon.icepanel.io/Technology/png-shadow-512/Next.js.png",
+        "alt": "Icon NextJS",
+        "name": "Next JS",
+        "skillType": "frentend"
+    },
+    {
+        "id": "b86dd0e6-8781-4913-8522-42fb7757b9d9",
+        "href": "https://icon.icepanel.io/Technology/svg/Redux.svg",
+        "alt": "Icon Redux",
+        "name": "Redux",
+        "skillType": "frentend"
+    },
+    {
+        "id": "741c4d63-690c-4f58-95c9-a2c5c9252825",
+        "href": "https://user-images.githubusercontent.com/958486/218346783-72be5ae3-b953-4dd7-b239-788a882fdad6.svg",
+        "alt": "Icon Zustand",
+        "name": "Zustand",
+        "skillType": "frentend"
+    },
+    {
+        "id": "01def859-3102-4fcb-86f0-a669fc333d90",
+        "href": "https://icon.icepanel.io/Technology/svg/jQuery.svg",
+        "alt": "Icon JQuery",
+        "name": "JQuery",
+        "skillType": "frentend"
+    },
+    {
+        "id": "5aaa124c-1eb1-4152-a1d1-6eb2eb95d861",
+        "href": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
+        "alt": "Icon TailwindCSS",
+        "name": "TailwindCSS",
+        "skillType": "frentend"
+    },
+    {
+        "id": "48da9022-94bc-4736-a655-151519ad24a2",
+        "href": "https://icon.icepanel.io/Technology/svg/Bootstrap.svg",
+        "alt": "Icon Bootstrap",
+        "name": "Bootstrap",
+        "skillType": "frentend"
+    },
+    {
+        "id": "d21ee4b1-8e10-420f-a941-f4713e94ac45",
+        "href": "https://icon.icepanel.io/Technology/svg/MongoDB.svg",
+        "alt": "Icon MongoDB",
+        "name": "Mongo DB",
+        "skillType": "another"
+    },
+    {
+        "id": "d8a7e895-7b3c-4979-8449-49df9d9d40f0",
+        "href": "https://icon.icepanel.io/Technology/png-shadow-512/Microsoft-SQL-Server.png",
+        "alt": "Icon Microsoft SQL Server",
+        "name": "Microsoft SQL Server",
+        "skillType": "another"
+    },
+    {
+        "id": "bd77895f-4a1b-47ad-b42c-ad68bdf8f61e",
+        "href": "https://icon.icepanel.io/Technology/svg/Oracle.svg",
+        "alt": "Icon Oracle",
+        "name": "Oracle Sql",
+        "skillType": "another"
+    },
+    {
+        "id": "2b4b42ee-13d9-486b-a133-6ac63bf92192",
+        "href": "https://icon.icepanel.io/Technology/svg/React.svg",
+        "alt": "Icon React Native",
+        "name": "React Native",
+        "skillType": "another"
+    },
+    {
+        "id": "c6da7ee6-e87b-4d7e-b1e0-f1b59dd4192c",
+        "href": "https://images.icon-icons.com/2389/PNG/512/expo_logo_icon_145293.png",
+        "alt": "Icon Expo",
+        "name": "Expo",
+        "skillType": "another"
+    },
+    {
+        "id": "44becd05-6d1b-46b4-8f1d-5e7c821263d8",
+        "href": "https://icon.icepanel.io/Technology/svg/Postman.svg",
+        "alt": "Icon Postman",
+        "name": "Postman",
+        "skillType": "another"
+    },
+    {
+        "id": "0cb89b9f-8ab6-42df-acd9-f1e25901b91b",
+        "href": "https://icon.icepanel.io/Technology/svg/Git.svg",
+        "alt": "Icon Git",
+        "name": "Git",
+        "skillType": "another"
+    },
+    {
+        "id": "e48af21c-2dd0-4150-9950-53fed128419e",
+        "href": "https://raw.githubusercontent.com/github/explore/5cc0a03a302ec862c4aeac2a22a513ae31c35432/topics/astro/astro.png",
+        "alt": "Icon Astro",
+        "name": "Astro",
+        "skillType": "interest"
+    },
+    {
+        "id": "6ea59901-99ee-4d1d-9d34-580fa0b752b9",
+        "href": "https://icon.icepanel.io/Technology/svg/Nest.js.svg",
+        "alt": "Icon Nest Js",
+        "name": "Nest Js",
+        "skillType": "interest"
+    },
+    {
+        "id": "e4c34162-b9a1-4dd9-9a84-d894b2ce0157",
+        "href": "https://icon.icepanel.io/Technology/svg/Python.svg",
+        "alt": "Icon Python",
+        "name": "Python",
+        "skillType": "interest"
+    },
+    {
+        "id": "abe27a4e-eb40-4403-bc39-2352366a5b13",
+        "href": "https://icon.icepanel.io/Technology/svg/Go.svg",
+        "alt": "Icon Go",
+        "name": "Go",
+        "skillType": "interest"
+    },
+    {
+        "id": "16aa547a-a716-4578-ba39-3877dae3e8cc",
+        "href": "https://icon.icepanel.io/Technology/svg/C%23-%28CSharp%29.svg",
+        "alt": "Icon CSharp",
+        "name": "C Shart",
+        "tooltipText": "quiero saber mas de esta tegnologia",
+        "skillType": "interest"
+    }
+]

@@ -27,8 +27,8 @@ export async function GET(request: NextRequest) {
       headers: { 'Content-Type': 'application/json' }
     });
   }
-  
-  return new Response(JSON.stringify({ translations: arrayToObject<TranslateEntity>(translate_, 'key'), languages: result[1] }), {
+
+  return new Response(JSON.stringify({ translations: arrayToObject<TranslateEntity>(result[0], 'key'), languages: result[1] }), {
     status: 200,
     headers: { 'Content-Type': 'application/json' }
   });

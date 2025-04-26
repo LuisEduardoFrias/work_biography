@@ -45,8 +45,8 @@ export default function Tooltip({ text, position, show }: TyoeToolTip) {
       (parts[1] === 'right' ? 'animate-show-tooltip-right' : 'animate-show-tooltip-left') :
       (parts[1] === 'right' ? 'animate-close-tooltip-right' : 'animate-close-tooltip-left');
 
-    const px = `${parts[1]}-0`;
-    const py = `${parts[0]}-10`;
+    const py = parts[0] === 'top' ? 'top-[4rem]' : 'bottom-[4rem]';
+    const px = parts[1] === 'right' ? 'right-0' : 'left-0';
     return `${animate} absolute ${px} ${py}`;
   }
 
