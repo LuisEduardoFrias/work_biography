@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import Paragraph from 'cp/paragraph';
+import useTranslate from 'hk/use_translate'
 
 type TyoeToolTip = {
   text: string;
@@ -16,6 +17,7 @@ export enum position {
 
 
 export default function Tooltip({ text, position, show }: TyoeToolTip) {
+const { translate } = useTranslate()
 
   // function tool() {
   //     const sp = document.querySelector("#unico");
@@ -55,7 +57,7 @@ export default function Tooltip({ text, position, show }: TyoeToolTip) {
 
   return (
     <div style={getRandomColor()} className={`shadow-img transition-all text-black z-50 rounded opacity-0 w-[0px] max-h-[55px] h-auto p-2 overflow-y-scroll ${getAnimate()}`} >
-      <Paragraph text={text} className="w-full" />
+      <Paragraph text={translate(text)} className="w-full" />
     </div>
   );
 }

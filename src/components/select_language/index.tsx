@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useStore } from 'swh/index'
+import useTranslate from 'hk/use_translate'
 import './styles.css'
 
 type TypeLanguage = {
@@ -13,12 +14,11 @@ export default function SelectLanguage() {
   const seleLang = useStore((state) => state.selectedLanguage)
   const languages = useStore((state) => state.languages)
   const changeLanguage = useStore((state) => state.changeLanguage)
-  const isLoading = useStore((state) => state.isLoading)
-  const translate = useStore((state) => state.translate)
+  const { translate, isLoading } = useTranslate()
 
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
+  const [textLanguage, setTextLanguage] = useState<string>();
   const [isOpen, setIsOpen] = useState(false);
-  const [textLanguage, setTextLanguage] = useState(languages?.find(l => l.key === seleLang)?.value);
   const toggleOpen = useCallback(() => setIsOpen(!isOpen), [isOpen]);
 
   const handleClickOutside = useCallback((event: MouseEvent) => {
@@ -28,7 +28,7 @@ export default function SelectLanguage() {
   }, [isOpen, dropdownRef]);
 
   useEffect(() => {
-    setTextLanguage(languages?.find(l => l.key === seleLang)?.value)
+    setTextLanguage(languages?.find(l => l.key === seleLang)?.value || languages[0].value)
   }, [seleLang, languages]);
 
   useEffect(() => {

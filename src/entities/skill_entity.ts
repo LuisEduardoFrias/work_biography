@@ -1,16 +1,15 @@
-
-import { alpha } from 'wolf-db'
 import { skillEnum } from './skill_enum'
 
-export class SkillEntity extends alpha {
+export class SkillEntity {
+  id: string;
   href: string;
   alt: string;
   name: string;
   tooltipText?: string;
   skillType: skillEnum
-
-  constructor(href: string, alt: string, name: string, skillType: skillEnum,tooltipText?: string) {
-    super();
+  
+  constructor(id:string,href: string, alt: string, name: string, skillType: skillEnum, tooltipText?: string) {
+    this.id = id;
     this.href = href;
     this.alt = alt;
     this.name = name;

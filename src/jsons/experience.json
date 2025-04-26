@@ -1,0 +1,56 @@
+[
+  {
+    "id": "830b7dc7-3f99-4099-803b-c18fda8ed559",
+    "institution": "Tecnoligía Asesoría, Servicios, TAS SRL",
+    "position": "Software engineer",
+    "responsibilities": [
+      "Fui outsourcing de la 'Asociación La Nacional de Ahorros y Préstamos (ALNAP)'",
+      "Realicé mantenimiento al backend del internet banking",
+      "Implementé nuevas características en el backend",
+      "Llevé a cabo la refactorización de código legacy en el backend",
+      "Añadí y optimicé consultas en Oracle PL/sql y Microsoft SQL server T-sql",
+      "Brindé soporte a usuarios"
+    ],
+    "technologies": [
+      "Asp .Net framework",
+      "Asp .Net Core",
+      "C#",
+      "soap",
+      "Api RestFull",
+      "Oracle Pl/Sql",
+      "Sql server T-sql"
+    ]
+  },
+  {
+    "id": "6606553a-1d64-468c-8a6d-faed51b94ed3",
+    "institution": "Aloe Software SRL",
+    "position": "Software developer",
+    "responsibilities": [
+      "Para la empresa de courier 'EPS', formé parte de un equipo de tres personas para crear un sistema de administración de paquetes (previamente desarrollado en Delphi)",
+      "Dentro de este proyecto, adquirí un conocimiento profundo de la lógica de negocio, analicé nuevos requerimientos y características, para luego desarrollarlas desde cero",
+      "Implemente la arquitectura del backend, usando una arquitectura en DDD",
+      "También trabajamos en conjunto en el desarrollo y estilización de componentes en React"
+    ],
+    "technologies": [
+      "C#, Asp .Net core",
+      "React",
+      "TypeScript",
+      "Redux"
+    ]
+  },
+  {
+    "id": "989b4afc-9fbc-4a93-ada0-50787bb2a659",
+    "institution": "Tegnosis SRL (Tecnologia y sistemas computarizados)",
+    "position": "Developer",
+    "responsibilities": [
+      "Trabsjé en la migración de un sistema ERP desarrollado en COBOL",
+      "Logré migrar el sistema a Windows Forms",
+      "Creé interfaces para permitir la interacción de COBOL con verifones de CartNet y VisaNet, así como con otros dispositivos de hardware y otra implementaciones."
+    ],
+    "technologies": [
+      "C#",
+      "windows forms",
+      "Windows services"
+    ]
+  }
+]

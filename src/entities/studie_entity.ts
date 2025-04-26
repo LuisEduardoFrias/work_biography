@@ -1,4 +1,3 @@
-import { alpha } from 'wolf-db'
 
 export type StudiesEntity = {
   titles: TitleEntity[],
@@ -7,26 +6,28 @@ export type StudiesEntity = {
   otherResourves: OtherResourveEntity[]
 }
 
-export class TitleEntity extends alpha {
+export class TitleEntity {
+  id: string;
   name: string;
   img: string;
   alt: string;
-  constructor(name: string, img: string, alt: string) {
-    super()
+  constructor(id:string,name: string, img: string, alt: string) {
+    this.id = id;
     this.name = name;
     this.img = img;
     this.alt = alt;
   }
 }
 
-export class YoutuberEntity extends alpha {
+export class YoutuberEntity {
+  id: string;
   sector: string;
   name: string;
   img: string;
   alt: string;
   url: string;
-  constructor(sector: string, name: string, img: string, alt: string, url: string) {
-    super()
+  constructor(id:string,sector: string, name: string, img: string, alt: string, url: string) {
+    this.id = id;
     this.sector = sector;
     this.name = name;
     this.img = img;
@@ -35,14 +36,15 @@ export class YoutuberEntity extends alpha {
   }
 }
 
-export class BookEntity extends alpha {
+export class BookEntity {
+  id: string;
   img: string;
   alt: string;
   name: string;
   autor: string;
   url: string;
-  constructor(img: string, alt: string, name: string, autor: string, url: string) {
-    super()
+  constructor(id:string,img: string, alt: string, name: string, autor: string, url: string) {
+    this.id = id;
     this.img = img;
     this.name = name;
     this.autor = autor;
@@ -51,11 +53,12 @@ export class BookEntity extends alpha {
   }
 }
 
-export class OtherResourveEntity extends alpha {
+export class OtherResourveEntity {
+  id: string;
   name: string;
   url: string;
-  constructor(name: string, url: string) {
-    super()
+  constructor(id:string,name: string, url: string) {
+    this.id = id;
     this.name = name;
     this.url = url;
   }

@@ -1,18 +1,18 @@
-import { alpha } from 'wolf-db'
 
-export class ExperienceEntity extends alpha {
+export class ExperienceEntity {
+  id: string;
   institution: string;
   position: string;
   responsibilities: string[];
   technologies: string[];
 
-  constructor(
+  constructor(id:string,
     institution: string,
     position: string,
     responsibilities: string[],
     technologies: string[]
-  ) {
-    super();
+) {
+    this.id = id;
     this.institution = institution;
     this.position = position;
     this.responsibilities = responsibilities;

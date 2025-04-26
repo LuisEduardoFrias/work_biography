@@ -1,4 +1,3 @@
-import { alpha } from 'wolf-db'
 
 export enum ECategory {
   home = 'home',
@@ -11,9 +10,7 @@ export enum ECategory {
   setting = 'setting',
 }
 
-
-
-export class TransLangEntity  {
+export class TransLangEntity {
   languages: LanguageEntity[];
   translations: TranslateEntity[];
   constructor(languages: LanguageEntity[], translations: TranslateEntity[]) {
@@ -22,25 +19,27 @@ export class TransLangEntity  {
   }
 }
 
-export class LanguageEntity extends alpha {
+export class LanguageEntity {
+  id: string;
   key: string;
   value: string;
 
-  constructor(key: string, value: string) {
-    super();
+  constructor(id:string,key: string, value: string) {
+    this.id = id;
     this.key = key;
     this.value = value;
   }
 }
 
-export class TranslateEntity extends alpha {
+export class TranslateEntity {
+  id: string;
   key: string;
   value: string;
   language: string;
   category: ECategory;
 
-  constructor(key: string, value: string, language: string, category: ECategory) {
-    super();
+  constructor(id:string,key: string, value: string, language: string, category: ECategory) {
+    this.id = id;
     this.key = key;
     this.value = value;
     this.language = language;

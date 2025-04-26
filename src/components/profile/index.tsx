@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image'
 import { useChangeClassName } from 'hk/use_change_classname';
 import './styles.css'

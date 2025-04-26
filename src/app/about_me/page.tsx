@@ -4,11 +4,10 @@ import Page from 'cp/book/page'
 import Paragraph from 'cp/paragraph'
 import Image from 'next/image';
 import sections from '../../jsons/about.json';
-import { useStore } from 'swh/index'
+import useTranslate from 'hk/use_translate'
 
 export default function About() {
-  const isLoading = useStore((state) => state.isLoading)
-  const translate = useStore((state) => state.translate)
+  const { translate, isLoading } = useTranslate()
   const mainRef = useRef<HTMLElement>(null);
   const h1Ref = useRef<HTMLHeadingElement>(null);
   const h2Ref = useRef<HTMLHeadingElement>(null);
@@ -55,7 +54,6 @@ export default function About() {
       <div className="-md:col-start-1 -md:col-end-2 md:col-start-1 md:col-end-2 row-start-1 md:row-end-2 -md:row-end-3 h-full relative">
         <div className="w-full h-full flex flex-col p-5 gap-2 overflow-y-hidden">
           <header className="flex flex-col gap-2 items-center mt-2">
-            {isLoading && <div className="refresh_icon"></div>}
             <Image
               className="w-[200px] h-[200px] rounded-full border-4 border-theme-4"
               style={{
@@ -70,18 +68,21 @@ export default function About() {
             <h1 ref={h1Ref} className="text-3xl font-bold text-center">
               Luis Eduardo Frias
             </h1>
-            <h2 ref={h2Ref} className="text-[1.5em] text-center">
+            <h2 ref={h2Ref} className="text-[1.5em] text-center flex flex-row">
               {translate('about_subtitle')}
+              {isLoading && <div className="refresh_icon"></div>}
             </h2>
-            <h3 ref={h3Ref} className="text-[1em]">
+            <h3 ref={h3Ref} className="text-[1em] flex flex-row">
               {translate('about_address')}
+              {isLoading && <div className="refresh_icon"></div>}
             </h3>
           </header>
           <main ref={mainRef} className="text-[15px] flex flex-col  items-center gap-5 overflow-y-scroll">
             {sections.map((section) => (
               <article key={section.id} className="w-full">
-                <h2 className="text-[16px] font-semibold mb-2 text-theme-5">
+                <h2 className="text-[16px] flex flex-row font-semibold mb-2 text-theme-5">
                   {translate(section.section)}
+                  {isLoading && <div className="refresh_icon"></div>}
                 </h2>
                 <Paragraph text={translate(section.p1)} />
                 <br />

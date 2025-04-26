@@ -23,12 +23,6 @@ importers:
       react-dom:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
-      subscriber_state:
-        specifier: ^2.0.17
-        version: 2.0.18(react@18.3.1)(uuid@11.1.0)
-      wolf-db:
-        specifier: ^1.0.8
-        version: 1.0.8
       zustand:
         specifier: ^5.0.3
         version: 5.0.3(@types/react@19.1.2)(react@18.3.1)
@@ -1182,9 +1176,6 @@ packages:
   graphemer@1.4.0:
     resolution: {integrity: sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==}
 
-  guid-typescript@1.0.9:
-    resolution: {integrity: sha512-Y8T4vYhEfwJOTbouREvG+3XDsjr8E3kIr7uf+JZ0BYloFsttiHU0WfvANVsR7TxNUJa/WpCnw/Ino/p+DeBhBQ==}
-
   has-bigints@1.1.0:
     resolution: {integrity: sha512-R3pbpkcIqv2Pm3dUwgjclDRVmWpTJW2DcMzcIhEXEx1oh/CEMObMm3KLmRJOdvhM7o4uQBnwr8pzRK2sJWIqfg==}
     engines: {node: '>= 0.4'}
@@ -1838,12 +1829,6 @@ packages:
       babel-plugin-macros:
         optional: true
 
-  subscriber_state@2.0.18:
-    resolution: {integrity: sha512-3j2gaGxSHQLZvvGsPDc0P0TSHBzuTw5uJkeD7A9b0K8Me2m/vYz2jcWtgVpBGH4BNJtNxfGGRBlj7mf70W/RRA==}
-    peerDependencies:
-      react: ^18.3.1
-      uuid: ^11.1.0
-
   sucrase@3.35.0:
     resolution: {integrity: sha512-8EbVDiu9iN/nESwxeSxDKe0dunta1GOlHufmSSXxMD2z2/tMZpDMpvXQGsc+ajGo8y2uYUmixaSRUc/QPoQ0GA==}
     engines: {node: '>=16 || 14 >=14.17'}
@@ -1946,15 +1931,8 @@ packages:
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
 
-  user@0.0.0:
-    resolution: {integrity: sha512-eRNM5isOvr6aEFAGi1CqAkmLkYxW2NJ5ThhbD+6IJXYKM1mo7Gtxx4mQIveHz/5K3p/SVnlW9k17ETn+QAu8IQ==}
-
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
-
-  uuid@11.1.0:
-    resolution: {integrity: sha512-0/A9rDy9P7cJ+8w1c9WD9V//9Wj15Ce2MPz8Ri6032usz+NfePxx5AcN3bN+r6ZL6jEo066/yNYB3tn4pQEx+A==}
-    hasBin: true
 
   which-boxed-primitive@1.1.1:
     resolution: {integrity: sha512-TbX3mj8n0odCBFVlY8AxkqcHASw3L60jIuF8jFP78az3C2YhmGvqbHBpAjTRH2/xqYunrJ9g1jSyjCjpoWzIAA==}
@@ -1976,9 +1954,6 @@ packages:
     resolution: {integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==}
     engines: {node: '>= 8'}
     hasBin: true
-
-  wolf-db@1.0.8:
-    resolution: {integrity: sha512-6aU+SH5fvOvdM31b76lQOJINBvGyNqDa+X84T3sznEFEeFljaAqlyIxy4P/a5lsIUAPmQ0JY+tBsNEMG41iFTQ==}
 
   word-wrap@1.2.5:
     resolution: {integrity: sha512-BN22B5eaMMI9UMtjrGd5g5eCYPpCPDUy0FJXbYsaT5zYxjFOckS53SQDE3pWkVoWpHXVb3BrYcEN4Twa55B5cA==}
@@ -3303,8 +3278,6 @@ snapshots:
 
   graphemer@1.4.0: {}
 
-  guid-typescript@1.0.9: {}
-
   has-bigints@1.1.0: {}
 
   has-flag@4.0.0: {}
@@ -4028,11 +4001,6 @@ snapshots:
       client-only: 0.0.1
       react: 18.3.1
 
-  subscriber_state@2.0.18(react@18.3.1)(uuid@11.1.0):
-    dependencies:
-      react: 18.3.1
-      uuid: 11.1.0
-
   sucrase@3.35.0:
     dependencies:
       '@jridgewell/gen-mapping': 0.3.8
@@ -4191,11 +4159,7 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  user@0.0.0: {}
-
   util-deprecate@1.0.2: {}
-
-  uuid@11.1.0: {}
 
   which-boxed-primitive@1.1.1:
     dependencies:
@@ -4241,11 +4205,6 @@ snapshots:
   which@2.0.2:
     dependencies:
       isexe: 2.0.0
-
-  wolf-db@1.0.8:
-    dependencies:
-      guid-typescript: 1.0.9
-      user: 0.0.0
 
   word-wrap@1.2.5: {}
 

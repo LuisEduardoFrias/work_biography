@@ -2,22 +2,18 @@
 import { useState, useEffect } from "react"
 import LoadingImage from "cp/loading_image"
 import Loading from '../loading'
-import ActionFetchApi from '../../actions/action_fetch_api'
+import study_ from 'js/study.json'
 import Page from 'cp/book/page'
 import TitlePage from 'cp/title_page'
 import { YoutuberEntity, StudiesEntity, OtherResourveEntity } from 'ett/studie_entity'
-import { useStore } from 'swh/index'
+import useTranslate from 'hk/use_translate'
 
 export default function Studies() {
-  const isLoading = useStore((state) => state.isLoading)
-  const translate = useStore((state) => state.translate)
-
+  const { translate, isLoading } = useTranslate()
   const [data, setData] = useState<StudiesEntity>()
 
   useEffect(() => {
-    (async () => {
-      setData(await ActionFetchApi("study", 'GET'))
-    })()
+    setData(study_)
   }, [])
 
   return (
@@ -29,10 +25,11 @@ export default function Studies() {
             <TitlePage title="Studies" />
 
             <div className="flex flex-col items-center overflow-y-scroll gap-4 pb-10">
-              <h2 className="text-center font-extrabold text-2xl my-6">
+              <h2 className="text-center flex flex-row font-extrabold text-2xl my-6">
                 {translate("Titles")}
+                {isLoading && <div className="refresh_icon"></div>}
               </h2>
-              {isLoading && <div className="refresh_icon"></div>}
+
               <section className="w-full flex flex-row flex-wrap gap-4 justify-center items-center">
                 {data.titles.map((title, index) => (
                   <article
@@ -40,6 +37,7 @@ export default function Studies() {
                     className="select-none w-[90%] -md:h-[300px] shadow-[var(theme-6)] rounded-[10px] p-2 flex flex-col justify-center items-center"
                   >
                     <h3 className="text-center" >{translate(title.name)}</h3>
+
                     <LoadingImage
                       contentCss="h-full w-full flex justify-center items-center"
                       className="w-full h-auto"
@@ -50,8 +48,9 @@ export default function Studies() {
                 ))}
               </section>
 
-              <h2 className="text-center font-extrabold text-2xl my-6">
+              <h2 className="text-center flex flex-row font-extrabold text-2xl my-6">
                 {translate("Books")}
+                {isLoading && <div className="refresh_icon"></div>}
               </h2>
 
               <section className="w-full flex flex-row flex-wrap gap-4 justify-center align-middle">

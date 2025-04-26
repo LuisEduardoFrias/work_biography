@@ -1,6 +1,8 @@
+'use client'
 import { create } from 'zustand'
 import { setCookie, getCookie } from 'hp/cookies'
-import ActionFetchApi from '../actions/action_fetch_api'
+import { TranslateEntity } from 'ett/translate_entity'
+import translate_ from 'js/translate.json'
 
 interface Translation {
   [key: string]: string;
@@ -9,75 +11,36 @@ interface Translation {
 interface StoreState {
   selectedLanguage: string;
   translations: Translation[];
-  languages: { id:string, key: string, value: string }[];
+  languages: { id: string, key: string, value: string }[];
   isDark: boolean;
   isLoading: boolean;
-  changeLanguage: (selectedLanguage: string) => Promise<void>;
+  changeLanguage: (newLanguage: string) => void;
   changeTheme: (isDark: boolean) => void;
-  translate: (text: string) => string;
-  initializeStore: () => Promise<void>;
 }
 
 const useStore = create<StoreState>((set, get) => ({
-  selectedLanguage: 'es',
-  translations: [],
-  languages: [{
-    "id": "7922d3a4-1a83-492b-85f0-c9754ca75f89",
-    "key": "es",
-    "value": "Spanich"
-  },
-  {
-    "id": "7922d1a4-1a83-892b-85f0-c9754ca75f89",
-    "key": "en",
-    "value": "English"
-  }],
-  isDark: true,
+  selectedLanguage: getCookie('selectedLanguage') ?? 'es',
+  isDark: getCookie('isDark') ?? true,
+  translations: translate_.translations.filter((trans) => trans.language === (getCookie('selectedLanguage') ?? 'es')),
+  languages: translate_.languages,
   isLoading: false,
 
-  initializeStore: async () => {
-    const storedLanguage = getCookie('selectedLanguage');
-    const storedIsDark = getCookie('isDark');
-    const initialLanguage = storedLanguage ?? 'es';
+  changeLanguage: (newLanguage: string) => {
+    set({ selectedLanguage: newLanguage, isLoading: true });
 
-    set({ selectedLanguage: initialLanguage, isDark: storedIsDark ?? true, isLoading: true });
+    setTimeout(() => {
+      const trans = translate_.translations.filter((trans) => trans.language === newLanguage);
 
-    const ActionFetchApiGet = await ActionFetchApi.bind(null, `translate?language=${initialLanguage}`, 'GET');
+      set({ translations: trans, isLoading: false });
+    }, 1000)
 
-    try {
-      const result = await ActionFetchApiGet();
-      set({ translations: result?.translations ?? [], languages: result?.languages ?? ['español', 'ingles'], isLoading: false });
-    } catch (error) {
-      console.error("Error fetching initial translations:", error);
-    }
-  },
-
-  changeLanguage: async (newLanguage: string) => {
-    set({ isLoading: true, selectedLanguage: newLanguage });
-    const ActionFetchApiGet = ActionFetchApi.bind(null, `translate?language=${newLanguage}`, 'GET');
-
-    try {
-      const result = await ActionFetchApiGet();
-      set({ translations: result?.translations ?? [], languages: result?.languages ?? ['español', 'ingles'], isLoading: false, selectedLanguage: newLanguage });
-    } catch (error) {
-      console.error("Error fetching translations:", error);
-    } finally {
-      setCookie('selectedLanguage', newLanguage);
-    }
+    setCookie('selectedLanguage', newLanguage);
   },
 
   changeTheme: (isDark: boolean) => {
     set({ isDark });
     setCookie('isDark', isDark);
-  },
-
-  translate: (text: string): string => {
-    const translations = get().translations;
-
-    if (translations)
-      return Reflect.get(translations, text) || text;
-
-    return text;
-  },
+  }
 }));
 
 export { useStore };

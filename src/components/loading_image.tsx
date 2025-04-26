@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
-import { useStore } from 'swh/index'
+import useTranslate from 'hk/use_translate'
 
 type TypeLoadingImage = {
   src: string;
@@ -13,8 +13,7 @@ type TypeLoadingImage = {
 };
 
 export default function LoadingImage({ src, alt, width, height, contentCss, className }: TypeLoadingImage) {
-  const isLoading = useStore((state) => state.isLoading)
-  const translate = useStore((state) => state.translate)
+  const { translate } = useTranslate()
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<boolean>(false);
 
@@ -27,7 +26,6 @@ export default function LoadingImage({ src, alt, width, height, contentCss, clas
 
       {error && (
         <div className={`absolute`}>
-          {isLoading && <div className="refresh_icon"></div>}
           <Image
             className="w-20 h-auto"
             src="/imgs/hide_image.png"

@@ -3,11 +3,10 @@ import Image from "next/image"
 import Link from "next/link"
 import Page from 'cp/book/page'
 import { useSearchParams } from 'next/navigation'
-import { useStore } from 'swh/index'
+import useTranslate from 'hk/use_translate'
 
 export default function NotFoundPage() {
-	const isLoading = useStore((state) => state.isLoading)
-  const translate = useStore((state) => state.translate)
+	const { translate, isLoading } = useTranslate()
 	const params = useSearchParams()
 	const error = params.get('error')
 

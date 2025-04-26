@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
-import ActionFetchApi from '../../actions/action_fetch_api'
+import experience_ from 'js/experience.json'
 import ExperienceCard from './experience_card'
 import { ExperienceEntity } from 'ett/experience_entity'
 
@@ -8,9 +8,7 @@ export default function Experiences() {
   const [experiences, setExperiences] = useState<ExperienceEntity[]>([])
 
   useEffect(() => {
-    (async () => {
-      setExperiences(await ActionFetchApi("experience", 'GET'))
-    })()
+      setExperiences(experience_)
   }, [])
 
   return (

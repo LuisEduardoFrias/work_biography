@@ -1,4 +1,4 @@
-import { useStore } from 'swh/index'
+import useTranslate from 'hk/use_translate'
 import Paragraph from 'cp/paragraph'
 //import { ExperienceEntity } from 'ett/experience_entity'
 
@@ -11,19 +11,20 @@ type TypeExperience = {
 }
 
 export default function ExperienceCard({ institution, position, technologies, responsibilities }: TypeExperience) {
-  const isLoading = useStore((state) => state.isLoading)
-  const translate = useStore((state) => state.translate)
+  const { translate, isLoading } = useTranslate()
 
   return (
     <article className="flex flex-col items-center gap-4 bg-base text-contrast rounded-lg w-full h-[300px] border overflow-y-scroll shadow-[2px_2px_6px_2px_var(--theme-6)] p-4">
 
-      <h2 className="text-xl text-center flex flex-row font-semibold">
+      <h2 className="text-xl text-center font-semibold">
         {translate(institution)}
-        {isLoading && <div className="refresh_icon"></div>}
       </h2>
 
       <div>
-        <h3 className="text-gray-300 font-extrabold" >{translate(position)}</h3>
+        <h3 className="text-gray-300 flex flex-row font-extrabold" >
+          {translate(position)}
+          {isLoading && <div className="refresh_icon"></div>}
+        </h3>
       </div>
 
       <div className="w-full">

@@ -1,3 +1,4 @@
+'use client'
 import { useEffect, useRef } from 'react'
 
 export function useChangeClassName<T extends HTMLElement>(removeClass: string, addClass: string) {
