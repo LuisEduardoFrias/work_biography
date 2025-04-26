@@ -181,30 +181,30 @@ function removeClassCenter(refs: TRefs) {
 }
 
 function removeCenterLine(refs: TRefs) {
-  refs?.pageRef1.classList.remove('remove-left-border');
-  refs?.pageRef2.classList.remove('remove-left-border');
-  refs?.pageRef3.classList.remove('remove-left-border');
-  refs?.pageRef4.classList.remove('remove-left-border');
-  refs?.pageRef5.classList.remove('remove-left-border');
-  refs?.pageRef6.classList.remove('remove-left-border');
-  refs?.pageRef7.classList.remove('remove-left-border');
-  refs?.pageRef8.classList.remove('remove-left-border');
-  refs?.pageRef9.classList.remove('remove-left-border');
-  refs?.pageRef0.classList.remove('remove-left-border');
+  refs.pageRef1?.classList.remove('remove-left-border');
+  refs.pageRef2?.classList.remove('remove-left-border');
+  refs.pageRef3?.classList.remove('remove-left-border');
+  refs.pageRef4?.classList.remove('remove-left-border');
+  refs.pageRef5?.classList.remove('remove-left-border');
+  refs.pageRef6?.classList.remove('remove-left-border');
+  refs.pageRef7?.classList.remove('remove-left-border');
+  refs.pageRef8?.classList.remove('remove-left-border');
+  refs.pageRef9?.classList.remove('remove-left-border');
+  refs.pageRef0?.classList.remove('remove-left-border');
 }
 
 function addRemoveCenterLine(refs: TRefs) {
-  refs?.pageRef1.classList.add('remove-left-border');
-  refs?.pageRef2.classList.add('remove-left-border');
-  refs?.pageRef3.classList.add('remove-left-border');
-  refs?.pageRef4.classList.add('remove-left-border');
-  refs?.pageRef5.classList.add('remove-left-border');
-  refs?.pageRef6.classList.add('remove-left-border');
-  refs?.pageRef7.classList.add('remove-left-border');
-  refs?.pageRef8.classList.add('remove-left-border');
-  refs?.pageRef9.classList.add('remove-left-border');
-  refs?.pageRef0.classList.add('remove-left-border');
-  refs?.pageRef0.classList.remove('about-extends-page');
+  refs.pageRef1?.classList.add('remove-left-border');
+  refs.pageRef2?.classList.add('remove-left-border');
+  refs.pageRef3?.classList.add('remove-left-border');
+  refs.pageRef4?.classList.add('remove-left-border');
+  refs.pageRef5?.classList.add('remove-left-border');
+  refs.pageRef6?.classList.add('remove-left-border');
+  refs.pageRef7?.classList.add('remove-left-border');
+  refs.pageRef8?.classList.add('remove-left-border');
+  refs.pageRef9?.classList.add('remove-left-border');
+  refs.pageRef0?.classList.add('remove-left-border');
+  refs.pageRef0?.classList.remove('about-extends-page');
 }
 
 //////////////////////////////////////////////////////
