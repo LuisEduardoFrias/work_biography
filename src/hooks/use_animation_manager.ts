@@ -103,23 +103,23 @@ export default function useAnimationManager() {
         //////////////////////////////////////////////////////
         //////////////////////////////////////////////////////
 
-        if (data.verifyPath === '/about_me') {
+        if (pathname === '/about_me') {
           reloadingAboutPage(refs)
         }
 
-        if (data.verifyPath === '/experiences') {
+        if (pathname === '/experiences') {
           reloadingExperiencesPage(refs)
         }
 
-        if (data.verifyPath === '/projects') {
+        if (pathname === '/projects') {
           reloadingProjectsPage(refs)
         }
 
-        if (data.verifyPath === '/studies') {
+        if (pathname === '/studies') {
           reloadingStudiesPage(refs)
         }
 
-        if ('/skills') {
+        if (pathname === '/skills') {
           reloadingSkillsPage(refs);
         }
       }
