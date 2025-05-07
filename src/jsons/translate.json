@@ -1,5 +1,5 @@
 {
- "translations": [
+  "translations": [
     {
       "id": "c0567143-5102-4693-a09d-79b0aa2ad916",
       "key": "about_subtitle",
@@ -353,7 +353,7 @@
     {
       "id": "c2ebac04-2e20-48b9-9a78-83f01a0d86db",
       "key": "about_footer",
-      "value": "2024 Luis Eduardo Frias ",
+      "value": "2024 Luis Eduardo Frías",
       "language": "es",
       "category": "about"
     },
@@ -374,7 +374,7 @@
     {
       "id": "b8398dcd-f89d-43ff-8bbb-576ca2dd5c88",
       "key": "introduction-p2",
-      "value": "En el <i>Instituto Politécnico Prof. Juan Bosch</i>, durante mi tercer año de secundaria, comencé a profundizar en la programación con materias como programación con <i>Delphi</i>, desarrollo web con <i>Dreamweaver</i> y lógica de compuertas. Aunque me gustaba la programación, sentía que <i>Delphi y Dreamweaver</i> eran tecnologías ambiguas, prefería la web tradicional con HTML, CSS y JavaScript, y explorar alternativas como Visual Basic.",
+      "value": "En el <i>Instituto Politécnico Prof. Juan Bosch</i>, durante mi tercer año de secundaria, comencé a profundizar en la programación con materias como programación con <i>Delphi</i>, desarrollo web con <i>Dreamweaver</i> y lógica de compuertas. Aunque me gustaba la programación, sentía que <i>Delphi</i> y <i>Dreamweaver</i> eran tecnologías ambiguas, prefería la web tradicional con HTML, CSS y JavaScript, y explorar alternativas como Visual Basic.",
       "language": "es",
       "category": "about"
     },
@@ -388,14 +388,14 @@
     {
       "id": "eb752790-888d-464f-ae78-746bd4407027",
       "key": "challenges-p1",
-      "value": "Al terminar la secundaria, una maestra me habló de una oportunidad para una beca en el ITLA (Instituto Tecnológico de las Américas) en la carrera de '<i>Desarrollo de Software</i>', dicha oportunidad se esfumó debido a circunstancias personales, Luego, la muerte de mi padre y la caída económica en mi familia me llevaron enfocarme a la UASD (Universidad Autónoma de Santo Domingo) con el fin de cumplir mi anhelo de convertirme en <b>Ingeniero en Informática</b>, anhelo que decallo al descubrir que la carrera había cambiado su titulo pasando de ser una '<b>Ingeniería</b>' a ser una '<b>Licenciatura</b>', la decepción fue grande, pero decidí continuar.",
+      "value": "Al terminar la secundaria, una maestra me habló de una oportunidad para una beca en el ITLA (Instituto Tecnológico de las Américas) en la carrera de '<i>Desarrollo de Software</i>', dicha oportunidad se esfumó debido a circunstancias personales. Luego, la muerte de mi padre y la caída económica en mi familia me llevaron a enfocarme en la UASD (Universidad Autónoma de Santo Domingo) con el fin de cumplir mi anhelo de convertirme en <b>Ingeniero en Informática</b>, anhelo que decayó al descubrir que la carrera había cambiado su título pasando de ser una '<b>Ingeniería</b>' a ser una '<b>Licenciatura</b>'. La decepción fue grande, pero decidí continuar.",
       "language": "es",
       "category": "about"
     },
     {
       "id": "2b7ceb8f-6f3b-43b5-bd06-1e6c3b04b609",
       "key": "challenges-p2",
-      "value": "Al final, la experiencia que me esperaba en la UASD era difícil, con la dificultad que implica estudiar allí, la decepción que ya tenía sobre la carrera, la introducción de un ciclo básico extenso de 2 años y la necesidad de trabajar, me llevaron a nunca asistir, abandoné todo anhelo.<br /> Finalmente, una luz apareció, gracias a Dios, un día me encontré con una amiga de la secundaria, ella estudiaba en el ITSC (Instituto Técnico Superior Comunitario)); un instituto igual de bueno que el ITLA, ella me guio y explicó cómo era todo allí, me devolvió las esperanzas. Fue entonces donde encontré mi camino como '<b>Técnico Superior en Desarrollo de Software</b>'.",
+      "value": "Al final, la experiencia que me esperaba en la UASD era difícil, con la dificultad que implica estudiar allí, la decepción que ya tenía sobre la carrera, la introducción de un ciclo básico extenso de 2 años y la necesidad de trabajar, me llevaron a nunca asistir, abandoné todo anhelo.<br /> Finalmente, una luz apareció, gracias a Dios, un día me encontré con una amiga de la secundaria, ella estudiaba en el ITSC (Instituto Técnico Superior Comunitario), un instituto igual de bueno que el ITLA. Ella me guio y explicó cómo era todo allí, me devolvió las esperanzas. Fue entonces donde encontré mi camino como '<b>Técnico Superior en Desarrollo de Software</b>'.",
       "language": "es",
       "category": "about"
     },
@@ -409,14 +409,14 @@
     {
       "id": "562ec876-46dc-4b6e-acb9-5f24f8cb2912",
       "key": "self-taught-p1",
-      "value": "Para amediado del años 2019 ya tenía mi primer empleo como programador y finalice la carrera técnica en el ITSC en el 2020. Comencé a aprender de forma autodidacta, adsorvia informacion y adquiria experiencia muy rapido, y en poco tiempo ya abia consegido mi 2do trabajo y duplicado mis ingresos, un empleo estable donde podia creser aun mas.",
+      "value": "Para mediados del año 2019 ya tenía mi primer empleo como programador y finalicé la carrera técnica en el ITSC en el 2020. Comencé a aprender de forma autodidacta, absorbía información y adquiría experiencia muy rápido, y en poco tiempo ya había conseguido mi 2do trabajo y duplicado mis ingresos, un empleo estable donde podía crecer aún más.",
       "language": "es",
       "category": "about"
     },
     {
       "id": "5febf09c-0c28-4ebe-8d61-7fdcbd971406",
       "key": "self-taught-p2",
-      "value": "Por la recomendscion de un amigo fue como fui contactado para lo que fue mi 3er empleo y asi duplicado otra vez mis ingreso, buen ambiente laboral, capacidades de cresimiento y desarrollo aun mayores, nuevamente mi deceos de arquirir un titulo universitario (<b>Ingeniero</b>) se esfumaron. Valoraba más el conocimiento y la capacidad que había adquirido luego de la carrera técnica y seguir como autodidacta. Me considero a mí mismo como '<b>Ingeniero en Software</b>' en constante aprendizaje.",
+      "value": "Por la recomendación de un amigo fue como fui contactado para lo que fue mi 3er empleo y así dupliqué otra vez mis ingresos, buen ambiente laboral, capacidades de crecimiento y desarrollo aún mayores. Nuevamente mis deseos de adquirir un título universitario (<b>Ingeniero</b>) se esfumaron. Valoraba más el conocimiento y la capacidad que había adquirido luego de la carrera técnica y seguir como autodidacta. Me considero a mí mismo como '<b>Ingeniero en Software</b>' en constante aprendizaje.",
       "language": "es",
       "category": "about"
     },
@@ -430,7 +430,7 @@
     {
       "id": "a51dad51-961a-42b1-910f-bda7adab11e3",
       "key": "fall-p1",
-      "value": "Proximamente",
+      "value": "Próximamente",
       "language": "es",
       "category": "about"
     },
@@ -451,7 +451,7 @@
     {
       "id": "ccb9a17d-6694-40ff-a682-d0b23c3f0783",
       "key": "reflections-p1",
-      "value": "Mi viaje en la programación ha sido un camino de descubrimientos, desafíos y aprendizaje constante. He aprendido que la pasión, la dedicación y la capacidad de aprender por uno mismo son fundamentales en este campo.<br /><br/ >Actual mente en pleno 2025, el deseo de obtener el título universitario ha resurgido. Además, el inglés se ha convertido en mi segunda gran meta o quien sabe quisas intercambien los puestos.",
+      "value": "Mi viaje en la programación ha sido un camino de descubrimientos, desafíos y aprendizaje constante. He aprendido que la pasión, la dedicación y la capacidad de aprender por uno mismo son fundamentales en este campo.<br /><br />Actualmente, en pleno 2025, el deseo de obtener el título universitario ha resurgido. Además, el inglés se ha convertido en mi segunda gran meta o, quién sabe, quizás intercambien los puestos.",
       "language": "es",
       "category": "about"
     },
@@ -486,14 +486,14 @@
     {
       "id": "150b9ddb-028a-4d6d-a802-d37b18d4c4bb",
       "key": "English",
-      "value": "Ingles",
+      "value": "Inglés",
       "language": "es",
       "category": "setting"
     },
     {
       "id": "24885bdc-3f07-4e35-9f40-2a6a8c76f7fc",
       "key": "back",
-      "value": "Atras",
+      "value": "Atrás",
       "language": "es",
       "category": "home"
     },
@@ -521,7 +521,7 @@
     {
       "id": "b3476415-9ccb-411d-ba1d-edbe7b1c7ba2",
       "key": "Hello",
-      "value": "Hola! soy",
+      "value": "¡Hola! Soy",
       "language": "es",
       "category": "home"
     },
@@ -542,14 +542,14 @@
     {
       "id": "707d0432-e4ba-4dd6-9d1f-0cb21be1bb1c",
       "key": "presentation-p1",
-      "value": "Tengo experiencia en el mercado laboral, me adactor facil y rapido.",
+      "value": "Tengo experiencia en el mercado laboral, me adapto fácil y rápido.",
       "language": "es",
       "category": "home"
     },
     {
       "id": "ebcb61b0-81fa-4152-9270-e90efa4fa685",
       "key": "presentation-p2",
-      "value": "Tengo buena abilidades blandas, soy muy colaborativo, me apaciona aprender cosas nuevas y diferentes.",
+      "value": "Tengo buenas habilidades blandas, soy muy colaborativo, me apasiona aprender cosas nuevas y diferentes.",
       "language": "es",
       "category": "home"
     },
@@ -563,7 +563,7 @@
     {
       "id": "1f3a4cda-25cb-4517-89a1-9b17a51483c7",
       "key": "Go to the home",
-      "value": "Ir al inicio!",
+      "value": "¡Ir al inicio!",
       "language": "es",
       "category": "notfound"
     },
@@ -591,7 +591,7 @@
     {
       "id": "6c9d581c-439f-42e5-bd9a-2c346bedea4b",
       "key": "Page 5",
-      "value": "pagina 5",
+      "value": "página 5",
       "language": "es",
       "category": "notfound"
     },
@@ -619,7 +619,7 @@
     {
       "id": "04f4bf1e-4d13-4863-8b06-31eaa4e74417",
       "key": "Tegnico superior en desarollo de software",
-      "value": "Tegnico superior en desarollo de software",
+      "value": "Técnico superior en desarrollo de software",
       "language": "es",
       "category": "studie"
     },
@@ -633,7 +633,7 @@
     {
       "id": "88e49780-0a34-4897-a9f1-672e91d49939",
       "key": "Titles",
-      "value": "Titulos",
+      "value": "Títulos",
       "language": "es",
       "category": "home"
     },
@@ -647,7 +647,7 @@
     {
       "id": "766a26a8-6eac-487a-8bf7-2730667692ac",
       "key": "Skills",
-      "value": "Abilidades",
+      "value": "Habilidades",
       "language": "es",
       "category": "home"
     },
@@ -668,12 +668,12 @@
     {
       "id": "e8c497fc-c5ad-45bf-b570-adcce08722fd",
       "key": "About me",
-      "value": "Acerca de mi",
+      "value": "Acerca de mí",
       "language": "es",
       "category": "home"
     }
   ],
- "languages": [
+  "languages": [
     {
       "id": "0adc493f-284f-428e-907b-c0f5338797a4",
       "key": "es",
